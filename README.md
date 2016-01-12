@@ -3,16 +3,16 @@
 ## Website	
  http://www.csc.uvic.ca/courses/csc226
  
-## Overview
-Instructor
-- Frank Ruskey 
+## Instructor
+- Name: Frank Ruskey 
 - Email: ruskey at uvic.ca 
 - Office: ECS 564 
 - Office Hours: MR 1:30 - 3:00 p.m. (tentative)
 
 ## Lecture Schedule	
--  MR 8:30 - 9:50 a.m.     HSD A240 
-##Textbooks	
+MR 8:30 - 9:50 a.m.     HSD A240 
+
+## Textbooks	
 Required:	[Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011 ](http://algs4.cs.princeton.edu/home/)
 
 ## I-clickers	
