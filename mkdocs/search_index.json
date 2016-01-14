@@ -1,6 +1,51 @@
 {
     "docs": [
         {
+            "location": "/", 
+            "text": "CSC 226: Algorithms and Data Structures: II\n\n\nWebsite\n\n\nhttp://www.csc.uvic.ca/courses/csc226\n\n\nInstructor\n\n\n\n\nName: Frank Ruskey \n\n\nEmail: ruskey at uvic.ca \n\n\nOffice: ECS 564 \n\n\nOffice Hours: MR 1:30 - 3:00 p.m. (tentative)\n\n\n\n\nLecture Schedule\n\n\nMR 8:30 - 9:50 a.m.     HSD A240 \n\n\nTextbooks\n\n\nRequired:   \nAlgorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011 \n\n\nI-clickers\n\n\nStudents are required to bring their iClickers to each lecture; the clickers will not be used in the labs.\n\n\nGrading\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nParticipation\n\n\n5%\n\n\n\n\n\n\nAssignments\n\n\n25%\n\n\n\n\n\n\nMidterm\n\n\n20%\n\n\n\n\n\n\nFinal\n\n\n50%\n\n\n\n\n\n\n\n\nAssignments\n\n\n\n\n\n\n\n\nAssignment #\n\n\nWeight\n\n\nDue Date\n\n\n\n\n\n\n\n\n\n\n1\n\n\n5%\n\n\nJanuary 23\n\n\n\n\n\n\n2\n\n\n5%\n\n\nFebruary 5\n\n\n\n\n\n\n3\n\n\n5%\n\n\nMarch 18\n\n\n\n\n\n\n4\n\n\n5%\n\n\nApril 4\n\n\n\n\n\n\n5\n\n\n5%\n\n\nMarch 25", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#csc-226-algorithms-and-data-structures-ii", 
+            "text": "", 
+            "title": "CSC 226: Algorithms and Data Structures: II"
+        }, 
+        {
+            "location": "/#website", 
+            "text": "http://www.csc.uvic.ca/courses/csc226", 
+            "title": "Website"
+        }, 
+        {
+            "location": "/#instructor", 
+            "text": "Name: Frank Ruskey   Email: ruskey at uvic.ca   Office: ECS 564   Office Hours: MR 1:30 - 3:00 p.m. (tentative)", 
+            "title": "Instructor"
+        }, 
+        {
+            "location": "/#lecture-schedule", 
+            "text": "MR 8:30 - 9:50 a.m.     HSD A240", 
+            "title": "Lecture Schedule"
+        }, 
+        {
+            "location": "/#textbooks", 
+            "text": "Required:    Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011", 
+            "title": "Textbooks"
+        }, 
+        {
+            "location": "/#i-clickers", 
+            "text": "Students are required to bring their iClickers to each lecture; the clickers will not be used in the labs.", 
+            "title": "I-clickers"
+        }, 
+        {
+            "location": "/#grading", 
+            "text": "Task  Weight      Participation  5%    Assignments  25%    Midterm  20%    Final  50%", 
+            "title": "Grading"
+        }, 
+        {
+            "location": "/#assignments", 
+            "text": "Assignment #  Weight  Due Date      1  5%  January 23    2  5%  February 5    3  5%  March 18    4  5%  April 4    5  5%  March 25", 
+            "title": "Assignments"
+        }, 
+        {
             "location": "/2016-01-04/", 
             "text": "Lecture 1 - Notes\n\n\nJanuary 4, 2016\n\n\nTrees\n\n\nTopological trees\n\n\n\n\nFree trees\n\n\nRooted trees\n\n\nOrdered trees\n\n\nBinary trees\n\n\n\n\nFree Trees\n\n\n\n\nA free tree is the most general kind of tree.\n\n\n\n\ndefinition\n: A \nfree tree\n is an acyclic connected graph.\n\n\n\n\nAcyclic\n: No cycles\n\n\nConnected\n: There is a path between any two vertices\n\n\n\n\n\n\nA \nfree tree\n with $n$ nodes always has $e = n-1$ edges.\n\n\nExample\n\n\nHow many trees are there with $n = 3$ vertices?\n\n\nSolution\n\n\nOne. See above.\n\n\nRooted Trees\n\n\ndefinition\n: A \nrooted tree\n is a tree in which some node is distinguished as the root.\n\n\n\n\nExample\n\n\nHow many trees are there with $n = 4$ vertices?\n\n\nSolution\n\n\nFour. See above.\n\n\nOrdered Trees\n\n\ndefinition\n: An \nordered tree\n is a rooted tree in which the subtrees are ordered recursively.\n\n\nThe tree is ordered \"horizontally\" (because that's how levels work).\n\n\n\n\nBinary Trees\n\n\ndefinition\n: A \nBinary Tree\n is either empty or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint binary trees.\n\n\n\n\nExample\n\n\nHow many trees are there with $n = 3$ vertices?\n\n\nSolution\n\n\nFive. See above.\n\n\nExtended Binary Trees\n\n\ndefinition\n: An \nExtended Binary Tree\n is either a leaf node or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint extended binary trees.\n\n\n\n\n\n\nA binary tree where each node has two children called leaves\n\n\nA binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)\n\n\n\n\nAn \nExtended Binary Tree\n with $n$ internal nodes has $l = n + 1$ leaves.\n\n\nApplications\n\n\n\n\nBinary Search Trees - Binary Tree\n\n\nDecision Trees - Extended Binary Tree\n\n\n\n\nRepresentations\n\n\nBinary Trees\n\n\nEach node represented with a data value and left and right child nodes.\n\n\n\n\nclass Node {\n    Object data;\n    Node leftChild;\n    Node rightChild;\n}\n\n\n\n\nTree Traversal\n\n\nPreorder\n\n\n\n\nIn-order\n\n\n\n\nPostorder\n\n\n\n\nConverting a Ordered Forest into a Binary Tree\n\n\n\n\n\n\nUse the root of the ordered tree as the root of the binary tree\n\n\nThe leftmost node in the ordered tree becomes the left child of the parent node\n\n\nContinue finding children of the parent node insert it as the right subtree of leftmost child\n\n\nRepeat this process for all of the nodes\n\n\nNodes that have children in the ordered tree representation will have a left child in the binary tree representation\n\n\nIf a node has a right child in the binary tree representation it has siblings in the ordered tree representation", 
             "title": "2016 01 04"
