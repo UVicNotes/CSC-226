@@ -57,9 +57,15 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#january-4th-2016">January 4th 2016</a></li>
+                <li class="toctree-l3"><a href="#lecture-1-notes">Lecture 1 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#january-4-2016">January 4, 2016</a></li>
                 
                     <li><a class="toctree-l4" href="#trees">Trees</a></li>
+                
+                    <li><a class="toctree-l4" href="#applications">Applications</a></li>
+                
+                    <li><a class="toctree-l4" href="#representations">Representations</a></li>
                 
                     <li><a class="toctree-l4" href="#tree-traversal">Tree Traversal</a></li>
                 
@@ -67,6 +73,27 @@
                 
             
             </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-07/">2016 01 07</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-11/">2016 01 11</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-14/">2016 01 14</a>
         
     </li>
 <li>
@@ -107,31 +134,73 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="january-4th-2016">January 4th 2016</h1>
+                <h1 id="lecture-1-notes">Lecture 1 - Notes</h1>
+<h3 id="january-4-2016">January 4, 2016</h3>
 <h2 id="trees">Trees</h2>
-<h3 id="free">Free</h3>
+<p>Topological trees</p>
 <ul>
-<li>An acyclic connected graph where there is a path between any pair of verticies</li>
+<li>Free trees</li>
+<li>Rooted trees</li>
+<li>Ordered trees</li>
+<li>Binary trees</li>
 </ul>
-<h3 id="rooted">Rooted</h3>
+<h3 id="free-trees">Free Trees</h3>
+<blockquote>
+<p>A free tree is the most general kind of tree.</p>
+</blockquote>
+<p><em>definition</em>: A <strong>free tree</strong> is an acyclic connected graph.</p>
 <ul>
-<li>Free tree where a single node is marked as the start</li>
+<li><strong>Acyclic</strong>: No cycles</li>
+<li><strong>Connected</strong>: There is a path between any two vertices</li>
 </ul>
-<h3 id="ordered">Ordered</h3>
+<p><img alt="Examples of free trees" src="http://mathworld.wolfram.com/images/eps-gif/Trees_600.gif" /></p>
+<p>A <strong>free tree</strong> with $n$ nodes always has $e = n-1$ edges.</p>
+<h5 id="example">Example</h5>
+<p>How many trees are there with $n = 3$ vertices?</p>
+<h6 id="solution">Solution</h6>
+<p>One. See above.</p>
+<h3 id="rooted-trees">Rooted Trees</h3>
+<p><em>definition</em>: A <strong>rooted tree</strong> is a tree in which some node is distinguished as the root.</p>
+<p><img alt="Examples of Rooted Trees" src="http://mathworld.wolfram.com/images/eps-gif/RootedTrees_700.gif" /></p>
+<h5 id="example_1">Example</h5>
+<p>How many trees are there with $n = 4$ vertices?</p>
+<h6 id="solution_1">Solution</h6>
+<p>Four. See above.</p>
+<h3 id="ordered-trees">Ordered Trees</h3>
+<p><em>definition</em>: An <strong>ordered tree</strong> is a rooted tree in which the subtrees are ordered recursively.</p>
+<p>The tree is ordered "horizontally" (because that's how levels work).</p>
+<p><img alt="Examples of ordered trees" src="http://i.stack.imgur.com/st6rl.png" /></p>
+<h3 id="binary-trees">Binary Trees</h3>
+<p><em>definition</em>: A <strong>Binary Tree</strong> is either empty or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint binary trees.</p>
+<p><img alt="Examples of Binary Trees" src="http://mathworld.wolfram.com/images/eps-gif/BinaryTrees_800.gif" /></p>
+<h5 id="example_2">Example</h5>
+<p>How many trees are there with $n = 3$ vertices?</p>
+<h6 id="solution_2">Solution</h6>
+<p>Five. See above.</p>
+<h3 id="extended-binary-trees">Extended Binary Trees</h3>
+<p><em>definition</em>: An <strong>Extended Binary Tree</strong> is either a leaf node or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint extended binary trees.</p>
+<p><img alt="Binary tree vs. Extended Binary Tree" src="http://mathworld.wolfram.com/images/eps-gif/ExtendedBinaryTree_750.gif" /></p>
 <ul>
-<li>A rooted tree where the subtrees are ordered recursively</li>
-<li>Each node can be thought of as the root of the subtree</li>
+<li>A binary tree where each node has two children called leaves</li>
+<li>A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)</li>
 </ul>
-<h3 id="binary">Binary</h3>
-<p><img alt="All possible Binary trees from n = 1 to n = 4" src="http://mathworld.wolfram.com/images/eps-gif/BinaryTreesNodes_950.gif" />
-- Either empty, or a root <code>r</code> and a left subtree <code>L</code> and a right subtree <code>R</code> both of which are binarary trees and disjoint
-- Unlike a proper tree, the relative positions of the children is significant.
-- As stated above, there is a strict limit of either 0, 1 or 2 children and exactly 0 or 1 parent on any node
-- Not a tree in a strict sense, because there is an implied hierarchy of subtrees</p>
-<h3 id="extended">Extended</h3>
-<p><img alt="Binary tree vs. Extended Binary Treee" src="http://mathworld.wolfram.com/images/eps-gif/ExtendedBinaryTree_750.gif" />
-- A binary tree where each node has two children called leaves
-- A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)</p>
+<p>An <strong>Extended Binary Tree</strong> with $n$ internal nodes has $l = n + 1$ leaves.</p>
+<h2 id="applications">Applications</h2>
+<ul>
+<li>Binary Search Trees - Binary Tree</li>
+<li>Decision Trees - Extended Binary Tree</li>
+</ul>
+<h2 id="representations">Representations</h2>
+<h3 id="binary-trees_1">Binary Trees</h3>
+<p>Each node represented with a data value and left and right child nodes.</p>
+<p><img alt="Representation of Binary Trees" src="http://www.ad.ntust.edu.tw/course/ad5601701/pics/charbtnode.jpg" /></p>
+<pre><code class="cs">class Node {
+    Object data;
+    Node leftChild;
+    Node rightChild;
+}
+</code></pre>
+
 <h2 id="tree-traversal">Tree Traversal</h2>
 <h3 id="preorder">Preorder</h3>
 <p><img alt="Preorder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/400px-Sorted_binary_tree_preorder.svg.png" /></p>
@@ -140,17 +209,26 @@
 <h3 id="postorder">Postorder</h3>
 <p><img alt="Postorder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/400px-Sorted_binary_tree_postorder.svg.png" /></p>
 <h2 id="converting-a-ordered-forest-into-a-binary-tree">Converting a Ordered Forest into a Binary Tree</h2>
-<p><img alt="Conversion of a Ordered Tree to a Binary Tree" src="http://i.imgur.com/9Gv0tdL.png" />
-- Use the root of the ordered tree as the root of the binary tree
-- The leftmost node in the ordered tree becomss the left child of the parent node
-- Continue finding children of the parent node insert it as the right subtree of leftmost child
-- Repeat this process for all of the nodes
-- Nodes that have children in the ordered tree representation will have a left child in the binary tree representation
-- If a node has a right child in the binary tree representation it has siblings in the ordered tree represntation</p>
+<p><img alt="Conversion of a Ordered Tree to a Binary Tree" src="http://i.imgur.com/9Gv0tdL.png" /></p>
+<ol>
+<li>Use the root of the ordered tree as the root of the binary tree</li>
+<li>The leftmost node in the ordered tree becomes the left child of the parent node</li>
+<li>Continue finding children of the parent node insert it as the right subtree of leftmost child</li>
+<li>Repeat this process for all of the nodes</li>
+<li>Nodes that have children in the ordered tree representation will have a left child in the binary tree representation</li>
+<li>If a node has a right child in the binary tree representation it has siblings in the ordered tree representation</li>
+</ol>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2016-01-07/" class="btn btn-neutral float-right" title="2016 01 07"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
@@ -176,6 +254,8 @@
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
+      
+        <span style="margin-left: 15px"><a href="../2016-01-07/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

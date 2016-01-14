@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2016 01 07 - CSC 226</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2016 01 07";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../2016-01-04/" class="icon icon-home"> CSC 226</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-04/">2016 01 04</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 01 07</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-2-notes">Lecture 2 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#january-7-2016">January 7, 2016</a></li>
+                
+                    <li><a class="toctree-l4" href="#encoding-trees">Encoding Trees</a></li>
+                
+                    <li><a class="toctree-l4" href="#union-find">Union Find</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-11/">2016 01 11</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-14/">2016 01 14</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../2016-01-04/">CSC 226</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../2016-01-04/">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>2016 01 07</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lecture-2-notes">Lecture 2 - Notes</h1>
+<h3 id="january-7-2016">January 7, 2016</h3>
+<h2 id="encoding-trees">Encoding Trees</h2>
+<p>Mark internal nodes with ones and leaves with zeros. We then do a preorder traversal. This gives us a sequence, e.g.,</p>
+<p>
+<script type="math/tex; mode=display">
+    11100011000
+</script>
+</p>
+<p>This <strong>tree sequence</strong> let's us create a well formed parenthesis string.</p>
+<p>
+<script type="math/tex; mode=display">
+    \underset{1}(\underset{1}(\underset{1}(\underset{0})\underset{0})\underset{0})\underset{1}(\underset{1}( \underset{0}) \underset{0})
+</script>
+</p>
+<p>This parenthesis string is <em>unique</em> to that tree.</p>
+<h2 id="union-find">Union Find</h2>
+<p>Given a set of $N$ object we would like to,</p>
+<ul>
+<li>Connect two objects</li>
+<li>Test if theirs a path between two objects</li>
+</ul>
+<p>To find out if a <em>static</em> graph is connected you could use DFS or BFS which is $O(|V| + |E|)$.</p>
+<p>In this <em>dynamic</em> environment we are adding edges to the graph. We assume "is connected to" to be an equivalence relation. We will therefor use sets to encapsulate components, when creating edges we will check which set each node is in then join the two sets.</p>
+<pre><code class="cs">class UF
+{
+    UF (int n)
+
+    void union(int p,  int q)
+
+    int find(int p)
+
+    boolean connected(int p, int q)
+}
+</code></pre>
+
+<h3 id="quick-find">Quick Find</h3>
+<h4 id="data-structure">Data structure</h4>
+<ul>
+<li>Integer array <code>id[]</code> of length <code>N</code></li>
+<li>Interpretation <code>id[p]</code> is the id of the component containing <code>p</code></li>
+</ul>
+<h4 id="example">Example</h4>
+<pre><code>          0 1 2 3 4 5 6 7 8 9
+    id = [0,1,1,8,8,0,0,1,8,8]
+</code></pre>
+
+<p>So 0, 5 and 6 are connected, etc.</p>
+<ul>
+<li><code>find(p)</code>: Lookup <code>p</code> by index</li>
+<li><code>connected(p,q)</code>: Do <code>p</code> and <code>q</code> have the same id?</li>
+<li><code>union(p,q)</code>: Change all entries were id is <code>id[p]</code> to <code>id[q]</code></li>
+</ul>
+<h3 id="quick-union">Quick Union</h3>
+<h4 id="data-structure_1">Data Structure</h4>
+<ul>
+<li>Integer array <code>id[]</code> of length <code>N</code></li>
+<li>Interpretation <code>id[i]</code> is the parent of <code>i</code></li>
+<li>Root of <code>i</code> is <code>id[id[...id[i]...]]</code></li>
+</ul>
+<pre><code>          0 1 2 3 4 5 6 7 8 9
+    id = [0,1,9,4,9,6,6,7,8,9]
+</code></pre>
+
+<ul>
+<li><code>find(p)</code>: What is the root of <code>p</code></li>
+<li><code>connected(p,q)</code>: Do <code>p</code> and <code>q</code> have the same root?</li>
+<li><code>union(p,q)</code>: Set the id of <code>p</code>'s root to the id of <code>q</code>'s root</li>
+</ul>
+<h3 id="issues">Issues</h3>
+<p>Both of the these operation are too expensive,</p>
+<table>
+<thead>
+<tr>
+<th align="center">Algorithm</th>
+<th align="center">intialize</th>
+<th align="center">union</th>
+<th align="center">find</th>
+<th align="center">connected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Quick Find</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(1)$</td>
+<td align="center">$O(1)$</td>
+</tr>
+<tr>
+<td align="center">Quick Union</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quick-find_1">Quick Find</h4>
+<ul>
+<li>Unions are expensive</li>
+<li>Trees are flat but it's expensive to eep them flat</li>
+</ul>
+<h4 id="quick-union_1">Quick Union</h4>
+<ul>
+<li>Trees can get very tall</li>
+<li>Find/connect is expensive</li>
+</ul>
+<h3 id="weighted-quick-union">Weighted Quick Union</h3>
+<ul>
+<li>Modify Quick Union to avoid tall trees</li>
+<li>Keep track of the size of each tree</li>
+<li>Balance by linking smaller tree to root of larger tree</li>
+</ul>
+<h4 id="data-structure_2">Data Structure</h4>
+<p>Same as Quick Union but maintain an extra array <code>sz[i]</code> that counts the number of objects rooted at <code>i</code>.</p>
+<ul>
+<li><code>find(p)</code>/<code>connected(p,q)</code>: Same as Quick Union</li>
+<li><code>Union(p,q)</code>: Link the smaller tree to the larger tree, update <code>sz[]</code></li>
+</ul>
+<h4 id="efficiency">Efficiency</h4>
+<table>
+<thead>
+<tr>
+<th align="center">Algorithm</th>
+<th align="center">initialize</th>
+<th align="center">union</th>
+<th align="center">find</th>
+<th align="center">connected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Quick Find</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(1)$</td>
+<td align="center">$O(1)$</td>
+</tr>
+<tr>
+<td align="center">Quick Union</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(N)$</td>
+</tr>
+<tr>
+<td align="center">Weighted Quick Union</td>
+<td align="center">$O(N)$</td>
+<td align="center">$O(\lg{N})$</td>
+<td align="center">$O(\lg{N})$</td>
+<td align="center">$O(\lg{N})$</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../2016-01-11/" class="btn btn-neutral float-right" title="2016 01 11"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2016-01-04/" class="btn btn-neutral" title="2016 01 04"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../2016-01-04/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../2016-01-11/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
