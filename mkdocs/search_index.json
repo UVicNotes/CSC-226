@@ -1,0 +1,29 @@
+{
+    "docs": [
+        {
+            "location": "/2016-01-04/", 
+            "text": "January 4th 2016\n\n\nTrees\n\n\nFree\n\n\n\n\nAn acyclic connected graph where there is a path between any pair of verticies\n\n\n\n\nRooted\n\n\n\n\nFree tree where a single node is marked as the start\n\n\n\n\nOrdered\n\n\n\n\nA rooted tree where the subtrees are ordered recursively\n\n\nEach node can be thought of as the root of the subtree\n\n\n\n\nBinary\n\n\n\n- Either empty, or a root \nr\n and a left subtree \nL\n and a right subtree \nR\n both of which are binarary trees and disjoint\n- Unlike a proper tree, the relative positions of the children is significant.\n- As stated above, there is a strict limit of either 0, 1 or 2 children and exactly 0 or 1 parent on any node\n- Not a tree in a strict sense, because there is an implied hierarchy of subtrees\n\n\nExtended\n\n\n\n- A binary tree where each node has two children called leaves\n- A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)\n\n\nTree Traversal\n\n\nPreorder\n\n\n\n\nIn-order\n\n\n\n\nPostorder\n\n\n\n\nConverting a Ordered Forest into a Binary Tree\n\n\n\n- Use the root of the ordered tree as the root of the binary tree\n- The leftmost node in the ordered tree becomss the left child of the parent node\n- Continue finding children of the parent node insert it as the right subtree of leftmost child\n- Repeat this process for all of the nodes\n- Nodes that have children in the ordered tree representation will have a left child in the binary tree representation\n- If a node has a right child in the binary tree representation it has siblings in the ordered tree represntation", 
+            "title": "2016 01 04"
+        }, 
+        {
+            "location": "/2016-01-04/#january-4th-2016", 
+            "text": "", 
+            "title": "January 4th 2016"
+        }, 
+        {
+            "location": "/2016-01-04/#trees", 
+            "text": "Free   An acyclic connected graph where there is a path between any pair of verticies   Rooted   Free tree where a single node is marked as the start   Ordered   A rooted tree where the subtrees are ordered recursively  Each node can be thought of as the root of the subtree   Binary  \n- Either empty, or a root  r  and a left subtree  L  and a right subtree  R  both of which are binarary trees and disjoint\n- Unlike a proper tree, the relative positions of the children is significant.\n- As stated above, there is a strict limit of either 0, 1 or 2 children and exactly 0 or 1 parent on any node\n- Not a tree in a strict sense, because there is an implied hierarchy of subtrees  Extended  \n- A binary tree where each node has two children called leaves\n- A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)", 
+            "title": "Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#tree-traversal", 
+            "text": "Preorder   In-order   Postorder", 
+            "title": "Tree Traversal"
+        }, 
+        {
+            "location": "/2016-01-04/#converting-a-ordered-forest-into-a-binary-tree", 
+            "text": "- Use the root of the ordered tree as the root of the binary tree\n- The leftmost node in the ordered tree becomss the left child of the parent node\n- Continue finding children of the parent node insert it as the right subtree of leftmost child\n- Repeat this process for all of the nodes\n- Nodes that have children in the ordered tree representation will have a left child in the binary tree representation\n- If a node has a right child in the binary tree representation it has siblings in the ordered tree represntation", 
+            "title": "Converting a Ordered Forest into a Binary Tree"
+        }
+    ]
+}

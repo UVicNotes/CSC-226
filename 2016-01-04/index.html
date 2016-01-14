@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2016 01 04 - CSC 226</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2016 01 04";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="./" class="icon icon-home"> CSC 226</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 01 04</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#january-4th-2016">January 4th 2016</a></li>
+                
+                    <li><a class="toctree-l4" href="#trees">Trees</a></li>
+                
+                    <li><a class="toctree-l4" href="#tree-traversal">Tree Traversal</a></li>
+                
+                    <li><a class="toctree-l4" href="#converting-a-ordered-forest-into-a-binary-tree">Converting a Ordered Forest into a Binary Tree</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="./">CSC 226</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="./">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>2016 01 04</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="january-4th-2016">January 4th 2016</h1>
+<h2 id="trees">Trees</h2>
+<h3 id="free">Free</h3>
+<ul>
+<li>An acyclic connected graph where there is a path between any pair of verticies</li>
+</ul>
+<h3 id="rooted">Rooted</h3>
+<ul>
+<li>Free tree where a single node is marked as the start</li>
+</ul>
+<h3 id="ordered">Ordered</h3>
+<ul>
+<li>A rooted tree where the subtrees are ordered recursively</li>
+<li>Each node can be thought of as the root of the subtree</li>
+</ul>
+<h3 id="binary">Binary</h3>
+<p><img alt="All possible Binary trees from n = 1 to n = 4" src="http://mathworld.wolfram.com/images/eps-gif/BinaryTreesNodes_950.gif" />
+- Either empty, or a root <code>r</code> and a left subtree <code>L</code> and a right subtree <code>R</code> both of which are binarary trees and disjoint
+- Unlike a proper tree, the relative positions of the children is significant.
+- As stated above, there is a strict limit of either 0, 1 or 2 children and exactly 0 or 1 parent on any node
+- Not a tree in a strict sense, because there is an implied hierarchy of subtrees</p>
+<h3 id="extended">Extended</h3>
+<p><img alt="Binary tree vs. Extended Binary Treee" src="http://mathworld.wolfram.com/images/eps-gif/ExtendedBinaryTree_750.gif" />
+- A binary tree where each node has two children called leaves
+- A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)</p>
+<h2 id="tree-traversal">Tree Traversal</h2>
+<h3 id="preorder">Preorder</h3>
+<p><img alt="Preorder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Sorted_binary_tree_preorder.svg/400px-Sorted_binary_tree_preorder.svg.png" /></p>
+<h3 id="in-order">In-order</h3>
+<p><img alt="In-order" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Sorted_binary_tree_inorder.svg/400px-Sorted_binary_tree_inorder.svg.png" /></p>
+<h3 id="postorder">Postorder</h3>
+<p><img alt="Postorder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Sorted_binary_tree_postorder.svg/400px-Sorted_binary_tree_postorder.svg.png" /></p>
+<h2 id="converting-a-ordered-forest-into-a-binary-tree">Converting a Ordered Forest into a Binary Tree</h2>
+<p><img alt="Conversion of a Ordered Tree to a Binary Tree" src="http://i.imgur.com/9Gv0tdL.png" />
+- Use the root of the ordered tree as the root of the binary tree
+- The leftmost node in the ordered tree becomss the left child of the parent node
+- Continue finding children of the parent node insert it as the right subtree of leftmost child
+- Repeat this process for all of the nodes
+- Nodes that have children in the ordered tree representation will have a left child in the binary tree representation
+- If a node has a right child in the binary tree representation it has siblings in the ordered tree represntation</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+
+</body>
+</html>
