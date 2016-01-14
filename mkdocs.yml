@@ -1,0 +1,12 @@
+site_name: CSC 226
+docs_dir: Notes
+site_url: http://uvicnotes.github.io/CSC-226/
+repo_url: https://github.com/UVicNotes/CSC-226
+site_description: Course Notes for CSC 226 - Algorithms and Data Structures II
+site_author: Andrei Taylor
+extra_javascript: 
+    - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js
+markdown_extensions:
+    - mdx_math
+theme: readthedocs

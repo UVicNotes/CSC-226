@@ -1,0 +1,7 @@
+sudo: true
+before_script: bash ./init.sh
+script: bash ./deploy.sh
+env:
+  global:
+  - GH_REF: github.com/UVicNotes/ELEC-310.git
+  - secure: J0ItjyPF8tZNGs8TEGvLbcQe7XRLfInayCQ9f8J930nvVTqACbt1Zq/oTzPApb+ZqrF3c5noZ/HDnjN0nk/s+14gFPZVcXt9XoVL02272YlqyalKtdlSGMF64k447AIpWQHGqON+bqm8/Z7UbFmwseBOuZK0BXx35jFXOVPh17TYzLUMlO6u+XpGub5+yQbpayW8Khp7z707GrNgbB2VREgdhX7F1smcpM/bQBnfpx3xXTUxus1+gbgiY5rHlc+Hg47IMqt/77MYadH+zb/aaGXkLyQkbNinV+DDlMNxNgAtaYvavuOKR1QR57qT8c4monJlnht3UF1r1kCZDtJi7Uzih2gzHm4XSeNWhZlZ+vf1BSehb2Sb9csfpuZRhAnUyv598aMNXqjbruvlreyz5W9sxe7XB4r+BXrVYEuq0ReFKX1V7z8TB7kI1RGx9qakxed045fcZvPZZHFXw56kj5W2lex+qDpPG+h3CYqpvjtC4DqmvrF3jQvrVRR3egtNqbb4/kki/qCOfWyR4AG+NIoyRTPJ7oWZ68NMILRDWutMu/Bxrki3VzZQdCeop9VtJAxp53DHY/ELhSCe/fprbxWoRRdKT8tYjE0DtiuWLojO9Arf5fTxgq6hPKDwnxHKu5Imt6uS20MLzu8/H6L9dM7+5RkdgNXF8I2ScXV/3vg=
