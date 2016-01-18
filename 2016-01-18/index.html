@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2016 01 11 - CSC 226</title>
+  <title>2016 01 18 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 01 11";
+    var mkdocs_page_name = "2016 01 18";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -73,21 +73,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 01 11</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-3-notes">Lecture 3 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#january-11-2016">January 11, 2016</a></li>
-                
-                    <li><a class="toctree-l4" href="#weighted-quick-union-continued">Weighted Quick Union --- Continued</a></li>
-                
-                    <li><a class="toctree-l4" href="#comparison-based-sorting">Comparison Based Sorting</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-11/">2016 01 11</a>
         
     </li>
 <li>
@@ -100,8 +87,19 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-01-18/">2016 01 18</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 01 18</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-5-notes">Lecture 5 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#today">Today</a></li>
+                
+                    <li><a class="toctree-l4" href="#comparison-based-bounds">Comparison Based Bounds</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -128,7 +126,7 @@
     
       
     
-    <li>2016 01 11</li>
+    <li>2016 01 18</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -142,63 +140,87 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-3-notes">Lecture 3 - Notes</h1>
-<h3 id="january-11-2016">January 11, 2016</h3>
-<h2 id="weighted-quick-union-continued">Weighted Quick Union --- Continued</h2>
-<h3 id="union">Union</h3>
-<p><strong>Proposition</strong>, The depth of any node is $\le \lg N$.</p>
-<p><strong>Proof:</strong></p>
-<p>The depth goes up (by 1) only on a union with $x$ where $x$ is in the smaller tree,</p>
-<ul>
-<li>the size of the tree containing $x$ is at least twice as large on such a union</li>
-<li>the size of a tree can double at most $\lg N$ times</li>
-</ul>
-<p>Using <strong>rank</strong> instead of node count to track the size of the trees can reduce the space complexity since the maximum bit length for the rank is $\le \lg(\lg(N))$</p>
-<h3 id="compression">Compression</h3>
-<p>We make nodes along the find path point to the root.</p>
-<p>To do this <strong>with two passes</strong> we can perform a second loop setting every node to the root.</p>
-<p>To do this <strong>with one path</strong> this make every other node in the path point to it's grandparent.</p>
-<pre><code class="c">public int find(int i)
-{
-   while (i != id[i])
-   {
-      id[i] = id[id[i]]; //&lt;-- Set the Grandparent
-      i = id[i]; 
-   }
-   return i;
-}
-</code></pre>
-
-<h2 id="comparison-based-sorting">Comparison Based Sorting</h2>
-<p>In <strong>Comparison Based Sorting</strong> like,</p>
-<ul>
-<li>Mergesort</li>
-<li>Quicksort</li>
-<li>Heapsort</li>
-</ul>
-<p>Let's say we are sorting something <code>sort([a,b,c])</code>,</p>
-<p><img alt="Example Sorting Tree" src="../img/Sorting-Tree.png" /></p>
-<p>This comparison tree has 6 leaves. In general it has to be $\ge N!$ (because that's how many possible combinations there are).</p>
-<p>The height is the worst case number of comparisons, in this case 3. What is the minimum height $h$ of an extended binary tree with $n$ leaves?</p>
+                <h1 id="lecture-5-notes">Lecture 5 - Notes</h1>
+<p><strong>January 18, 2016</strong>  </p>
+<h3 id="today">Today</h3>
+<ol>
+<li>Finish comparison based sorting</li>
+<li>2-3 and Red-Black Trees</li>
+</ol>
+<h2 id="comparison-based-bounds">Comparison Based Bounds</h2>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Size</th>
+<th>Lower Bound</th>
+<th>Upper Bound</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>max</td>
+<td>of $n$</td>
+<td>$O(n-1)$</td>
+<td>$O(n-1)$</td>
+<td>See <a href="#max">graph theory proof</a></td>
+</tr>
+<tr>
+<td>merge</td>
+<td>$n+n$</td>
+<td>$O(2n-1)$</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>search on ordered table</td>
+<td>$n$</td>
+<td>$O(\lg n)$</td>
+<td>$\lceil \lg n \rceil$</td>
+<td>Information Theory</td>
+</tr>
+<tr>
+<td>max &amp; min</td>
+<td>of $n$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>max &amp; next</td>
+<td>of $n$</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>sorting</td>
+<td>$n$</td>
+<td>$O(n \ log n)$</td>
+<td>$\lceil \lg n! \rceil$</td>
+<td>Information theory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="max">Max</h3>
+<p><strong>Theorem</strong>: $n - 1$ is the best upper bound for finding the maximum in an unordered array.</p>
+<p><strong>Proof</strong>: Make a graph $G = (V,E)$,</p>
 <p>
-<script type="math/tex; mode=display">\begin{align}
-    n &\le 2^h \newline
-    \lceil \lg n \rceil &\le h
-\end{align}</script>
+<script type="math/tex; mode=display">
+    V = \text{ vertices } = \{a_1, a_2, ..., a_n \}
+</script>
 </p>
-<p>Therefore the height for sorting is $\ge \lceil \lg{N!} \rceil$. We can bound $N!$ with,</p>
+<p>Each time a comparison is made say $a_i \lt a_j$ add the edge $(i,j)$. If the algorithm is correct, then at the end $G$ must be connected. For $G$ to be connected it must have at least $\left|E\right| \ge n - 1$ edges.</p>
+<h3 id="merge">Merge</h3>
+<p><strong>Theorem</strong>: $2n - 1$ is the best upper bound for the merge operation.</p>
+<p><strong>Proof</strong>: Suppose the input is ordered so that,</p>
 <p>
-<script type="math/tex; mode=display">\begin{align}
-    \left( \frac{n}{2} \right) ^ \frac{n}{2} \le N! \le N^N
-\end{align}</script>
+<script type="math/tex; mode=display">
+    a_1 \lt b_1 \lt \underbrace{a_2 \lt b_2}_\text{not made} \lt ... \lt a_n \lt b_n
+</script>
 </p>
-<p>and by taking the log,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \frac{n}{2} \lg \left( \frac{n}{2} \right) \le \lg{N!} \le N \lg {N}
-\end{align}</script>
-</p>
-<p>So comparison based sorting requires $\Omega (N \lg N)$ comparisons.</p>
+<p>If some comparison, either $a_i \lt b_i$ or $b_i \lt a_{i+1}$ is not made, then the algorithm will fail. This is called an <em>adversarial argument</em>.</p>
               
             </div>
           </div>
@@ -206,10 +228,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-01-14/" class="btn btn-neutral float-right" title="2016 01 14"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-01-07/" class="btn btn-neutral" title="2016 01 07"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-01-14/" class="btn btn-neutral" title="2016 01 14"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -237,10 +257,8 @@
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-01-07/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-01-14/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-01-14/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
