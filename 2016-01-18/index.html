@@ -98,6 +98,8 @@
                 
                     <li><a class="toctree-l4" href="#comparison-based-bounds">Comparison Based Bounds</a></li>
                 
+                    <li><a class="toctree-l4" href="#balanced-search-trees">Balanced Search Trees</a></li>
+                
             
             </ul>
         
@@ -170,8 +172,8 @@
 <td>merge</td>
 <td>$n+n$</td>
 <td>$O(2n-1)$</td>
-<td></td>
-<td></td>
+<td>$O(2n-1)$</td>
+<td>See <a href="#merge">adversarial argument proof</a></td>
 </tr>
 <tr>
 <td>search on ordered table</td>
@@ -183,16 +185,16 @@
 <tr>
 <td>max &amp; min</td>
 <td>of $n$</td>
-<td></td>
-<td></td>
-<td></td>
+<td>$\lceil \frac{3}{2}n -2 \rceil$</td>
+<td>$\lceil \frac{3}{n} -2 \rceil$</td>
+<td>Tricky adversarial argument</td>
 </tr>
 <tr>
 <td>max &amp; next</td>
 <td>of $n$</td>
-<td></td>
-<td></td>
-<td></td>
+<td>$n + \lceil \lg n \rceil - 1$</td>
+<td>$n + \lceil \lg n \rceil - 1$</td>
+<td>Tricky adversarial argument</td>
 </tr>
 <tr>
 <td>sorting</td>
@@ -203,6 +205,7 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Note:</strong> I know that $O(2n-1) = O(n)$ but Ruskey insists on "more accurate numbers". So I've added the big-o's even though they aren't strictly necessary.</p>
 <h3 id="max">Max</h3>
 <p><strong>Theorem</strong>: $n - 1$ is the best upper bound for finding the maximum in an unordered array.</p>
 <p><strong>Proof</strong>: Make a graph $G = (V,E)$,</p>
@@ -221,6 +224,97 @@
 </script>
 </p>
 <p>If some comparison, either $a_i \lt b_i$ or $b_i \lt a_{i+1}$ is not made, then the algorithm will fail. This is called an <em>adversarial argument</em>.</p>
+<h3 id="max-min">Max &amp; Min</h3>
+<p>If we use a tree to model the comparisons, we have $\frac{n}{2}$ comparisons on the first row. Since an extended binary tree has $N - 1$ internal nodes (where $N$ is the number of leaves), and our comparison tree has $\frac{n}{2}$ leaves</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \text{Comparisons} &= \frac{n}{2} + 2 \left( \frac{n}{2} - 1 \right) \newline
+    &= \frac{3}{2}n -2
+\end{align}</script>
+</p>
+<h3 id="max-next-max">Max &amp; Next Max</h3>
+<p>If we use a tree like before, the next maxes will all be those that lost to the first max. Since we have one on each level we have another "sub" comparison set.</p>
+<h2 id="balanced-search-trees">Balanced Search Trees</h2>
+<h3 id="slides"><a href="http://algs4.cs.princeton.edu/lectures/33BalancedSearchTrees.pdf">Slides</a></h3>
+<h3 id="2-3-trees">2-3 Trees</h3>
+<p><em>definition</em>: A <strong>2-3 Tree</strong> is a search tree which allows,</p>
+<ul>
+<li><strong>2-node</strong>: one key, two children <em>or</em></li>
+<li><strong>3-node</strong>: two keys, three children</li>
+</ul>
+<p>and we maintain,</p>
+<ul>
+<li><strong>Symmetric order</strong>: Inorder traversal yields keys in ascending order</li>
+<li><strong>Perfect balance</strong>: Every path from root to null link has same length</li>
+</ul>
+<h4 id="search">Search</h4>
+<p>Search work more-or-less as it would on a binary search tree working it's way down from the root.</p>
+<h4 id="insertion">Insertion</h4>
+<p>If we insert into a 2-node we can just make it a 3-node. If we insert into a 3-node,</p>
+<ul>
+<li>Add new key to 3-node to create temporary 4-node</li>
+<li>Move middle key in 4-node into parent</li>
+<li>Repeat up the tree, as necessary</li>
+<li>If you reach the root and it's a 4-node, split it into three 2-nodes</li>
+</ul>
+<p>Because the rest of the tree isn't affected, splitting a 4-node is a <strong>local transformation</strong> and requires <strong>constant time</strong>.</p>
+<h4 id="perfect-balance"><em>Perfect Balance</em></h4>
+<p>Perfect balance means that every path from the root to a leaf is the same length. The height is therefore,</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Tree Height</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Worst Case</td>
+<td>$\lg N$</td>
+<td>All 2-nodes</td>
+</tr>
+<tr>
+<td>Best Case</td>
+<td>$\log_3 N$</td>
+<td>All 3-nodes</td>
+</tr>
+</tbody>
+</table>
+<p>In practice this means between 12 and 20 for a million nodes and between 18 and 30 for a billion nodes. The bottom line is 2-3 trees provide <strong>guaranteed logarithmic performance</strong>.</p>
+<h4 id="implementation"><em>Implementation</em></h4>
+<p>Directly implementing a 2-3 tree is complicated, because,</p>
+<ul>
+<li>Maintaining multiple node types is cumbersome</li>
+<li>Need multiple compares to move down tree</li>
+<li>Need to move back up the tree to split 4-nodes</li>
+<li>Large number of cases for splitting</li>
+</ul>
+<p>for example,</p>
+<pre><code class="java">public void put(Key key, Value val)
+{
+  Node x = root;
+  while (x.getTheCorrectChild(key) != null)
+  {
+    x = x.getTheCorrectChildKey();
+    if (x.is4Node()) x.split();
+  }
+  if (x.is2Node()) x.make3Node(key, val);
+  else if (x.is3Node()) x.make4Node(key, val);
+}
+</code></pre>
+
+<h3 id="red-black-trees">Red-Black Trees</h3>
+<p>A better way to represent a represent a 2-3 tree using a binary tree with one edge used as the "glue" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.</p>
+<p><em>definition</em>: A <strong>Red-Black Tree</strong> is a binary search tree where,</p>
+<ul>
+<li>No node has two red links connected to it</li>
+<li>Every path from root to null link has the same number of black links (perfect black balance)</li>
+<li>Red links lean left</li>
+</ul>
+<p>this tree also has a one-to-one correspondence with a 2-3 tree.</p>
+<h4 id="search_1">Search</h4>
+<p>Search is the same as a normal binary search tree but faster because of better balance.</p>
               
             </div>
           </div>
