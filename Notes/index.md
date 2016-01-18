@@ -1,6 +1,6 @@
 # CSC 226
 
-## [Course Website](http://www.csc.uvic.ca/courses/csc226)
+## [Course Website](https://connex.csc.uvic.ca/portal/site/94c78ea1-849a-4871-9d0a-8d258e69092d)
 
 ### [Textbook Website](http://algs4.cs.princeton.edu/home/)
 
