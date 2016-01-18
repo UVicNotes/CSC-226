@@ -1,19 +1,23 @@
-# CSC 226: Algorithms and Data Structures: II
+# CSC 226
 
-## Website	
- http://www.csc.uvic.ca/courses/csc226
- 
+## [Course Website](http://www.csc.uvic.ca/courses/csc226)
+
+### [Textbook Website](http://algs4.cs.princeton.edu/home/)
+
 ## Instructor
-- Name: Frank Ruskey 
-- Email: ruskey at uvic.ca 
-- Office: ECS 564 
-- Office Hours: MR 1:30 - 3:00 p.m. (tentative)
 
-## Lecture Schedule	
-MR 8:30 - 9:50 a.m.     HSD A240 
+- **Name**: Frank Ruskey 
+- **Email**: [ruskey@uvic.ca](mailto:ruskey@uvic.ca)
+- **Office**: ECS 564 
+- **Office Hours**: Mondays and Thursdays, 1:30 PM - 3:00 PM (tentative)
+
+## Lecture Schedule
+
+Mondays and Thursdays, 8:30 AM - 9:50 AM  
+**HSD A240**
 
 ## Textbooks	
-Required:	[Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011 ](http://algs4.cs.princeton.edu/home/)
+Required:	Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011
 
 ## I-clickers	
 Students are required to bring their iClickers to each lecture; the clickers will not be used in the labs.
