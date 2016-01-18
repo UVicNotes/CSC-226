@@ -48,9 +48,10 @@ class ZOrep extends TreeAndRepresentation {
 ##Second Representation (FL): 
 Consider the following process on a given ordered forest `FF`:
 
-Labels the nodes of the forest according to their depth, with roots having depth 0.
-Convert `FF` to the corresponding binary tree `BB` (under the left-child right-sibling correspondence).
-Traverse BB in inorder to get an sequence `(array) a[0],a[1],...,a[N-1]` where `NN` is the number of nodes in `FF`.
+- Labels the nodes of the forest according to their depth, with roots having depth 0.
+- Convert `FF` to the corresponding binary tree `BB` (under the left-child right-sibling correspondence).
+- Traverse BB in inorder to get an sequence `(array) a[0],a[1],...,a[N-1]` where `NN` is the number of nodes in `FF`.
+
 For example` a[1..9] = 2 1 2 1 0 0 1 0 0` is such a sequence, as is `4 6 6 5 4 3 3 5 4 3 6 5 4 4 4 6 5 4 3 5 4 3 2 3 2 1 0 1 0 0`. As above, you need to write the constructors that convert back and forth between the tree and the sequence.
 ```Java
 class FLrep extends TreeAndRepresentation {
