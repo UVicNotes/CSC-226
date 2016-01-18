@@ -2,32 +2,32 @@
     "docs": [
         {
             "location": "/", 
-            "text": "CSC 226: Algorithms and Data Structures: II\n\n\nWebsite\n\n\nhttp://www.csc.uvic.ca/courses/csc226\n\n\nInstructor\n\n\n\n\nName: Frank Ruskey \n\n\nEmail: ruskey at uvic.ca \n\n\nOffice: ECS 564 \n\n\nOffice Hours: MR 1:30 - 3:00 p.m. (tentative)\n\n\n\n\nLecture Schedule\n\n\nMR 8:30 - 9:50 a.m.     HSD A240 \n\n\nTextbooks\n\n\nRequired:   \nAlgorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011 \n\n\nI-clickers\n\n\nStudents are required to bring their iClickers to each lecture; the clickers will not be used in the labs.\n\n\nGrading\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nParticipation\n\n\n5%\n\n\n\n\n\n\nAssignments\n\n\n25%\n\n\n\n\n\n\nMidterm\n\n\n20%\n\n\n\n\n\n\nFinal\n\n\n50%\n\n\n\n\n\n\n\n\nAssignments\n\n\n\n\n\n\n\n\nAssignment #\n\n\nWeight\n\n\nDue Date\n\n\n\n\n\n\n\n\n\n\n1\n\n\n5%\n\n\nJanuary 23\n\n\n\n\n\n\n2\n\n\n5%\n\n\nFebruary 5\n\n\n\n\n\n\n3\n\n\n5%\n\n\nMarch 18\n\n\n\n\n\n\n4\n\n\n5%\n\n\nApril 4\n\n\n\n\n\n\n5\n\n\n5%\n\n\nMarch 25", 
+            "text": "CSC 226\n\n\nCourse Website\n\n\nTextbook Website\n\n\nInstructor\n\n\n\n\nName\n: Frank Ruskey \n\n\nEmail\n: \nruskey@uvic.ca\n\n\nOffice\n: ECS 564 \n\n\nOffice Hours\n: Mondays and Thursdays, 1:30 PM - 3:00 PM (tentative)\n\n\n\n\nLecture Schedule\n\n\nMondays and Thursdays, 8:30 AM - 9:50 AM\n\n\nHSD A240\n\n\nTextbooks\n\n\nRequired:   Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011\n\n\nI-clickers\n\n\nStudents are required to bring their iClickers to each lecture; the clickers will not be used in the labs.\n\n\nGrading\n\n\n\n\n\n\n\n\nTask\n\n\nWeight\n\n\n\n\n\n\n\n\n\n\nParticipation\n\n\n5%\n\n\n\n\n\n\nAssignments\n\n\n25%\n\n\n\n\n\n\nMidterm\n\n\n20%\n\n\n\n\n\n\nFinal\n\n\n50%\n\n\n\n\n\n\n\n\nAssignments\n\n\n\n\n\n\n\n\nAssignment #\n\n\nWeight\n\n\nDue Date\n\n\n\n\n\n\n\n\n\n\n1\n\n\n5%\n\n\nJanuary 23\n\n\n\n\n\n\n2\n\n\n5%\n\n\nFebruary 5\n\n\n\n\n\n\n3\n\n\n5%\n\n\nMarch 18\n\n\n\n\n\n\n4\n\n\n5%\n\n\nApril 4\n\n\n\n\n\n\n5\n\n\n5%\n\n\nMarch 25", 
             "title": "Home"
         }, 
         {
-            "location": "/#csc-226-algorithms-and-data-structures-ii", 
+            "location": "/#csc-226", 
             "text": "", 
-            "title": "CSC 226: Algorithms and Data Structures: II"
+            "title": "CSC 226"
         }, 
         {
-            "location": "/#website", 
-            "text": "http://www.csc.uvic.ca/courses/csc226", 
-            "title": "Website"
+            "location": "/#course-website", 
+            "text": "Textbook Website", 
+            "title": "Course Website"
         }, 
         {
             "location": "/#instructor", 
-            "text": "Name: Frank Ruskey   Email: ruskey at uvic.ca   Office: ECS 564   Office Hours: MR 1:30 - 3:00 p.m. (tentative)", 
+            "text": "Name : Frank Ruskey   Email :  ruskey@uvic.ca  Office : ECS 564   Office Hours : Mondays and Thursdays, 1:30 PM - 3:00 PM (tentative)", 
             "title": "Instructor"
         }, 
         {
             "location": "/#lecture-schedule", 
-            "text": "MR 8:30 - 9:50 a.m.     HSD A240", 
+            "text": "Mondays and Thursdays, 8:30 AM - 9:50 AM  HSD A240", 
             "title": "Lecture Schedule"
         }, 
         {
             "location": "/#textbooks", 
-            "text": "Required:    Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011", 
+            "text": "Required:   Algorithms (Fourth Edition) Robert Sedgewick and Kevin Wayne Addison-Wesley, 2011", 
             "title": "Textbooks"
         }, 
         {
