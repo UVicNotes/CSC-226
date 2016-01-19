@@ -8,4 +8,4 @@
 
 If you'd like to contribute your notes please start by forking the repository. Notes should be taken in [Markdown](https://daringfireball.net/projects/markdown/) and we support MathJax (basically LaTeX) for math. Notes should be clear and concise and should have build off of the master notes for that day.
 
-If you have any questions you please feel free to [contact](ben@hawker.me) the repository maintainer.
+If you have any questions you please feel free to [contact](mailto:ben@hawker.me) the repository maintainer.
