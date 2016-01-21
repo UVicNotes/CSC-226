@@ -12,8 +12,13 @@
         }, 
         {
             "location": "/#course-website", 
-            "text": "Textbook Website", 
+            "text": "", 
             "title": "Course Website"
+        }, 
+        {
+            "location": "/#textbook-website", 
+            "text": "", 
+            "title": "Textbook Website"
         }, 
         {
             "location": "/#instructor", 
@@ -52,13 +57,73 @@
         }, 
         {
             "location": "/2016-01-04/#lecture-1-notes", 
-            "text": "January 4, 2016", 
+            "text": "", 
             "title": "Lecture 1 - Notes"
         }, 
         {
+            "location": "/2016-01-04/#january-4-2016", 
+            "text": "", 
+            "title": "January 4, 2016"
+        }, 
+        {
             "location": "/2016-01-04/#trees", 
-            "text": "Topological trees   Free trees  Rooted trees  Ordered trees  Binary trees   Free Trees   A free tree is the most general kind of tree.   definition : A  free tree  is an acyclic connected graph.   Acyclic : No cycles  Connected : There is a path between any two vertices    A  free tree  with $n$ nodes always has $e = n-1$ edges.  Example  How many trees are there with $n = 3$ vertices?  Solution  One. See above.  Rooted Trees  definition : A  rooted tree  is a tree in which some node is distinguished as the root.   Example  How many trees are there with $n = 4$ vertices?  Solution  Four. See above.  Ordered Trees  definition : An  ordered tree  is a rooted tree in which the subtrees are ordered recursively.  The tree is ordered \"horizontally\" (because that's how levels work).   Binary Trees  definition : A  Binary Tree  is either empty or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint binary trees.   Example  How many trees are there with $n = 3$ vertices?  Solution  Five. See above.  Extended Binary Trees  definition : An  Extended Binary Tree  is either a leaf node or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint extended binary trees.    A binary tree where each node has two children called leaves  A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)   An  Extended Binary Tree  with $n$ internal nodes has $l = n + 1$ leaves.", 
+            "text": "Topological trees   Free trees  Rooted trees  Ordered trees  Binary trees", 
             "title": "Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#free-trees", 
+            "text": "A free tree is the most general kind of tree.   definition : A  free tree  is an acyclic connected graph.   Acyclic : No cycles  Connected : There is a path between any two vertices    A  free tree  with $n$ nodes always has $e = n-1$ edges.", 
+            "title": "Free Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#example", 
+            "text": "How many trees are there with $n = 3$ vertices?", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-04/#solution", 
+            "text": "One. See above.", 
+            "title": "Solution"
+        }, 
+        {
+            "location": "/2016-01-04/#rooted-trees", 
+            "text": "definition : A  rooted tree  is a tree in which some node is distinguished as the root.", 
+            "title": "Rooted Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#example_1", 
+            "text": "How many trees are there with $n = 4$ vertices?", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-04/#solution_1", 
+            "text": "Four. See above.", 
+            "title": "Solution"
+        }, 
+        {
+            "location": "/2016-01-04/#ordered-trees", 
+            "text": "definition : An  ordered tree  is a rooted tree in which the subtrees are ordered recursively.  The tree is ordered \"horizontally\" (because that's how levels work).", 
+            "title": "Ordered Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#binary-trees", 
+            "text": "definition : A  Binary Tree  is either empty or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint binary trees.", 
+            "title": "Binary Trees"
+        }, 
+        {
+            "location": "/2016-01-04/#example_2", 
+            "text": "How many trees are there with $n = 3$ vertices?", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-04/#solution_2", 
+            "text": "Five. See above.", 
+            "title": "Solution"
+        }, 
+        {
+            "location": "/2016-01-04/#extended-binary-trees", 
+            "text": "definition : An  Extended Binary Tree  is either a leaf node or consists of a root, a left subtree $L$ and a right subtree $R$ both of which are disjoint extended binary trees.    A binary tree where each node has two children called leaves  A binary tree in which special nodes are added wherever a null subtree was present in the original tree so that each node in the original tree will always have 2 children (excluding an empty tree)   An  Extended Binary Tree  with $n$ internal nodes has $l = n + 1$ leaves.", 
+            "title": "Extended Binary Trees"
         }, 
         {
             "location": "/2016-01-04/#applications", 
@@ -67,13 +132,33 @@
         }, 
         {
             "location": "/2016-01-04/#representations", 
-            "text": "Binary Trees  Each node represented with a data value and left and right child nodes.   class Node {\n    Object data;\n    Node leftChild;\n    Node rightChild;\n}", 
+            "text": "", 
             "title": "Representations"
         }, 
         {
+            "location": "/2016-01-04/#binary-trees_1", 
+            "text": "Each node represented with a data value and left and right child nodes.   class Node {\n    Object data;\n    Node leftChild;\n    Node rightChild;\n}", 
+            "title": "Binary Trees"
+        }, 
+        {
             "location": "/2016-01-04/#tree-traversal", 
-            "text": "Preorder   In-order   Postorder", 
+            "text": "", 
             "title": "Tree Traversal"
+        }, 
+        {
+            "location": "/2016-01-04/#preorder", 
+            "text": "", 
+            "title": "Preorder"
+        }, 
+        {
+            "location": "/2016-01-04/#in-order", 
+            "text": "", 
+            "title": "In-order"
+        }, 
+        {
+            "location": "/2016-01-04/#postorder", 
+            "text": "", 
+            "title": "Postorder"
         }, 
         {
             "location": "/2016-01-04/#converting-a-ordered-forest-into-a-binary-tree", 
@@ -87,8 +172,13 @@
         }, 
         {
             "location": "/2016-01-07/#lecture-2-notes", 
-            "text": "January 7, 2016", 
+            "text": "", 
             "title": "Lecture 2 - Notes"
+        }, 
+        {
+            "location": "/2016-01-07/#january-7-2016", 
+            "text": "", 
+            "title": "January 7, 2016"
         }, 
         {
             "location": "/2016-01-07/#encoding-trees", 
@@ -97,8 +187,63 @@
         }, 
         {
             "location": "/2016-01-07/#union-find", 
-            "text": "Given a set of $N$ object we would like to,   Connect two objects  Test if theirs a path between two objects   To find out if a  static  graph is connected you could use DFS or BFS which is $O(|V| + |E|)$.  In this  dynamic  environment we are adding edges to the graph. We assume \"is connected to\" to be an equivalence relation. We will therefor use sets to encapsulate components, when creating edges we will check which set each node is in then join the two sets.  class UF\n{\n    UF (int n)\n\n    void union(int p,  int q)\n\n    int find(int p)\n\n    boolean connected(int p, int q)\n}  Quick Find  Data structure   Integer array  id[]  of length  N  Interpretation  id[p]  is the id of the component containing  p   Example            0 1 2 3 4 5 6 7 8 9\n    id = [0,1,1,8,8,0,0,1,8,8]  So 0, 5 and 6 are connected, etc.   find(p) : Lookup  p  by index  connected(p,q) : Do  p  and  q  have the same id?  union(p,q) : Change all entries were id is  id[p]  to  id[q]   Quick Union  Data Structure   Integer array  id[]  of length  N  Interpretation  id[i]  is the parent of  i  Root of  i  is  id[id[...id[i]...]]             0 1 2 3 4 5 6 7 8 9\n    id = [0,1,9,4,9,6,6,7,8,9]   find(p) : What is the root of  p  connected(p,q) : Do  p  and  q  have the same root?  union(p,q) : Set the id of  p 's root to the id of  q 's root   Issues  Both of the these operation are too expensive,     Algorithm  intialize  union  find  connected      Quick Find  $O(N)$  $O(N)$  $O(1)$  $O(1)$    Quick Union  $O(N)$  $O(N)$  $O(N)$  $O(N)$     Quick Find   Unions are expensive  Trees are flat but it's expensive to eep them flat   Quick Union   Trees can get very tall  Find/connect is expensive   Weighted Quick Union   Modify Quick Union to avoid tall trees  Keep track of the size of each tree  Balance by linking smaller tree to root of larger tree   Data Structure  Same as Quick Union but maintain an extra array  sz[i]  that counts the number of objects rooted at  i .   find(p) / connected(p,q) : Same as Quick Union  Union(p,q) : Link the smaller tree to the larger tree, update  sz[]   Efficiency     Algorithm  initialize  union  find  connected      Quick Find  $O(N)$  $O(N)$  $O(1)$  $O(1)$    Quick Union  $O(N)$  $O(N)$  $O(N)$  $O(N)$    Weighted Quick Union  $O(N)$  $O(\\lg{N})$  $O(\\lg{N})$  $O(\\lg{N})$", 
+            "text": "Given a set of $N$ object we would like to,   Connect two objects  Test if theirs a path between two objects   To find out if a  static  graph is connected you could use DFS or BFS which is $O(|V| + |E|)$.  In this  dynamic  environment we are adding edges to the graph. We assume \"is connected to\" to be an equivalence relation. We will therefor use sets to encapsulate components, when creating edges we will check which set each node is in then join the two sets.  class UF\n{\n    UF (int n)\n\n    void union(int p,  int q)\n\n    int find(int p)\n\n    boolean connected(int p, int q)\n}", 
             "title": "Union Find"
+        }, 
+        {
+            "location": "/2016-01-07/#quick-find", 
+            "text": "", 
+            "title": "Quick Find"
+        }, 
+        {
+            "location": "/2016-01-07/#data-structure", 
+            "text": "Integer array  id[]  of length  N  Interpretation  id[p]  is the id of the component containing  p", 
+            "title": "Data structure"
+        }, 
+        {
+            "location": "/2016-01-07/#example", 
+            "text": "0 1 2 3 4 5 6 7 8 9\n    id = [0,1,1,8,8,0,0,1,8,8]  So 0, 5 and 6 are connected, etc.   find(p) : Lookup  p  by index  connected(p,q) : Do  p  and  q  have the same id?  union(p,q) : Change all entries were id is  id[p]  to  id[q]", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-07/#quick-union", 
+            "text": "", 
+            "title": "Quick Union"
+        }, 
+        {
+            "location": "/2016-01-07/#data-structure_1", 
+            "text": "Integer array  id[]  of length  N  Interpretation  id[i]  is the parent of  i  Root of  i  is  id[id[...id[i]...]]             0 1 2 3 4 5 6 7 8 9\n    id = [0,1,9,4,9,6,6,7,8,9]   find(p) : What is the root of  p  connected(p,q) : Do  p  and  q  have the same root?  union(p,q) : Set the id of  p 's root to the id of  q 's root", 
+            "title": "Data Structure"
+        }, 
+        {
+            "location": "/2016-01-07/#issues", 
+            "text": "Both of the these operation are too expensive,     Algorithm  intialize  union  find  connected      Quick Find  $O(N)$  $O(N)$  $O(1)$  $O(1)$    Quick Union  $O(N)$  $O(N)$  $O(N)$  $O(N)$", 
+            "title": "Issues"
+        }, 
+        {
+            "location": "/2016-01-07/#quick-find_1", 
+            "text": "Unions are expensive  Trees are flat but it's expensive to eep them flat", 
+            "title": "Quick Find"
+        }, 
+        {
+            "location": "/2016-01-07/#quick-union_1", 
+            "text": "Trees can get very tall  Find/connect is expensive", 
+            "title": "Quick Union"
+        }, 
+        {
+            "location": "/2016-01-07/#weighted-quick-union", 
+            "text": "Modify Quick Union to avoid tall trees  Keep track of the size of each tree  Balance by linking smaller tree to root of larger tree", 
+            "title": "Weighted Quick Union"
+        }, 
+        {
+            "location": "/2016-01-07/#data-structure_2", 
+            "text": "Same as Quick Union but maintain an extra array  sz[i]  that counts the number of objects rooted at  i .   find(p) / connected(p,q) : Same as Quick Union  Union(p,q) : Link the smaller tree to the larger tree, update  sz[]", 
+            "title": "Data Structure"
+        }, 
+        {
+            "location": "/2016-01-07/#efficiency", 
+            "text": "Algorithm  initialize  union  find  connected      Quick Find  $O(N)$  $O(N)$  $O(1)$  $O(1)$    Quick Union  $O(N)$  $O(N)$  $O(N)$  $O(N)$    Weighted Quick Union  $O(N)$  $O(\\lg{N})$  $O(\\lg{N})$  $O(\\lg{N})$", 
+            "title": "Efficiency"
         }, 
         {
             "location": "/2016-01-11/", 
@@ -107,13 +252,28 @@
         }, 
         {
             "location": "/2016-01-11/#lecture-3-notes", 
-            "text": "January 11, 2016", 
+            "text": "", 
             "title": "Lecture 3 - Notes"
         }, 
         {
+            "location": "/2016-01-11/#january-11-2016", 
+            "text": "", 
+            "title": "January 11, 2016"
+        }, 
+        {
             "location": "/2016-01-11/#weighted-quick-union-continued", 
-            "text": "Union  Proposition , The depth of any node is $\\le \\lg N$.  Proof:  The depth goes up (by 1) only on a union with $x$ where $x$ is in the smaller tree,   the size of the tree containing $x$ is at least twice as large on such a union  the size of a tree can double at most $\\lg N$ times   Using  rank  instead of node count to track the size of the trees can reduce the space complexity since the maximum bit length for the rank is $\\le \\lg(\\lg(N))$  Compression  We make nodes along the find path point to the root.  To do this  with two passes  we can perform a second loop setting every node to the root.  To do this  with one path  this make every other node in the path point to it's grandparent.  public int find(int i)\n{\n   while (i != id[i])\n   {\n      id[i] = id[id[i]]; // -- Set the Grandparent\n      i = id[i]; \n   }\n   return i;\n}", 
+            "text": "", 
             "title": "Weighted Quick Union --- Continued"
+        }, 
+        {
+            "location": "/2016-01-11/#union", 
+            "text": "Proposition , The depth of any node is $\\le \\lg N$.  Proof:  The depth goes up (by 1) only on a union with $x$ where $x$ is in the smaller tree,   the size of the tree containing $x$ is at least twice as large on such a union  the size of a tree can double at most $\\lg N$ times   Using  rank  instead of node count to track the size of the trees can reduce the space complexity since the maximum bit length for the rank is $\\le \\lg(\\lg(N))$", 
+            "title": "Union"
+        }, 
+        {
+            "location": "/2016-01-11/#compression", 
+            "text": "We make nodes along the find path point to the root.  To do this  with two passes  we can perform a second loop setting every node to the root.  To do this  with one path  this make every other node in the path point to it's grandparent.  public int find(int i)\n{\n   while (i != id[i])\n   {\n      id[i] = id[id[i]]; // -- Set the Grandparent\n      i = id[i]; \n   }\n   return i;\n}", 
+            "title": "Compression"
         }, 
         {
             "location": "/2016-01-11/#comparison-based-sorting", 
@@ -132,28 +292,153 @@
         }, 
         {
             "location": "/2016-01-14/#comparison-based-lower-bounds", 
-            "text": "If we are solving a problem using only comparisons and there are $n$ possible outcomes, then in the worst case $\\lceil \\lg{n} \\rceil$ comparisons are required.  Example  Suppose we have an array of $n$ sorted elements and we want to find some element $x$.  We could use binary search which will give us $O(\\lg n)$. Instead we could use interpolation search $O\\left(\\lg{\\left(\\lg{n}\\right)}\\right)$.  Sorting  Let say we're sorting again,   A sorting algorithm can be viewed as transforming a totally unordered set into a totally ordered set. Below we have converter the sorting diagram into a graph of partial order sets.   Partial Order Sets  definition : A binary relation ($\\le$) on a set $S$ is a  partial order  if,   $a \\le a$ for all $a \\in S$ (reflexive)  $a \\le b$ and $b \\le a$ implies $a = b$ (anti-symmetric)  $a \\le b$ and $b \\le c$ implies $a \\le c$ (transitive)   A partially ordered set is sometimes called a  poset .  Some other variants of this ordering are,   $\\le$ Weak Partial Order  $\\lt$ Strick Partial Order  $\\equiv$ Equivalence Relations   Hasse Diagram  definition : A  Hasse Diagram  of a partially ordered set (poset) $S$ is a graph $G = (S,E)$ where $(a,c) \\in E$ if and only if $a \\lt c$ and there is no $b$ such that $a \\lt b \\lt c$  These posets can be combined into a  Hasse diagram . Below are the Hasse diagrams for sorts of size 3 and 4.", 
+            "text": "If we are solving a problem using only comparisons and there are $n$ possible outcomes, then in the worst case $\\lceil \\lg{n} \\rceil$ comparisons are required.", 
             "title": "Comparison Based Lower Bounds"
         }, 
         {
+            "location": "/2016-01-14/#example", 
+            "text": "Suppose we have an array of $n$ sorted elements and we want to find some element $x$.  We could use binary search which will give us $O(\\lg n)$. Instead we could use interpolation search $O\\left(\\lg{\\left(\\lg{n}\\right)}\\right)$.", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-14/#sorting", 
+            "text": "Let say we're sorting again,   A sorting algorithm can be viewed as transforming a totally unordered set into a totally ordered set. Below we have converter the sorting diagram into a graph of partial order sets.", 
+            "title": "Sorting"
+        }, 
+        {
+            "location": "/2016-01-14/#partial-order-sets", 
+            "text": "definition : A binary relation ($\\le$) on a set $S$ is a  partial order  if,   $a \\le a$ for all $a \\in S$ (reflexive)  $a \\le b$ and $b \\le a$ implies $a = b$ (anti-symmetric)  $a \\le b$ and $b \\le c$ implies $a \\le c$ (transitive)   A partially ordered set is sometimes called a  poset .  Some other variants of this ordering are,   $\\le$ Weak Partial Order  $\\lt$ Strick Partial Order  $\\equiv$ Equivalence Relations", 
+            "title": "Partial Order Sets"
+        }, 
+        {
+            "location": "/2016-01-14/#hasse-diagram", 
+            "text": "definition : A  Hasse Diagram  of a partially ordered set (poset) $S$ is a graph $G = (S,E)$ where $(a,c) \\in E$ if and only if $a \\lt c$ and there is no $b$ such that $a \\lt b \\lt c$  These posets can be combined into a  Hasse diagram . Below are the Hasse diagrams for sorts of size 3 and 4.", 
+            "title": "Hasse Diagram"
+        }, 
+        {
             "location": "/2016-01-18/", 
-            "text": "Lecture 5 - Notes\n\n\nJanuary 18, 2016\n  \n\n\nToday\n\n\n\n\nFinish comparison based sorting\n\n\n2-3 and Red-Black Trees\n\n\n\n\nComparison Based Bounds\n\n\n\n\n\n\n\n\nProblem\n\n\nSize\n\n\nLower Bound\n\n\nUpper Bound\n\n\nReason\n\n\n\n\n\n\n\n\n\n\nmax\n\n\nof $n$\n\n\n$O(n-1)$\n\n\n$O(n-1)$\n\n\nSee \ngraph theory proof\n\n\n\n\n\n\nmerge\n\n\n$n+n$\n\n\n$O(2n-1)$\n\n\n$O(2n-1)$\n\n\nSee \nadversarial argument proof\n\n\n\n\n\n\nsearch on ordered table\n\n\n$n$\n\n\n$O(\\lg n)$\n\n\n$\\lceil \\lg n \\rceil$\n\n\nInformation Theory\n\n\n\n\n\n\nmax \n min\n\n\nof $n$\n\n\n$\\lceil \\frac{3}{2}n -2 \\rceil$\n\n\n$\\lceil \\frac{3}{n} -2 \\rceil$\n\n\nTricky adversarial argument\n\n\n\n\n\n\nmax \n next\n\n\nof $n$\n\n\n$n + \\lceil \\lg n \\rceil - 1$\n\n\n$n + \\lceil \\lg n \\rceil - 1$\n\n\nTricky adversarial argument\n\n\n\n\n\n\nsorting\n\n\n$n$\n\n\n$O(n \\ log n)$\n\n\n$\\lceil \\lg n! \\rceil$\n\n\nInformation theory\n\n\n\n\n\n\n\n\nNote:\n I know that $O(2n-1) = O(n)$ but Ruskey insists on \"more accurate numbers\". So I've added the big-o's even though they aren't strictly necessary.\n\n\nMax\n\n\nTheorem\n: $n - 1$ is the best upper bound for finding the maximum in an unordered array.\n\n\nProof\n: Make a graph $G = (V,E)$,\n\n\n\n\n\n    V = \\text{ vertices } = \\{a_1, a_2, ..., a_n \\}\n\n\n\n\n\nEach time a comparison is made say $a_i \\lt a_j$ add the edge $(i,j)$. If the algorithm is correct, then at the end $G$ must be connected. For $G$ to be connected it must have at least $\\left|E\\right| \\ge n - 1$ edges.\n\n\nMerge\n\n\nTheorem\n: $2n - 1$ is the best upper bound for the merge operation.\n\n\nProof\n: Suppose the input is ordered so that,\n\n\n\n\n\n    a_1 \\lt b_1 \\lt \\underbrace{a_2 \\lt b_2}_\\text{not made} \\lt ... \\lt a_n \\lt b_n\n\n\n\n\n\nIf some comparison, either $a_i \\lt b_i$ or $b_i \\lt a_{i+1}$ is not made, then the algorithm will fail. This is called an \nadversarial argument\n.\n\n\nMax \n Min\n\n\nIf we use a tree to model the comparisons, we have $\\frac{n}{2}$ comparisons on the first row. Since an extended binary tree has $N - 1$ internal nodes (where $N$ is the number of leaves), and our comparison tree has $\\frac{n}{2}$ leaves\n\n\n\n\n\\begin{align}\n    \\text{Comparisons} &= \\frac{n}{2} + 2 \\left( \\frac{n}{2} - 1 \\right) \\newline\n    &= \\frac{3}{2}n -2\n\\end{align}\n\n\n\n\nMax \n Next Max\n\n\nIf we use a tree like before, the next maxes will all be those that lost to the first max. Since we have one on each level we have another \"sub\" comparison set.\n\n\nBalanced Search Trees\n\n\nSlides\n\n\n2-3 Trees\n\n\ndefinition\n: A \n2-3 Tree\n is a search tree which allows,\n\n\n\n\n2-node\n: one key, two children \nor\n\n\n3-node\n: two keys, three children\n\n\n\n\nand we maintain,\n\n\n\n\nSymmetric order\n: Inorder traversal yields keys in ascending order\n\n\nPerfect balance\n: Every path from root to null link has same length\n\n\n\n\nSearch\n\n\nSearch work more-or-less as it would on a binary search tree working it's way down from the root.\n\n\nInsertion\n\n\nIf we insert into a 2-node we can just make it a 3-node. If we insert into a 3-node,\n\n\n\n\nAdd new key to 3-node to create temporary 4-node\n\n\nMove middle key in 4-node into parent\n\n\nRepeat up the tree, as necessary\n\n\nIf you reach the root and it's a 4-node, split it into three 2-nodes\n\n\n\n\nBecause the rest of the tree isn't affected, splitting a 4-node is a \nlocal transformation\n and requires \nconstant time\n.\n\n\nPerfect Balance\n\n\nPerfect balance means that every path from the root to a leaf is the same length. The height is therefore,\n\n\n\n\n\n\n\n\n\n\nTree Height\n\n\nReason\n\n\n\n\n\n\n\n\n\n\nWorst Case\n\n\n$\\lg N$\n\n\nAll 2-nodes\n\n\n\n\n\n\nBest Case\n\n\n$\\log_3 N$\n\n\nAll 3-nodes\n\n\n\n\n\n\n\n\nIn practice this means between 12 and 20 for a million nodes and between 18 and 30 for a billion nodes. The bottom line is 2-3 trees provide \nguaranteed logarithmic performance\n.\n\n\nImplementation\n\n\nDirectly implementing a 2-3 tree is complicated, because,\n\n\n\n\nMaintaining multiple node types is cumbersome\n\n\nNeed multiple compares to move down tree\n\n\nNeed to move back up the tree to split 4-nodes\n\n\nLarge number of cases for splitting\n\n\n\n\nfor example,\n\n\npublic void put(Key key, Value val)\n{\n  Node x = root;\n  while (x.getTheCorrectChild(key) != null)\n  {\n    x = x.getTheCorrectChildKey();\n    if (x.is4Node()) x.split();\n  }\n  if (x.is2Node()) x.make3Node(key, val);\n  else if (x.is3Node()) x.make4Node(key, val);\n}\n\n\n\n\nRed-Black Trees\n\n\nA better way to represent a represent a 2-3 tree using a binary tree with one edge used as the \"glue\" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.\n\n\ndefinition\n: A \nRed-Black Tree\n is a binary search tree where,\n\n\n\n\nNo node has two red links connected to it\n\n\nEvery path from root to null link has the same number of black links (perfect black balance)\n\n\nRed links lean left\n\n\n\n\nthis tree also has a one-to-one correspondence with a 2-3 tree.\n\n\nSearch\n\n\nSearch is the same as a normal binary search tree but faster because of better balance.", 
+            "text": "Lecture 5 - Notes\n\n\nJanuary 18, 2016\n  \n\n\nToday\n\n\n\n\nFinish comparison based sorting\n\n\n2-3 and Red-Black Trees\n\n\n\n\nComparison Based Bounds\n\n\n\n\n\n\n\n\nProblem\n\n\nSize\n\n\nLower Bound\n\n\nUpper Bound\n\n\nReason\n\n\n\n\n\n\n\n\n\n\nmax\n\n\nof $n$\n\n\n$O(n-1)$\n\n\n$O(n-1)$\n\n\nSee \ngraph theory proof\n\n\n\n\n\n\nmerge\n\n\n$n+n$\n\n\n$O(2n-1)$\n\n\n$O(2n-1)$\n\n\nSee \nadversarial argument proof\n\n\n\n\n\n\nsearch on ordered table\n\n\n$n$\n\n\n$O(\\lg n)$\n\n\n$\\lceil \\lg n \\rceil$\n\n\nInformation Theory\n\n\n\n\n\n\nmax \n min\n\n\nof $n$\n\n\n$\\lceil \\frac{3}{2}n -2 \\rceil$\n\n\n$\\lceil \\frac{3}{n} -2 \\rceil$\n\n\nTricky adversarial argument\n\n\n\n\n\n\nmax \n next\n\n\nof $n$\n\n\n$n + \\lceil \\lg n \\rceil - 1$\n\n\n$n + \\lceil \\lg n \\rceil - 1$\n\n\nTricky adversarial argument\n\n\n\n\n\n\nsorting\n\n\n$n$\n\n\n$O(n \\ log n)$\n\n\n$\\lceil \\lg n! \\rceil$\n\n\nInformation theory\n\n\n\n\n\n\n\n\nNote:\n I know that $O(2n-1) = O(n)$ but Ruskey insists on \"more accurate numbers\". So I've added the big-o's even though they aren't strictly necessary.\n\n\nMax\n\n\nTheorem\n: $n - 1$ is the best upper bound for finding the maximum in an unordered array.\n\n\nProof\n: Make a graph $G = (V,E)$,\n\n\n\n\n\n    V = \\text{ vertices } = \\{a_1, a_2, ..., a_n \\}\n\n\n\n\n\nEach time a comparison is made say $a_i \\lt a_j$ add the edge $(i,j)$. If the algorithm is correct, then at the end $G$ must be connected. For $G$ to be connected it must have at least $\\left|E\\right| \\ge n - 1$ edges.\n\n\nMerge\n\n\nTheorem\n: $2n - 1$ is the best upper bound for the merge operation.\n\n\nProof\n: Suppose the input is ordered so that,\n\n\n\n\n\n    a_1 \\lt b_1 \\lt \\underbrace{a_2 \\lt b_2}_\\text{not made} \\lt ... \\lt a_n \\lt b_n\n\n\n\n\n\nIf some comparison, either $a_i \\lt b_i$ or $b_i \\lt a_{i+1}$ is not made, then the algorithm will fail. This is called an \nadversarial argument\n.\n\n\nMax \n Min\n\n\nIf we use a tree to model the comparisons, we have $\\frac{n}{2}$ comparisons on the first row. Since an extended binary tree has $N - 1$ internal nodes (where $N$ is the number of leaves), and our comparison tree has $\\frac{n}{2}$ leaves\n\n\n\n\n\\begin{align}\n    \\text{Comparisons} &= \\frac{n}{2} + 2 \\left( \\frac{n}{2} - 1 \\right) \\newline\n    &= \\frac{3}{2}n -2\n\\end{align}\n\n\n\n\nMax \n Next Max\n\n\nIf we use a tree like before, the next maxes will all be those that lost to the first max. Since we have one on each level we have another \"sub\" comparison set.\n\n\nBalanced Search Trees\n\n\nSlides\n\n\n2-3 Trees\n\n\ndefinition\n: A \n2-3 Tree\n is a search tree which allows,\n\n\n\n\n2-node\n: one key, two children \nor\n\n\n3-node\n: two keys, three children\n\n\n\n\nand we maintain,\n\n\n\n\nSymmetric order\n: Inorder traversal yields keys in ascending order\n\n\nPerfect balance\n: Every path from root to null link has same length\n\n\n\n\nSearch\n\n\nSearch work more-or-less as it would on a binary search tree working it's way down from the root.\n\n\nInsertion\n\n\nIf we insert into a 2-node we can just make it a 3-node. If we insert into a 3-node,\n\n\n\n\nAdd new key to 3-node to create temporary 4-node\n\n\nMove middle key in 4-node into parent\n\n\nRepeat up the tree, as necessary\n\n\nIf you reach the root and it's a 4-node, split it into three 2-nodes\n\n\n\n\nBecause the rest of the tree isn't affected, splitting a 4-node is a \nlocal transformation\n and requires \nconstant time\n.\n\n\nPerfect Balance\n\n\nPerfect balance means that every path from the root to a leaf is the same length. The height is therefore,\n\n\n\n\n\n\n\n\n\n\nTree Height\n\n\nReason\n\n\n\n\n\n\n\n\n\n\nWorst Case\n\n\n$\\lg N$\n\n\nAll 2-nodes\n\n\n\n\n\n\nBest Case\n\n\n$\\log_3 N$\n\n\nAll 3-nodes\n\n\n\n\n\n\n\n\nIn practice this means between 12 and 20 for a million nodes and between 18 and 30 for a billion nodes. The bottom line is 2-3 trees provide \nguaranteed logarithmic performance\n.\n\n\nImplementation\n\n\nDirectly implementing a 2-3 tree is complicated, because,\n\n\n\n\nMaintaining multiple node types is cumbersome\n\n\nNeed multiple compares to move down tree\n\n\nNeed to move back up the tree to split 4-nodes\n\n\nLarge number of cases for splitting\n\n\n\n\nfor example,\n\n\npublic void put(Key key, Value val)\n{\n  Node x = root;\n  while (x.getTheCorrectChild(key) != null)\n  {\n    x = x.getTheCorrectChildKey();\n    if (x.is4Node()) x.split();\n  }\n  if (x.is2Node()) x.make3Node(key, val);\n  else if (x.is3Node()) x.make4Node(key, val);\n}", 
             "title": "2016 01 18"
         }, 
         {
             "location": "/2016-01-18/#lecture-5-notes", 
-            "text": "January 18, 2016     Today   Finish comparison based sorting  2-3 and Red-Black Trees", 
+            "text": "January 18, 2016", 
             "title": "Lecture 5 - Notes"
         }, 
         {
+            "location": "/2016-01-18/#today", 
+            "text": "Finish comparison based sorting  2-3 and Red-Black Trees", 
+            "title": "Today"
+        }, 
+        {
             "location": "/2016-01-18/#comparison-based-bounds", 
-            "text": "Problem  Size  Lower Bound  Upper Bound  Reason      max  of $n$  $O(n-1)$  $O(n-1)$  See  graph theory proof    merge  $n+n$  $O(2n-1)$  $O(2n-1)$  See  adversarial argument proof    search on ordered table  $n$  $O(\\lg n)$  $\\lceil \\lg n \\rceil$  Information Theory    max   min  of $n$  $\\lceil \\frac{3}{2}n -2 \\rceil$  $\\lceil \\frac{3}{n} -2 \\rceil$  Tricky adversarial argument    max   next  of $n$  $n + \\lceil \\lg n \\rceil - 1$  $n + \\lceil \\lg n \\rceil - 1$  Tricky adversarial argument    sorting  $n$  $O(n \\ log n)$  $\\lceil \\lg n! \\rceil$  Information theory     Note:  I know that $O(2n-1) = O(n)$ but Ruskey insists on \"more accurate numbers\". So I've added the big-o's even though they aren't strictly necessary.  Max  Theorem : $n - 1$ is the best upper bound for finding the maximum in an unordered array.  Proof : Make a graph $G = (V,E)$,   \n    V = \\text{ vertices } = \\{a_1, a_2, ..., a_n \\}   Each time a comparison is made say $a_i \\lt a_j$ add the edge $(i,j)$. If the algorithm is correct, then at the end $G$ must be connected. For $G$ to be connected it must have at least $\\left|E\\right| \\ge n - 1$ edges.  Merge  Theorem : $2n - 1$ is the best upper bound for the merge operation.  Proof : Suppose the input is ordered so that,   \n    a_1 \\lt b_1 \\lt \\underbrace{a_2 \\lt b_2}_\\text{not made} \\lt ... \\lt a_n \\lt b_n   If some comparison, either $a_i \\lt b_i$ or $b_i \\lt a_{i+1}$ is not made, then the algorithm will fail. This is called an  adversarial argument .  Max   Min  If we use a tree to model the comparisons, we have $\\frac{n}{2}$ comparisons on the first row. Since an extended binary tree has $N - 1$ internal nodes (where $N$ is the number of leaves), and our comparison tree has $\\frac{n}{2}$ leaves   \\begin{align}\n    \\text{Comparisons} &= \\frac{n}{2} + 2 \\left( \\frac{n}{2} - 1 \\right) \\newline\n    &= \\frac{3}{2}n -2\n\\end{align}   Max   Next Max  If we use a tree like before, the next maxes will all be those that lost to the first max. Since we have one on each level we have another \"sub\" comparison set.", 
+            "text": "Problem  Size  Lower Bound  Upper Bound  Reason      max  of $n$  $O(n-1)$  $O(n-1)$  See  graph theory proof    merge  $n+n$  $O(2n-1)$  $O(2n-1)$  See  adversarial argument proof    search on ordered table  $n$  $O(\\lg n)$  $\\lceil \\lg n \\rceil$  Information Theory    max   min  of $n$  $\\lceil \\frac{3}{2}n -2 \\rceil$  $\\lceil \\frac{3}{n} -2 \\rceil$  Tricky adversarial argument    max   next  of $n$  $n + \\lceil \\lg n \\rceil - 1$  $n + \\lceil \\lg n \\rceil - 1$  Tricky adversarial argument    sorting  $n$  $O(n \\ log n)$  $\\lceil \\lg n! \\rceil$  Information theory     Note:  I know that $O(2n-1) = O(n)$ but Ruskey insists on \"more accurate numbers\". So I've added the big-o's even though they aren't strictly necessary.", 
             "title": "Comparison Based Bounds"
         }, 
         {
+            "location": "/2016-01-18/#max", 
+            "text": "Theorem : $n - 1$ is the best upper bound for finding the maximum in an unordered array.  Proof : Make a graph $G = (V,E)$,   \n    V = \\text{ vertices } = \\{a_1, a_2, ..., a_n \\}   Each time a comparison is made say $a_i \\lt a_j$ add the edge $(i,j)$. If the algorithm is correct, then at the end $G$ must be connected. For $G$ to be connected it must have at least $\\left|E\\right| \\ge n - 1$ edges.", 
+            "title": "Max"
+        }, 
+        {
+            "location": "/2016-01-18/#merge", 
+            "text": "Theorem : $2n - 1$ is the best upper bound for the merge operation.  Proof : Suppose the input is ordered so that,   \n    a_1 \\lt b_1 \\lt \\underbrace{a_2 \\lt b_2}_\\text{not made} \\lt ... \\lt a_n \\lt b_n   If some comparison, either $a_i \\lt b_i$ or $b_i \\lt a_{i+1}$ is not made, then the algorithm will fail. This is called an  adversarial argument .", 
+            "title": "Merge"
+        }, 
+        {
+            "location": "/2016-01-18/#max-min", 
+            "text": "If we use a tree to model the comparisons, we have $\\frac{n}{2}$ comparisons on the first row. Since an extended binary tree has $N - 1$ internal nodes (where $N$ is the number of leaves), and our comparison tree has $\\frac{n}{2}$ leaves   \\begin{align}\n    \\text{Comparisons} &= \\frac{n}{2} + 2 \\left( \\frac{n}{2} - 1 \\right) \\newline\n    &= \\frac{3}{2}n -2\n\\end{align}", 
+            "title": "Max &amp; Min"
+        }, 
+        {
+            "location": "/2016-01-18/#max-next-max", 
+            "text": "If we use a tree like before, the next maxes will all be those that lost to the first max. Since we have one on each level we have another \"sub\" comparison set.", 
+            "title": "Max &amp; Next Max"
+        }, 
+        {
             "location": "/2016-01-18/#balanced-search-trees", 
-            "text": "Slides  2-3 Trees  definition : A  2-3 Tree  is a search tree which allows,   2-node : one key, two children  or  3-node : two keys, three children   and we maintain,   Symmetric order : Inorder traversal yields keys in ascending order  Perfect balance : Every path from root to null link has same length   Search  Search work more-or-less as it would on a binary search tree working it's way down from the root.  Insertion  If we insert into a 2-node we can just make it a 3-node. If we insert into a 3-node,   Add new key to 3-node to create temporary 4-node  Move middle key in 4-node into parent  Repeat up the tree, as necessary  If you reach the root and it's a 4-node, split it into three 2-nodes   Because the rest of the tree isn't affected, splitting a 4-node is a  local transformation  and requires  constant time .  Perfect Balance  Perfect balance means that every path from the root to a leaf is the same length. The height is therefore,      Tree Height  Reason      Worst Case  $\\lg N$  All 2-nodes    Best Case  $\\log_3 N$  All 3-nodes     In practice this means between 12 and 20 for a million nodes and between 18 and 30 for a billion nodes. The bottom line is 2-3 trees provide  guaranteed logarithmic performance .  Implementation  Directly implementing a 2-3 tree is complicated, because,   Maintaining multiple node types is cumbersome  Need multiple compares to move down tree  Need to move back up the tree to split 4-nodes  Large number of cases for splitting   for example,  public void put(Key key, Value val)\n{\n  Node x = root;\n  while (x.getTheCorrectChild(key) != null)\n  {\n    x = x.getTheCorrectChildKey();\n    if (x.is4Node()) x.split();\n  }\n  if (x.is2Node()) x.make3Node(key, val);\n  else if (x.is3Node()) x.make4Node(key, val);\n}  Red-Black Trees  A better way to represent a represent a 2-3 tree using a binary tree with one edge used as the \"glue\" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.  definition : A  Red-Black Tree  is a binary search tree where,   No node has two red links connected to it  Every path from root to null link has the same number of black links (perfect black balance)  Red links lean left   this tree also has a one-to-one correspondence with a 2-3 tree.  Search  Search is the same as a normal binary search tree but faster because of better balance.", 
+            "text": "", 
             "title": "Balanced Search Trees"
+        }, 
+        {
+            "location": "/2016-01-18/#slides", 
+            "text": "", 
+            "title": "Slides"
+        }, 
+        {
+            "location": "/2016-01-18/#2-3-trees", 
+            "text": "definition : A  2-3 Tree  is a search tree which allows,   2-node : one key, two children  or  3-node : two keys, three children   and we maintain,   Symmetric order : Inorder traversal yields keys in ascending order  Perfect balance : Every path from root to null link has same length", 
+            "title": "2-3 Trees"
+        }, 
+        {
+            "location": "/2016-01-18/#search", 
+            "text": "Search work more-or-less as it would on a binary search tree working it's way down from the root.", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/2016-01-18/#insertion", 
+            "text": "If we insert into a 2-node we can just make it a 3-node. If we insert into a 3-node,   Add new key to 3-node to create temporary 4-node  Move middle key in 4-node into parent  Repeat up the tree, as necessary  If you reach the root and it's a 4-node, split it into three 2-nodes   Because the rest of the tree isn't affected, splitting a 4-node is a  local transformation  and requires  constant time .", 
+            "title": "Insertion"
+        }, 
+        {
+            "location": "/2016-01-18/#perfect-balance", 
+            "text": "Perfect balance means that every path from the root to a leaf is the same length. The height is therefore,      Tree Height  Reason      Worst Case  $\\lg N$  All 2-nodes    Best Case  $\\log_3 N$  All 3-nodes     In practice this means between 12 and 20 for a million nodes and between 18 and 30 for a billion nodes. The bottom line is 2-3 trees provide  guaranteed logarithmic performance .", 
+            "title": "Perfect Balance"
+        }, 
+        {
+            "location": "/2016-01-18/#implementation", 
+            "text": "Directly implementing a 2-3 tree is complicated, because,   Maintaining multiple node types is cumbersome  Need multiple compares to move down tree  Need to move back up the tree to split 4-nodes  Large number of cases for splitting   for example,  public void put(Key key, Value val)\n{\n  Node x = root;\n  while (x.getTheCorrectChild(key) != null)\n  {\n    x = x.getTheCorrectChildKey();\n    if (x.is4Node()) x.split();\n  }\n  if (x.is2Node()) x.make3Node(key, val);\n  else if (x.is3Node()) x.make4Node(key, val);\n}", 
+            "title": "Implementation"
+        }, 
+        {
+            "location": "/2016-01-21/", 
+            "text": "Lecture 6 - Notes\n\n\nJanuary 21, 2016\n  \n\n\nBalance Search Trees - Contined\n\n\nRed-Black Trees\n\n\nA better way to represent a represent a 2-3 tree using a binary tree with one edge used as the \"glue\" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.\n\n\ndefinition\n: A \nRed-Black Tree\n is a binary search tree where,\n\n\n\n\nNo node has two red links connected to it\n\n\nEvery path from root to null link has the same number of black links (perfect black balance)\n\n\nRed links lean left\n\n\n\n\nthis tree also has a one-to-one correspondence with a 2-3 tree. To map the correspondence the \nred\n links are used to \"join\" 3-nodes.\n\n\nSearch\n\n\nSearch is the same as a normal binary search tree but faster because of better balance.\n\n\nLeft Rotation\n\n\nTo bring a (temporarily) right leaning edge to the left, we need to do a left rotation,\n\n\n\n\nprivate Node rotateLeft(Node h)\n{\n   assert isRed(h.right);\n   Node x = h.right;\n   h.right = x.left;\n   x.left = h;\n   x.color = h.color;\n   h.color = RED;\n   return x;\n}\n\n\n\n\nRight Rotation\n\n\nTo bring a left leaning edge to the right (temporarily), we do a right rotation,\n\n\n\n\nprivate Node rotateRight(Node h)\n{\n   assert isRed(h.left);\n   Node x = h.left;\n   h.left = x.right;\n   x.right = h;\n   x.color = h.color;\n   h.color = RED;\n   return x;\n}\n\n\n\n\nColor Flip\n\n\nTo recolour to split a (temporary) 4-node,\n\n\nprivate void flipColors(Node h)\n{\n   assert !isRed(h);\n   assert isRed(h.left);\n   assert isRed(h.right);\n   h.color = RED;\n   h.left.color = BLACK;\n   h.right.color = BLACK;\n}\n\n\n\n\nInsertion\n\n\nInsert a node we navigate the Binary Search Tree and perform the insertion using a red edge (so we maintain perfect black balance). Then we move back up the tree fixing any issues we create.\n\n\n\n\nRight child red, left child black: rotate left.\n\n\nLeft child, left-left grandchild red: rotate right.\n\n\nBoth children red: flip colors.\n\n\n\n\nprivate Node put(Node h, Key key, Value val)\n{\n   if (h == null) return new Node(key, val, RED);\n   int cmp = key.compareTo(h.key);\n   if      (cmp  \n 0) h.left  = put(h.left,  key, val);\n   else if (cmp  \n 0) h.right = put(h.right, key, val);\n   else if (cmp == 0) h.val = val;\n\n    if (isRed(h.right) \n !isRed(h.left))     h = rotateLeft(h);\n    if (isRed(h.left)  \n isRed(h.left.left)) h = rotateRight(h);\n    if (isRed(h.left)  \n isRed(h.right))     flipColors(h);\n    return h; \n}\n\n\n\n\nBalance\n\n\nProperty\n: The height of the tree is $\\le 2 \\lg N$ in the worst case.", 
+            "title": "2016 01 21"
+        }, 
+        {
+            "location": "/2016-01-21/#lecture-6-notes", 
+            "text": "January 21, 2016", 
+            "title": "Lecture 6 - Notes"
+        }, 
+        {
+            "location": "/2016-01-21/#balance-search-trees-contined", 
+            "text": "", 
+            "title": "Balance Search Trees - Contined"
+        }, 
+        {
+            "location": "/2016-01-21/#red-black-trees", 
+            "text": "A better way to represent a represent a 2-3 tree using a binary tree with one edge used as the \"glue\" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.  definition : A  Red-Black Tree  is a binary search tree where,   No node has two red links connected to it  Every path from root to null link has the same number of black links (perfect black balance)  Red links lean left   this tree also has a one-to-one correspondence with a 2-3 tree. To map the correspondence the  red  links are used to \"join\" 3-nodes.", 
+            "title": "Red-Black Trees"
+        }, 
+        {
+            "location": "/2016-01-21/#search", 
+            "text": "Search is the same as a normal binary search tree but faster because of better balance.", 
+            "title": "Search"
+        }, 
+        {
+            "location": "/2016-01-21/#left-rotation", 
+            "text": "To bring a (temporarily) right leaning edge to the left, we need to do a left rotation,   private Node rotateLeft(Node h)\n{\n   assert isRed(h.right);\n   Node x = h.right;\n   h.right = x.left;\n   x.left = h;\n   x.color = h.color;\n   h.color = RED;\n   return x;\n}", 
+            "title": "Left Rotation"
+        }, 
+        {
+            "location": "/2016-01-21/#right-rotation", 
+            "text": "To bring a left leaning edge to the right (temporarily), we do a right rotation,   private Node rotateRight(Node h)\n{\n   assert isRed(h.left);\n   Node x = h.left;\n   h.left = x.right;\n   x.right = h;\n   x.color = h.color;\n   h.color = RED;\n   return x;\n}", 
+            "title": "Right Rotation"
+        }, 
+        {
+            "location": "/2016-01-21/#color-flip", 
+            "text": "To recolour to split a (temporary) 4-node,  private void flipColors(Node h)\n{\n   assert !isRed(h);\n   assert isRed(h.left);\n   assert isRed(h.right);\n   h.color = RED;\n   h.left.color = BLACK;\n   h.right.color = BLACK;\n}", 
+            "title": "Color Flip"
+        }, 
+        {
+            "location": "/2016-01-21/#insertion", 
+            "text": "Insert a node we navigate the Binary Search Tree and perform the insertion using a red edge (so we maintain perfect black balance). Then we move back up the tree fixing any issues we create.   Right child red, left child black: rotate left.  Left child, left-left grandchild red: rotate right.  Both children red: flip colors.   private Node put(Node h, Key key, Value val)\n{\n   if (h == null) return new Node(key, val, RED);\n   int cmp = key.compareTo(h.key);\n   if      (cmp    0) h.left  = put(h.left,  key, val);\n   else if (cmp    0) h.right = put(h.right, key, val);\n   else if (cmp == 0) h.val = val;\n\n    if (isRed(h.right)   !isRed(h.left))     h = rotateLeft(h);\n    if (isRed(h.left)    isRed(h.left.left)) h = rotateRight(h);\n    if (isRed(h.left)    isRed(h.right))     flipColors(h);\n    return h; \n}", 
+            "title": "Insertion"
+        }, 
+        {
+            "location": "/2016-01-21/#balance", 
+            "text": "Property : The height of the tree is $\\le 2 \\lg N$ in the worst case.", 
+            "title": "Balance"
         }
     ]
 }

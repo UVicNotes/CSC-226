@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 01 11 - CSC 226</title>
+  <title>2016 01 21 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 01 11";
-    var mkdocs_page_input_path = "2016-01-11.md";
-    var mkdocs_page_url = "/2016-01-11/";
+    var mkdocs_page_name = "2016 01 21";
+    var mkdocs_page_input_path = "2016-01-21.md";
+    var mkdocs_page_url = "/2016-01-21/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -78,21 +78,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 01 11</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-3-notes">Lecture 3 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#january-11-2016">January 11, 2016</a></li>
-                
-                    <li><a class="toctree-l4" href="#weighted-quick-union-continued">Weighted Quick Union --- Continued</a></li>
-                
-                    <li><a class="toctree-l4" href="#comparison-based-sorting">Comparison Based Sorting</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-11/">2016 01 11</a>
         
     </li>
 <li>
@@ -112,8 +99,17 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-01-21/">2016 01 21</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 01 21</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-6-notes">Lecture 6 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#balance-search-trees-contined">Balance Search Trees - Contined</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -140,7 +136,7 @@
     
       
     
-    <li>2016 01 11</li>
+    <li>2016 01 21</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -154,63 +150,87 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-3-notes">Lecture 3 - Notes</h1>
-<h3 id="january-11-2016">January 11, 2016</h3>
-<h2 id="weighted-quick-union-continued">Weighted Quick Union --- Continued</h2>
-<h3 id="union">Union</h3>
-<p><strong>Proposition</strong>, The depth of any node is $\le \lg N$.</p>
-<p><strong>Proof:</strong></p>
-<p>The depth goes up (by 1) only on a union with $x$ where $x$ is in the smaller tree,</p>
+                <h1 id="lecture-6-notes">Lecture 6 - Notes</h1>
+<p><strong>January 21, 2016</strong>  </p>
+<h2 id="balance-search-trees-contined">Balance Search Trees - Contined</h2>
+<h3 id="red-black-trees">Red-Black Trees</h3>
+<p>A better way to represent a represent a 2-3 tree using a binary tree with one edge used as the "glue" edge to create a 3-node. We apply the arbitrary restriction the the red link are on the left.</p>
+<p><em>definition</em>: A <strong>Red-Black Tree</strong> is a binary search tree where,</p>
 <ul>
-<li>the size of the tree containing $x$ is at least twice as large on such a union</li>
-<li>the size of a tree can double at most $\lg N$ times</li>
+<li>No node has two red links connected to it</li>
+<li>Every path from root to null link has the same number of black links (perfect black balance)</li>
+<li>Red links lean left</li>
 </ul>
-<p>Using <strong>rank</strong> instead of node count to track the size of the trees can reduce the space complexity since the maximum bit length for the rank is $\le \lg(\lg(N))$</p>
-<h3 id="compression">Compression</h3>
-<p>We make nodes along the find path point to the root.</p>
-<p>To do this <strong>with two passes</strong> we can perform a second loop setting every node to the root.</p>
-<p>To do this <strong>with one path</strong> this make every other node in the path point to it's grandparent.</p>
-<pre><code class="c">public int find(int i)
+<p>this tree also has a one-to-one correspondence with a 2-3 tree. To map the correspondence the <em>red</em> links are used to "join" 3-nodes.</p>
+<h4 id="search">Search</h4>
+<p>Search is the same as a normal binary search tree but faster because of better balance.</p>
+<h4 id="left-rotation">Left Rotation</h4>
+<p>To bring a (temporarily) right leaning edge to the left, we need to do a left rotation,</p>
+<p><img alt="Example of a left rotation" src="../img/Left-Rotation.svg" /></p>
+<pre><code class="java">private Node rotateLeft(Node h)
 {
-   while (i != id[i])
-   {
-      id[i] = id[id[i]]; //&lt;-- Set the Grandparent
-      i = id[i]; 
-   }
-   return i;
+   assert isRed(h.right);
+   Node x = h.right;
+   h.right = x.left;
+   x.left = h;
+   x.color = h.color;
+   h.color = RED;
+   return x;
 }
 </code></pre>
 
-<h2 id="comparison-based-sorting">Comparison Based Sorting</h2>
-<p>In <strong>Comparison Based Sorting</strong> like,</p>
+<h4 id="right-rotation">Right Rotation</h4>
+<p>To bring a left leaning edge to the right (temporarily), we do a right rotation,</p>
+<p><img alt="Example of a right rotation" src="../img/Right-Rotation.svg" /></p>
+<pre><code class="java">private Node rotateRight(Node h)
+{
+   assert isRed(h.left);
+   Node x = h.left;
+   h.left = x.right;
+   x.right = h;
+   x.color = h.color;
+   h.color = RED;
+   return x;
+}
+</code></pre>
+
+<h4 id="color-flip">Color Flip</h4>
+<p>To recolour to split a (temporary) 4-node,</p>
+<pre><code class="java">private void flipColors(Node h)
+{
+   assert !isRed(h);
+   assert isRed(h.left);
+   assert isRed(h.right);
+   h.color = RED;
+   h.left.color = BLACK;
+   h.right.color = BLACK;
+}
+</code></pre>
+
+<h4 id="insertion">Insertion</h4>
+<p>Insert a node we navigate the Binary Search Tree and perform the insertion using a red edge (so we maintain perfect black balance). Then we move back up the tree fixing any issues we create.</p>
 <ul>
-<li>Mergesort</li>
-<li>Quicksort</li>
-<li>Heapsort</li>
+<li>Right child red, left child black: rotate left.</li>
+<li>Left child, left-left grandchild red: rotate right.</li>
+<li>Both children red: flip colors.</li>
 </ul>
-<p>Let's say we are sorting something <code>sort([a,b,c])</code>,</p>
-<p><img alt="Example Sorting Tree" src="../img/Sorting-Tree.png" /></p>
-<p>This comparison tree has 6 leaves. In general it has to be $\ge N!$ (because that's how many possible combinations there are).</p>
-<p>The height is the worst case number of comparisons, in this case 3. What is the minimum height $h$ of an extended binary tree with $n$ leaves?</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    n &\le 2^h \newline
-    \lceil \lg n \rceil &\le h
-\end{align}</script>
-</p>
-<p>Therefore the height for sorting is $\ge \lceil \lg{N!} \rceil$. We can bound $N!$ with,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \left( \frac{n}{2} \right) ^ \frac{n}{2} \le N! \le N^N
-\end{align}</script>
-</p>
-<p>and by taking the log,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \frac{n}{2} \lg \left( \frac{n}{2} \right) \le \lg{N!} \le N \lg {N}
-\end{align}</script>
-</p>
-<p>So comparison based sorting requires $\Omega (N \lg N)$ comparisons.</p>
+<pre><code class="java">private Node put(Node h, Key key, Value val)
+{
+   if (h == null) return new Node(key, val, RED);
+   int cmp = key.compareTo(h.key);
+   if      (cmp  &lt; 0) h.left  = put(h.left,  key, val);
+   else if (cmp  &gt; 0) h.right = put(h.right, key, val);
+   else if (cmp == 0) h.val = val;
+
+    if (isRed(h.right) &amp;&amp; !isRed(h.left))     h = rotateLeft(h);
+    if (isRed(h.left)  &amp;&amp; isRed(h.left.left)) h = rotateRight(h);
+    if (isRed(h.left)  &amp;&amp; isRed(h.right))     flipColors(h);
+    return h; 
+}
+</code></pre>
+
+<h4 id="balance">Balance</h4>
+<p><strong>Property</strong>: The height of the tree is $\le 2 \lg N$ in the worst case.</p>
               
             </div>
           </div>
@@ -218,10 +238,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-01-14/" class="btn btn-neutral float-right" title="2016 01 14">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-01-07/" class="btn btn-neutral" title="2016 01 07"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-01-18/" class="btn btn-neutral" title="2016 01 18"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -249,10 +267,8 @@
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-01-07/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-01-18/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-01-14/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
