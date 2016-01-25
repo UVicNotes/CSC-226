@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Andrei Taylor">
+  
+  <title>2016 01 25 - CSC 226</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "2016 01 25";
+    var mkdocs_page_input_path = "2016-01-25.md";
+    var mkdocs_page_url = "/2016-01-25/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script src="https://cdn.rawgit.com/UVicNotes/UVicNotes/81099952ba789829fab1840e5d26cb5a2bf62011/helpers/mathjax.js"></script>
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> CSC 226</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-04/">2016 01 04</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-07/">2016 01 07</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-11/">2016 01 11</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-14/">2016 01 14</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-18/">2016 01 18</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-01-21/">2016 01 21</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 01 25</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-7-notes">Lecture 7 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#binary-trees">Binary Trees</a></li>
+                
+                    <li><a class="toctree-l4" href="#binomial-coefficients">Binomial Coefficients</a></li>
+                
+                    <li><a class="toctree-l4" href="#binomial-queues">Binomial Queues</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">CSC 226</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>2016 01 25</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lecture-7-notes">Lecture 7 - Notes</h1>
+<p><strong>January 25, 2016</strong>  </p>
+<h2 id="binary-trees">Binary Trees</h2>
+<p>How many nodes in a  binary tree with height $h$?</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    h + 1 &\le n \newline
+    &\le 1 + 2 + 4 + ... + 2^h \newline
+    &= 2^{h+1} - 1
+\end{align}</script>
+</p>
+<p>and conversely,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    n &\le 2^{h+1} - 1 \newline
+    n + 1 &\le 2^{h+1} \newline
+    \lg (n + 1) &\le h+1 \newline
+    \lg (n + 1) - 1 &\le h \newline
+    \left\lceil\lg \left(n + 1\right) - 1\right\rceil &\le h \newline
+\end{align}</script>
+</p>
+<h2 id="binomial-coefficients">Binomial Coefficients</h2>
+<p>Let $n \choose k$ denote the number of $k$-subsets of an $n$-set. $2$-subsets of the set ${a,b,c,d}$ are</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \{a,b\} \newline
+    \{a,c\} \newline
+    \{a,d\} \newline
+    \{b,c\} \newline
+    \{b,d\} \newline
+    \{c,d\} \newline
+\end{align}</script>
+</p>
+<p>In this case,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{4}{2} &= 6 \newline
+    \binom{4}{1} &= \binom{4}{3} = 4 \newline
+\end{align}</script>
+</p>
+<p>In general,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{n}{k} = \binom{n}{n-k}
+\end{align}</script>
+</p>
+<p>the function $f$ that maps ${a_0,a_1,\ldots,a_k}$ to $[n] \setminus {a_0,a_1,\ldots,a_k}$ where $[n] = {1,2,\ldots,n}$, is a <a href="https://en.wikipedia.org/wiki/Bijection">bijection</a>. For example</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    f\left(\left\{ n \right\} \right) = \{b,c,d\}
+\end{align}</script>
+</p>
+<p><strong>Claim</strong>: Pascals triangle equality, e.g.,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{n}{k} = \binom{n-1}{k} + \binom{n-1}{k-1}
+\end{align}</script>
+</p>
+<p><strong>Proof</strong>: Classify the $k$-subsets of $[n]$ according to whether they contain $n$ or not. There are $\binom{n-1}{k-1}$ $k$-subsets that contain $n$ and $\binom{n-1}{k}$ $k$-subsets that do <em>not</em> contain $n$.</p>
+<p>We can demonstrate this with pascals triangle.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>1</strong></td>
+<td>1</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>1</td>
+<td>5</td>
+<td>10</td>
+<td>10</td>
+<td>5</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td>1</td>
+<td>6</td>
+<td>15</td>
+<td>20</td>
+<td>15</td>
+<td>6</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Claim</strong>:</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{n}{k} = \frac{n!}{k!(n-k)!}
+\end{align}</script>
+</p>
+<p><em>Shepherd Principal</em>: We can prove this using the Shepherd principal. Suppose we are counting sheep and they really like each other so they have squished together into one blob. Luckily the sheep are standing on a sheet of glass so we can go underneath and count the feet. Divide by four and we have the number of sheep.</p>
+<p>So if a set (the sheep) has been divided into equivalence classes (the feet) and each equivalence class has the same number for elements. Then the number of equivalence classes is</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \frac{\text{Number of Elements}}{\text{Number in Each Class}}
+\end{align}</script>
+</p>
+<p><strong>Proof</strong>: There are $n(n-1) \ldots (n-k+1)$ $k$-sequences in an $n$-set. Each $k$-subset corresponds to $k!$ of these. Thus,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{n}{k} &= \frac{n(n-1) \ldots (n-k+1)}{k!} \newline
+    &= \frac{n(n-1) \ldots (n-k+1)}{k!} \cdot \frac{(n-k)!}{(n-k)!} \newline
+    &= \frac{n!}{k!(n-k)!}\newline
+\end{align}</script>
+</p>
+<h4 id="example">Example</h4>
+<p>How many binary sequences are there with $s$ zeros and $t$ ones? For example, given,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    10101110
+\end{align}</script>
+</p>
+<p>then $s = 3$ and $t = 5$.</p>
+<h5 id="solution">Solution</h5>
+<p>I think the answer is,</p>
+<p>
+<script type="math/tex; mode=display">\begin{align}
+    \binom{s+t}{t}
+\end{align}</script>
+</p>
+<p>Frank Ruskey is hard to follow at best.</p>
+<h2 id="binomial-queues">Binomial Queues</h2>
+<p><em>definition</em>: A <strong>binomial queue</strong> are a kind of a mergeable heap.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../2016-01-21/" class="btn btn-neutral" title="2016 01 21"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../2016-01-21/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+
+</body>
+</html>

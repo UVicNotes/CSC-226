@@ -439,6 +439,41 @@
             "location": "/2016-01-21/#balance", 
             "text": "Property : The height of the tree is $\\le 2 \\lg N$ in the worst case.", 
             "title": "Balance"
+        }, 
+        {
+            "location": "/2016-01-25/", 
+            "text": "Lecture 7 - Notes\n\n\nJanuary 25, 2016\n  \n\n\nBinary Trees\n\n\nHow many nodes in a  binary tree with height $h$?\n\n\n\n\n\\begin{align}\n    h + 1 &\\le n \\newline\n    &\\le 1 + 2 + 4 + ... + 2^h \\newline\n    &= 2^{h+1} - 1\n\\end{align}\n\n\n\n\nand conversely,\n\n\n\n\n\\begin{align}\n    n &\\le 2^{h+1} - 1 \\newline\n    n + 1 &\\le 2^{h+1} \\newline\n    \\lg (n + 1) &\\le h+1 \\newline\n    \\lg (n + 1) - 1 &\\le h \\newline\n    \\left\\lceil\\lg \\left(n + 1\\right) - 1\\right\\rceil &\\le h \\newline\n\\end{align}\n\n\n\n\nBinomial Coefficients\n\n\nLet $n \\choose k$ denote the number of $k$-subsets of an $n$-set. $2$-subsets of the set ${a,b,c,d}$ are\n\n\n\n\n\\begin{align}\n    \\{a,b\\} \\newline\n    \\{a,c\\} \\newline\n    \\{a,d\\} \\newline\n    \\{b,c\\} \\newline\n    \\{b,d\\} \\newline\n    \\{c,d\\} \\newline\n\\end{align}\n\n\n\n\nIn this case,\n\n\n\n\n\\begin{align}\n    \\binom{4}{2} &= 6 \\newline\n    \\binom{4}{1} &= \\binom{4}{3} = 4 \\newline\n\\end{align}\n\n\n\n\nIn general,\n\n\n\n\n\\begin{align}\n    \\binom{n}{k} = \\binom{n}{n-k}\n\\end{align}\n\n\n\n\nthe function $f$ that maps ${a_0,a_1,\\ldots,a_k}$ to $[n] \\setminus {a_0,a_1,\\ldots,a_k}$ where $[n] = {1,2,\\ldots,n}$, is a \nbijection\n. For example\n\n\n\n\n\\begin{align}\n    f\\left(\\left\\{ n \\right\\} \\right) = \\{b,c,d\\}\n\\end{align}\n\n\n\n\nClaim\n: Pascals triangle equality, e.g.,\n\n\n\n\n\\begin{align}\n    \\binom{n}{k} = \\binom{n-1}{k} + \\binom{n-1}{k-1}\n\\end{align}\n\n\n\n\nProof\n: Classify the $k$-subsets of $[n]$ according to whether they contain $n$ or not. There are $\\binom{n-1}{k-1}$ $k$-subsets that contain $n$ and $\\binom{n-1}{k}$ $k$-subsets that do \nnot\n contain $n$.\n\n\nWe can demonstrate this with pascals triangle.\n\n\n\n\n\n\n\n\n\n\n0\n\n\n1\n\n\n2\n\n\n3\n\n\n4\n\n\n5\n\n\n6\n\n\n\n\n\n\n\n\n\n\n0\n\n\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n1\n\n\n1\n\n\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n\n\n1\n\n\n2\n\n\n1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n\n\n1\n\n\n3\n\n\n3\n\n\n1\n\n\n\n\n\n\n\n\n\n\n\n\n4\n\n\n1\n\n\n4\n\n\n6\n\n\n4\n\n\n1\n\n\n\n\n\n\n\n\n\n\n5\n\n\n1\n\n\n5\n\n\n10\n\n\n10\n\n\n5\n\n\n1\n\n\n\n\n\n\n\n\n6\n\n\n1\n\n\n6\n\n\n15\n\n\n20\n\n\n15\n\n\n6\n\n\n1\n\n\n\n\n\n\n\n\nClaim\n:\n\n\n\n\n\\begin{align}\n    \\binom{n}{k} = \\frac{n!}{k!(n-k)!}\n\\end{align}\n\n\n\n\nShepherd Principal\n: We can prove this using the Shepherd principal. Suppose we are counting sheep and they really like each other so they have squished together into one blob. Luckily the sheep are standing on a sheet of glass so we can go underneath and count the feet. Divide by four and we have the number of sheep.\n\n\nSo if a set (the sheep) has been divided into equivalence classes (the feet) and each equivalence class has the same number for elements. Then the number of equivalence classes is\n\n\n\n\n\\begin{align}\n    \\frac{\\text{Number of Elements}}{\\text{Number in Each Class}}\n\\end{align}\n\n\n\n\nProof\n: There are $n(n-1) \\ldots (n-k+1)$ $k$-sequences in an $n$-set. Each $k$-subset corresponds to $k!$ of these. Thus,\n\n\n\n\n\\begin{align}\n    \\binom{n}{k} &= \\frac{n(n-1) \\ldots (n-k+1)}{k!} \\newline\n    &= \\frac{n(n-1) \\ldots (n-k+1)}{k!} \\cdot \\frac{(n-k)!}{(n-k)!} \\newline\n    &= \\frac{n!}{k!(n-k)!}\\newline\n\\end{align}\n\n\n\n\nExample\n\n\nHow many binary sequences are there with $s$ zeros and $t$ ones? For example, given,\n\n\n\n\n\\begin{align}\n    10101110\n\\end{align}\n\n\n\n\nthen $s = 3$ and $t = 5$.\n\n\nSolution\n\n\nI think the answer is,\n\n\n\n\n\\begin{align}\n    \\binom{s+t}{t}\n\\end{align}\n\n\n\n\nFrank Ruskey is hard to follow at best.\n\n\nBinomial Queues\n\n\ndefinition\n: A \nbinomial queue\n are a kind of a mergeable heap.", 
+            "title": "2016 01 25"
+        }, 
+        {
+            "location": "/2016-01-25/#lecture-7-notes", 
+            "text": "January 25, 2016", 
+            "title": "Lecture 7 - Notes"
+        }, 
+        {
+            "location": "/2016-01-25/#binary-trees", 
+            "text": "How many nodes in a  binary tree with height $h$?   \\begin{align}\n    h + 1 &\\le n \\newline\n    &\\le 1 + 2 + 4 + ... + 2^h \\newline\n    &= 2^{h+1} - 1\n\\end{align}   and conversely,   \\begin{align}\n    n &\\le 2^{h+1} - 1 \\newline\n    n + 1 &\\le 2^{h+1} \\newline\n    \\lg (n + 1) &\\le h+1 \\newline\n    \\lg (n + 1) - 1 &\\le h \\newline\n    \\left\\lceil\\lg \\left(n + 1\\right) - 1\\right\\rceil &\\le h \\newline\n\\end{align}", 
+            "title": "Binary Trees"
+        }, 
+        {
+            "location": "/2016-01-25/#binomial-coefficients", 
+            "text": "Let $n \\choose k$ denote the number of $k$-subsets of an $n$-set. $2$-subsets of the set ${a,b,c,d}$ are   \\begin{align}\n    \\{a,b\\} \\newline\n    \\{a,c\\} \\newline\n    \\{a,d\\} \\newline\n    \\{b,c\\} \\newline\n    \\{b,d\\} \\newline\n    \\{c,d\\} \\newline\n\\end{align}   In this case,   \\begin{align}\n    \\binom{4}{2} &= 6 \\newline\n    \\binom{4}{1} &= \\binom{4}{3} = 4 \\newline\n\\end{align}   In general,   \\begin{align}\n    \\binom{n}{k} = \\binom{n}{n-k}\n\\end{align}   the function $f$ that maps ${a_0,a_1,\\ldots,a_k}$ to $[n] \\setminus {a_0,a_1,\\ldots,a_k}$ where $[n] = {1,2,\\ldots,n}$, is a  bijection . For example   \\begin{align}\n    f\\left(\\left\\{ n \\right\\} \\right) = \\{b,c,d\\}\n\\end{align}   Claim : Pascals triangle equality, e.g.,   \\begin{align}\n    \\binom{n}{k} = \\binom{n-1}{k} + \\binom{n-1}{k-1}\n\\end{align}   Proof : Classify the $k$-subsets of $[n]$ according to whether they contain $n$ or not. There are $\\binom{n-1}{k-1}$ $k$-subsets that contain $n$ and $\\binom{n-1}{k}$ $k$-subsets that do  not  contain $n$.  We can demonstrate this with pascals triangle.      0  1  2  3  4  5  6      0  1          1  1  1         2  1  2  1        3  1  3  3  1       4  1  4  6  4  1      5  1  5  10  10  5  1     6  1  6  15  20  15  6  1     Claim :   \\begin{align}\n    \\binom{n}{k} = \\frac{n!}{k!(n-k)!}\n\\end{align}   Shepherd Principal : We can prove this using the Shepherd principal. Suppose we are counting sheep and they really like each other so they have squished together into one blob. Luckily the sheep are standing on a sheet of glass so we can go underneath and count the feet. Divide by four and we have the number of sheep.  So if a set (the sheep) has been divided into equivalence classes (the feet) and each equivalence class has the same number for elements. Then the number of equivalence classes is   \\begin{align}\n    \\frac{\\text{Number of Elements}}{\\text{Number in Each Class}}\n\\end{align}   Proof : There are $n(n-1) \\ldots (n-k+1)$ $k$-sequences in an $n$-set. Each $k$-subset corresponds to $k!$ of these. Thus,   \\begin{align}\n    \\binom{n}{k} &= \\frac{n(n-1) \\ldots (n-k+1)}{k!} \\newline\n    &= \\frac{n(n-1) \\ldots (n-k+1)}{k!} \\cdot \\frac{(n-k)!}{(n-k)!} \\newline\n    &= \\frac{n!}{k!(n-k)!}\\newline\n\\end{align}", 
+            "title": "Binomial Coefficients"
+        }, 
+        {
+            "location": "/2016-01-25/#example", 
+            "text": "How many binary sequences are there with $s$ zeros and $t$ ones? For example, given,   \\begin{align}\n    10101110\n\\end{align}   then $s = 3$ and $t = 5$.", 
+            "title": "Example"
+        }, 
+        {
+            "location": "/2016-01-25/#solution", 
+            "text": "I think the answer is,   \\begin{align}\n    \\binom{s+t}{t}\n\\end{align}   Frank Ruskey is hard to follow at best.", 
+            "title": "Solution"
+        }, 
+        {
+            "location": "/2016-01-25/#binomial-queues", 
+            "text": "definition : A  binomial queue  are a kind of a mergeable heap.", 
+            "title": "Binomial Queues"
         }
     ]
 }
