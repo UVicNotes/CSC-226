@@ -474,6 +474,31 @@
             "location": "/2016-01-25/#binomial-queues", 
             "text": "definition : A  binomial queue  are a kind of a mergeable heap.", 
             "title": "Binomial Queues"
+        }, 
+        {
+            "location": "/2016-01-28/", 
+            "text": "Lecture 8 - Notes\n\n\nJanuary 28, 2016\n  \n\n\nHashing\n\n\ndefinition\n: With \nhashing\n we save items in a key-indexed table (where the index is a function of the key). A \nhash function\n is used for computing the array index from the key.\n\n\nHorner's Rule\n\n\nTo hash a string we use,\n\n\n\n\n\\begin{align}\n    h = s[0] \\cdot 31^{L\u20131} + \\ldots + s[L \u2013 3] \\cdot 31^2 + s[L \u2013 2] \\cdot 31^1 + s[L \u2013 1] \\cdot 31^0\n\\end{align}\n\n\n\n\nfor example,\n\n\npublic final class String\n{\n    private final char[] s;\n    ...\n    public int hashCode()\n    {\n        int hash = 0;\n        for (int i = 0; i \n length(); i++)\n            hash = s[i] + (31 * hash);\n        return hash;\n    }\n} \n\n\n\n\nProbability\n\n\nHow many people does it take before the probability that two have the same birthday is more than 50%?\n\n\nLet's assume that all birthdays are equally likely, what's the probability that $n$ people have different birthdays?\n\n\nSo,\n\n\n\n\n\\begin{align}\n    p &= \\frac{\\text{favourable cases}}{\\text{total number of cases}} \\\\\\\\\n    &= \\frac{\\binom{365}{n}n!}{365^n}\n\\end{align}\n\n\n\n\nwe could also think of this as,\n\n\n\n\n\\begin{align}\n    \\frac{365}{365} \\cdot \\frac{364}{365} \\cdot \\frac{363}{365} \\cdot \\ldots \\cdot\\frac{365-n}{365}\n\\end{align}\n\n\n\n\nlet's rewrite this where $D$ is the days,\n\n\n\n\n\\begin{align}\n    \\left( 1 - \\frac{0}{D}\\right)\\left( 1 - \\frac{2}{D}\\right)\\ldots\\left( 1 - \\frac{n-1}{D}\\right)\n\\end{align}", 
+            "title": "2016 01 28"
+        }, 
+        {
+            "location": "/2016-01-28/#lecture-8-notes", 
+            "text": "January 28, 2016", 
+            "title": "Lecture 8 - Notes"
+        }, 
+        {
+            "location": "/2016-01-28/#hashing", 
+            "text": "definition : With  hashing  we save items in a key-indexed table (where the index is a function of the key). A  hash function  is used for computing the array index from the key.", 
+            "title": "Hashing"
+        }, 
+        {
+            "location": "/2016-01-28/#horners-rule", 
+            "text": "To hash a string we use,   \\begin{align}\n    h = s[0] \\cdot 31^{L\u20131} + \\ldots + s[L \u2013 3] \\cdot 31^2 + s[L \u2013 2] \\cdot 31^1 + s[L \u2013 1] \\cdot 31^0\n\\end{align}   for example,  public final class String\n{\n    private final char[] s;\n    ...\n    public int hashCode()\n    {\n        int hash = 0;\n        for (int i = 0; i   length(); i++)\n            hash = s[i] + (31 * hash);\n        return hash;\n    }\n}", 
+            "title": "Horner's Rule"
+        }, 
+        {
+            "location": "/2016-01-28/#probability", 
+            "text": "How many people does it take before the probability that two have the same birthday is more than 50%?  Let's assume that all birthdays are equally likely, what's the probability that $n$ people have different birthdays?  So,   \\begin{align}\n    p &= \\frac{\\text{favourable cases}}{\\text{total number of cases}} \\\\\\\\\n    &= \\frac{\\binom{365}{n}n!}{365^n}\n\\end{align}   we could also think of this as,   \\begin{align}\n    \\frac{365}{365} \\cdot \\frac{364}{365} \\cdot \\frac{363}{365} \\cdot \\ldots \\cdot\\frac{365-n}{365}\n\\end{align}   let's rewrite this where $D$ is the days,   \\begin{align}\n    \\left( 1 - \\frac{0}{D}\\right)\\left( 1 - \\frac{2}{D}\\right)\\ldots\\left( 1 - \\frac{n-1}{D}\\right)\n\\end{align}", 
+            "title": "Probability"
         }
     ]
 }
