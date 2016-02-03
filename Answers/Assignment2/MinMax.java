@@ -1,5 +1,6 @@
 public class MinMax {
     public static int comparisons = 0;
+    public static int k = 0;
     /*
      * Determine the min and max values of the input array a in the range ub to ub (inclusive)
      * using a Floor(n/2) and Ceiling (n/2)split.
@@ -45,10 +46,12 @@ public class MinMax {
         if(n == 1 ) return new Pair(a[lb], a[ub]);
         if((n & (n - 1)) == 0 ) return mmB2Power(lb, ub, a);
 
-        Pair left = mmB2Power(lb, Integer.highestOneBit(n-1) - 1, a);
-        Pair right = mmB(Integer.highestOneBit(n-1), ub, a);
+        //if (k++ > 20) return null;
+
+        Pair left = mmB2Power(lb, lb + Integer.highestOneBit(n-1) - 1, a);
+        Pair right = mmB(lb + Integer.highestOneBit(n-1), ub, a);
         comparisons +=2;
-        //System.out.format("comparisons %d \n", comparisons);
+        System.out.format("comparisons %d \n", comparisons);
         return new Pair(Math.min(left.alpha, right.alpha), Math.max(left.omega, right.omega));
     }
 
@@ -56,25 +59,27 @@ public class MinMax {
         int n = ub - lb + 1;
         //System.out.format("lb: %d, ub: %d, n = %d \n", lb, ub, n);
 
+        //if (k++ > 20) return null;
         if( n == 2){
             comparisons += 1;
-            //System.out.format("comparisons %d\n", comparisons);
+            System.out.format("comparisons %d\n", comparisons);
             return a[lb] < a[ub] ? new Pair(a[lb], a[ub]) : new Pair(a[ub], a[lb]);
         }
         int middle = (ub + lb)/2;
         Pair left = mmB2Power(lb, middle, a);
         Pair right = mmB2Power(middle +1, ub, a);
         comparisons +=2;
-        //System.out.format("comparisons %d \n", comparisons);
+        System.out.format("comparisons %d \n", comparisons);
         return new Pair(Math.min(left.alpha, right.alpha), Math.max(left.omega, right.omega));
     }
 
     public static void main(String[] args) {
-        //int[] array = new int[]{4, 7, 2}; Pair expected = new Pair(2, 7);
+        int[] array = new int[]{4, 7, 2}; Pair expected = new Pair(2, 7);
         //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 2, 34, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23}; Pair expected = new Pair(-4098, 345);
         //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5}; Pair expected = new Pair(1, 345);
         //int[] array = new int[]{4, 7, 2, 10}; Pair expected = new Pair(2, 10);
-        int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23, 0}; Pair expected = new Pair(-4098, 345);
+        //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23, 0}; Pair expected = new Pair(-4098, 345);
+        //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 200, 20, 13, 10, 1}; Pair expected = new Pair(1, 345);
 
         Pair actual = MinMax.mmB(0, array.length-1, array);
         if (actual.alpha != expected.alpha) {
