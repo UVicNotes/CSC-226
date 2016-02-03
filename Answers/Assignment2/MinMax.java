@@ -42,9 +42,14 @@ public class MinMax {
      */
     public static Pair mmB(int lb, int ub, int[] a) {
         int n = ub - lb + 1;
-        //System.out.format("lb: %d, ub: %d, n = %d highest 2 = %d\n", lb, ub, n,  Integer.highestOneBit(n-1));
+        System.out.format("lb: %d, ub: %d, n = %d highest 2 = %d\n", lb, ub, n,  Integer.highestOneBit(n-1));
         if(n == 1 ) return new Pair(a[lb], a[ub]);
-        if((n & (n - 1)) == 0 ) return mmB2Power(lb, ub, a);
+        //if((n & (n - 1)) == 0 ) return mmB2Power(lb, ub, a);
+        if( n == 2){
+            comparisons += 1;
+            System.out.format("comparisons %d\n", comparisons);
+            return a[lb] < a[ub] ? new Pair(a[lb], a[ub]) : new Pair(a[ub], a[lb]);
+        }
 
         //if (k++ > 20) return null;
 
@@ -74,8 +79,8 @@ public class MinMax {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[]{4, 7, 2}; Pair expected = new Pair(2, 7);
-        //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 2, 34, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23}; Pair expected = new Pair(-4098, 345);
+        //int[] array = new int[]{4, 7, 2}; Pair expected = new Pair(2, 7);
+        int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 2, 34, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23}; Pair expected = new Pair(-4098, 345);
         //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5}; Pair expected = new Pair(1, 345);
         //int[] array = new int[]{4, 7, 2, 10}; Pair expected = new Pair(2, 10);
         //int[] array = new int[]{4, 7, 2, 10, 345, 28, 1, 5, 0, -10, -4098, 23, 0}; Pair expected = new Pair(-4098, 345);
