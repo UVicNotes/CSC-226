@@ -529,6 +529,31 @@
             "location": "/2016-02-01/#uniform-hashing", 
             "text": "You're a coupon collector and you're trying to collect $n$ coupons. How many do I need to collect before I can expect to have them all?  Let $X$ be the number of trials.", 
             "title": "Uniform Hashing"
+        }, 
+        {
+            "location": "/2016-02-04/", 
+            "text": "Lecture 10 - Notes\n\n\nFebruary 4, 2016\n  \n\n\nRandom Permutations\n\n\nHow do we generate a random permutation?\n\n\nWe would like it to be uniform with an equal probability of $\\frac{1}{n!}$ for each permutation.\n\n\na = [0,1,2,...,n]\nfor i = n-1, i \n 0, --i\n    t = a[i]\n    j = rand(0,i-1)\n    a[i] = a[j]\n    a[j] = t\n\n\n\n\nwe swap elements on one of the remaining elements in the list, e.g.\n\n\na = [1,2,3,4,5]\n\n  = [5,2,3,4,1]\n     *       ^\n  = [5,2,4,3,1]\n         * ^\n  = [4,2,5,3,1]\n     *   ^\n  = [2,4,5,3,1]\n     * ^\n\n\n\n\nwe can see this is uniform \n\n\n\n\n\\begin{align}\n    \\frac{1}{5} \\cdot \\frac{1}{4} \\cdot \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot  \\frac{1}{1} =  \\frac{1}{5!}\n\\end{align}\n\n\n\n\nMinimum Weight Spanning Trees\n\n\ndefinition\n: A \nminimum weight spanning tree\n connects a graph using the lowest possible sum of edge weights.\n\n\nKruskal's Method\n\n\nPick the smallest edge as long as no cycle is created.", 
+            "title": "2016 02 04"
+        }, 
+        {
+            "location": "/2016-02-04/#lecture-10-notes", 
+            "text": "February 4, 2016", 
+            "title": "Lecture 10 - Notes"
+        }, 
+        {
+            "location": "/2016-02-04/#random-permutations", 
+            "text": "How do we generate a random permutation?  We would like it to be uniform with an equal probability of $\\frac{1}{n!}$ for each permutation.  a = [0,1,2,...,n]\nfor i = n-1, i   0, --i\n    t = a[i]\n    j = rand(0,i-1)\n    a[i] = a[j]\n    a[j] = t  we swap elements on one of the remaining elements in the list, e.g.  a = [1,2,3,4,5]\n\n  = [5,2,3,4,1]\n     *       ^\n  = [5,2,4,3,1]\n         * ^\n  = [4,2,5,3,1]\n     *   ^\n  = [2,4,5,3,1]\n     * ^  we can see this is uniform    \\begin{align}\n    \\frac{1}{5} \\cdot \\frac{1}{4} \\cdot \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot  \\frac{1}{1} =  \\frac{1}{5!}\n\\end{align}", 
+            "title": "Random Permutations"
+        }, 
+        {
+            "location": "/2016-02-04/#minimum-weight-spanning-trees", 
+            "text": "definition : A  minimum weight spanning tree  connects a graph using the lowest possible sum of edge weights.", 
+            "title": "Minimum Weight Spanning Trees"
+        }, 
+        {
+            "location": "/2016-02-04/#kruskals-method", 
+            "text": "Pick the smallest edge as long as no cycle is created.", 
+            "title": "Kruskal's Method"
         }
     ]
 }
