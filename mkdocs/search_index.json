@@ -532,7 +532,7 @@
         }, 
         {
             "location": "/2016-02-04/", 
-            "text": "Lecture 10 - Notes\n\n\nFebruary 4, 2016\n  \n\n\nRandom Permutations\n\n\nHow do we generate a random permutation?\n\n\nWe would like it to be uniform with an equal probability of $\\frac{1}{n!}$ for each permutation.\n\n\na = [0,1,2,...,n]\nfor i = n-1, i \n 0, --i\n    t = a[i]\n    j = rand(0,i-1)\n    a[i] = a[j]\n    a[j] = t\n\n\n\n\nwe swap elements on one of the remaining elements in the list, e.g.\n\n\na = [1,2,3,4,5]\n\n  = [5,2,3,4,1]\n     *       ^\n  = [5,2,4,3,1]\n         * ^\n  = [4,2,5,3,1]\n     *   ^\n  = [2,4,5,3,1]\n     * ^\n\n\n\n\nwe can see this is uniform \n\n\n\n\n\\begin{align}\n    \\frac{1}{5} \\cdot \\frac{1}{4} \\cdot \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot  \\frac{1}{1} =  \\frac{1}{5!}\n\\end{align}\n\n\n\n\nMinimum Weight Spanning Trees\n\n\ndefinition\n: A \nminimum weight spanning tree\n connects a graph using the lowest possible sum of edge weights.\n\n\nKruskal's Method\n\n\nPick the smallest edge as long as no cycle is created.", 
+            "text": "Lecture 10 - Notes\n\n\nFebruary 4, 2016\n  \n\n\nRandom Permutations\n\n\nHow do we generate a random permutation?\n\n\nWe would like it to be uniform with an equal probability of $\\frac{1}{n!}$ for each permutation.\n\n\na = [0,1,2,...,n]\nfor i = n-1, i \n 0, --i\n    t = a[i]\n    j = rand(0,i-1)\n    a[i] = a[j]\n    a[j] = t\n\n\n\n\nwe swap elements on one of the remaining elements in the list, e.g.\n\n\na = [1,2,3,4,5]\n\n  = [5,2,3,4,1]\n     *       ^\n  = [5,2,4,3,1]\n         * ^\n  = [4,2,5,3,1]\n     *   ^\n  = [2,4,5,3,1]\n     * ^\n\n\n\n\nwe can see this is uniform \n\n\n\n\n\\begin{align}\n    \\frac{1}{5} \\cdot \\frac{1}{4} \\cdot \\frac{1}{3} \\cdot \\frac{1}{2} \\cdot  \\frac{1}{1} =  \\frac{1}{5!}\n\\end{align}", 
             "title": "2016 02 04"
         }, 
         {
@@ -546,14 +546,44 @@
             "title": "Random Permutations"
         }, 
         {
-            "location": "/2016-02-04/#minimum-weight-spanning-trees", 
-            "text": "definition : A  minimum weight spanning tree  connects a graph using the lowest possible sum of edge weights.", 
+            "location": "/2016-02-15/", 
+            "text": "Lecture 11 - Notes\n\n\nFebruary 15, 2016\n  \n\n\nMinimum Weight Spanning Trees\n\n\ndefinition\n: A \nminimum weight spanning tree (MST)\n connects a graph using the lowest possible sum of edge weights.\n\n\nGreedy Algorithms\n\n\nWe make two assumptions,\n\n\n\n\nThe graph is connected\n\n\nEdge weights are distinct (no two edges of the same weight)\n\n\n\n\nThe consequence is that the minimum weight spanning tree exists and is unique.\n\n\nCut Property\n\n\ndefinition\n: If we \ncut\n the graph along any number of edges the edge with the lowest weight will be in the MST.\n\n\nUsing the Cut Property\n\n\n\n\nCut the graph on a set of edges that aren't in the MST yet. \n\n\nAdd the smallest edge to the MST. \n\n\nRepeat until we have $V - 1$ edges in the tree.\n\n\n\n\n\n\nKruskal's Method\n\n\n\n\nGo through the edges from smallest to largest\n\n\nAdd the edge as long as no cycle is created\n\n\n\n\nPrim's Method\n\n\n\n\nStart with vertex 0 and grow the tree $T$\n\n\nStop when we have $V-1$ edges", 
+            "title": "2016 02 15"
+        }, 
+        {
+            "location": "/2016-02-15/#lecture-11-notes", 
+            "text": "February 15, 2016", 
+            "title": "Lecture 11 - Notes"
+        }, 
+        {
+            "location": "/2016-02-15/#minimum-weight-spanning-trees", 
+            "text": "definition : A  minimum weight spanning tree (MST)  connects a graph using the lowest possible sum of edge weights.", 
             "title": "Minimum Weight Spanning Trees"
         }, 
         {
-            "location": "/2016-02-04/#kruskals-method", 
-            "text": "Pick the smallest edge as long as no cycle is created.", 
+            "location": "/2016-02-15/#greedy-algorithms", 
+            "text": "We make two assumptions,   The graph is connected  Edge weights are distinct (no two edges of the same weight)   The consequence is that the minimum weight spanning tree exists and is unique.", 
+            "title": "Greedy Algorithms"
+        }, 
+        {
+            "location": "/2016-02-15/#cut-property", 
+            "text": "definition : If we  cut  the graph along any number of edges the edge with the lowest weight will be in the MST.", 
+            "title": "Cut Property"
+        }, 
+        {
+            "location": "/2016-02-15/#using-the-cut-property", 
+            "text": "Cut the graph on a set of edges that aren't in the MST yet.   Add the smallest edge to the MST.   Repeat until we have $V - 1$ edges in the tree.", 
+            "title": "Using the Cut Property"
+        }, 
+        {
+            "location": "/2016-02-15/#kruskals-method", 
+            "text": "Go through the edges from smallest to largest  Add the edge as long as no cycle is created", 
             "title": "Kruskal's Method"
+        }, 
+        {
+            "location": "/2016-02-15/#prims-method", 
+            "text": "Start with vertex 0 and grow the tree $T$  Stop when we have $V-1$ edges", 
+            "title": "Prim's Method"
         }
     ]
 }
