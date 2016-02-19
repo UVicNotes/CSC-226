@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 02 15 - CSC 226</title>
+  <title>2016 02 18 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 02 15";
-    var mkdocs_page_input_path = "2016-02-15.md";
-    var mkdocs_page_url = "/2016-02-15/";
+    var mkdocs_page_name = "2016 02 18";
+    var mkdocs_page_input_path = "2016-02-18.md";
+    var mkdocs_page_url = "/2016-02-18/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -134,24 +134,26 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 02 15</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-11-notes">Lecture 11 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#minimum-weight-spanning-trees">Minimum Weight Spanning Trees</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-02-15/">2016 02 15</a>
         
     </li>
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-02-18/">2016 02 18</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 02 18</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-12-notes">Lecture 12 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#minimum-weight-spanning-trees-continued">Minimum Weight Spanning Trees Continued</a></li>
+                
+                    <li><a class="toctree-l4" href="#indexed-priority-queues">Indexed Priority Queues</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -178,7 +180,7 @@
     
       
     
-    <li>2016 02 15</li>
+    <li>2016 02 18</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -192,36 +194,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-11-notes">Lecture 11 - Notes</h1>
-<p><strong>February 15, 2016</strong>  </p>
-<h2 id="minimum-weight-spanning-trees">Minimum Weight Spanning Trees</h2>
-<p><em>definition</em>: A <strong>minimum weight spanning tree (MST)</strong> connects a graph using the lowest possible sum of edge weights.</p>
-<h3 id="greedy-algorithms">Greedy Algorithms</h3>
-<p>We make two assumptions,</p>
-<ol>
-<li>The graph is connected</li>
-<li>Edge weights are distinct (no two edges of the same weight)</li>
-</ol>
-<p>The consequence is that the minimum weight spanning tree exists and is unique.</p>
-<h4 id="cut-property">Cut Property</h4>
-<p><em>definition</em>: If we <strong>cut</strong> the graph along any number of edges the edge with the lowest weight will be in the MST.</p>
-<h4 id="using-the-cut-property">Using the Cut Property</h4>
-<ol>
-<li>Cut the graph on a set of edges that aren't in the MST yet. </li>
-<li>Add the smallest edge to the MST. </li>
-<li>Repeat until we have $V - 1$ edges in the tree.</li>
-</ol>
-<p><img alt="Example of making a cut" src="../img/MST-Cuts.svg" /></p>
-<h3 id="kruskals-method">Kruskal's Method</h3>
-<ol>
-<li>Go through the edges from smallest to largest</li>
-<li>Add the edge as long as no cycle is created</li>
-</ol>
-<h3 id="prims-method">Prim's Method</h3>
-<ol>
-<li>Start with vertex 0 and grow the tree $T$</li>
-<li>Stop when we have $V-1$ edges</li>
-</ol>
+                <h1 id="lecture-12-notes">Lecture 12 - Notes</h1>
+<p><strong>February 18, 2016</strong>  </p>
+<h2 id="minimum-weight-spanning-trees-continued">Minimum Weight Spanning Trees Continued</h2>
+<h3 id="prims-algorithm">Prim's Algorithm</h3>
+<ul>
+<li><strong>Lazy</strong>: Keep track of edges in cut</li>
+<li><strong>Eager</strong>: Keep track of vertices not in tree</li>
+</ul>
+<h2 id="indexed-priority-queues">Indexed Priority Queues</h2>
+<p>Implemented with a binary queue, maintain arrays</p>
+<ul>
+<li><code>keys[i]</code> is th priority of <code>i</code></li>
+<li><code>pq[i]</code> is the index of the key in heap position <code>i</code></li>
+<li><code>qp[i]</code> is the heap position of the key with index <code>i</code></li>
+</ul>
               
             </div>
           </div>
@@ -229,10 +216,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-02-18/" class="btn btn-neutral float-right" title="2016 02 18">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-02-04/" class="btn btn-neutral" title="2016 02 04"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-02-15/" class="btn btn-neutral" title="2016 02 15"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -260,10 +245,8 @@
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-02-04/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-02-15/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-02-18/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

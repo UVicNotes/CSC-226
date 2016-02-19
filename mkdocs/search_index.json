@@ -584,6 +584,31 @@
             "location": "/2016-02-15/#prims-method", 
             "text": "Start with vertex 0 and grow the tree $T$  Stop when we have $V-1$ edges", 
             "title": "Prim's Method"
+        }, 
+        {
+            "location": "/2016-02-18/", 
+            "text": "Lecture 12 - Notes\n\n\nFebruary 18, 2016\n  \n\n\nMinimum Weight Spanning Trees Continued\n\n\nPrim's Algorithm\n\n\n\n\nLazy\n: Keep track of edges in cut\n\n\nEager\n: Keep track of vertices not in tree\n\n\n\n\nIndexed Priority Queues\n\n\nImplemented with a binary queue, maintain arrays\n\n\n\n\nkeys[i]\n is th priority of \ni\n\n\npq[i]\n is the index of the key in heap position \ni\n\n\nqp[i]\n is the heap position of the key with index \ni", 
+            "title": "2016 02 18"
+        }, 
+        {
+            "location": "/2016-02-18/#lecture-12-notes", 
+            "text": "February 18, 2016", 
+            "title": "Lecture 12 - Notes"
+        }, 
+        {
+            "location": "/2016-02-18/#minimum-weight-spanning-trees-continued", 
+            "text": "", 
+            "title": "Minimum Weight Spanning Trees Continued"
+        }, 
+        {
+            "location": "/2016-02-18/#prims-algorithm", 
+            "text": "Lazy : Keep track of edges in cut  Eager : Keep track of vertices not in tree", 
+            "title": "Prim's Algorithm"
+        }, 
+        {
+            "location": "/2016-02-18/#indexed-priority-queues", 
+            "text": "Implemented with a binary queue, maintain arrays   keys[i]  is th priority of  i  pq[i]  is the index of the key in heap position  i  qp[i]  is the heap position of the key with index  i", 
+            "title": "Indexed Priority Queues"
         }
     ]
 }
