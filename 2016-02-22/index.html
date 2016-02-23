@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 02 04 - CSC 226</title>
+  <title>2016 02 22 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 02 04";
-    var mkdocs_page_input_path = "2016-02-04.md";
-    var mkdocs_page_url = "/2016-02-04/";
+    var mkdocs_page_name = "2016 02 22";
+    var mkdocs_page_input_path = "2016-02-22.md";
+    var mkdocs_page_url = "/2016-02-22/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -127,17 +127,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 02 04</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-10-notes">Lecture 10 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#random-permutations">Random Permutations</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-02-04/">2016 02 04</a>
         
     </li>
 <li>
@@ -157,8 +148,17 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-02-22/">2016 02 22</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 02 22</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-13-notes">Lecture 13 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#undirected-graphs">Undirected Graphs</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -185,7 +185,7 @@
     
       
     
-    <li>2016 02 04</li>
+    <li>2016 02 22</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -199,38 +199,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-10-notes">Lecture 10 - Notes</h1>
-<p><strong>February 4, 2016</strong>  </p>
-<h2 id="random-permutations">Random Permutations</h2>
-<p><em>How do we generate a random permutation?</em></p>
-<p>We would like it to be uniform with an equal probability of $\frac{1}{n!}$ for each permutation.</p>
-<pre><code class="py">a = [0,1,2,...,n]
-for i = n-1, i &gt; 0, --i
-    t = a[i]
-    j = rand(0,i-1)
-    a[i] = a[j]
-    a[j] = t
-</code></pre>
-
-<p>we swap elements on one of the remaining elements in the list, e.g.</p>
-<pre><code>a = [1,2,3,4,5]
-
-  = [5,2,3,4,1]
-     *       ^
-  = [5,2,4,3,1]
-         * ^
-  = [4,2,5,3,1]
-     *   ^
-  = [2,4,5,3,1]
-     * ^
-</code></pre>
-
-<p>we can see this is uniform </p>
+                <h1 id="lecture-13-notes">Lecture 13 - Notes</h1>
+<p><strong>February 22, 2016</strong>  </p>
+<h2 id="undirected-graphs">Undirected Graphs</h2>
+<p>We can consider a graph,</p>
 <p>
 <script type="math/tex; mode=display">\begin{align}
-    \frac{1}{5} \cdot \frac{1}{4} \cdot \frac{1}{3} \cdot \frac{1}{2} \cdot  \frac{1}{1} =  \frac{1}{5!}
+    G = (V,E)
 \end{align}</script>
 </p>
+<h3 id="bipartite-graph">Bipartite Graph</h3>
+<p><em>definition</em>: A graph is <strong>bipartite</strong> is there is a partition $A,B$ of $V$ such that all edges $(a,b) \in E$ have $a \in A$ and $b \in B$.</p>
+<p>Trees are an example of a bipartite set, we can show this using a <strong>two coloring</strong>. So are paths, even cycles, and complete bipartite graphs.</p>
+<h3 id="subgraphs">Subgraphs</h3>
+<p><em>definition</em>: A graph $G^\prime$ is a <strong>subgraph</strong> of a graph $G$ if $V^\prime \subseteq V$, $E^\prime \subseteq E$ and all edges in $E^\prime$ are valid.</p>
+<p>There are a few special types of subgraphs,</p>
+<ul>
+<li><strong>spanning</strong>: Uses all the vertices in $G$, i.e., $V^\prime = V$</li>
+<li><strong>induced</strong>: Uses all the valid edges in $G$ (with the selected vertices)</li>
+</ul>
               
             </div>
           </div>
@@ -238,10 +225,8 @@ for i = n-1, i &gt; 0, --i
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-02-15/" class="btn btn-neutral float-right" title="2016 02 15">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-02-01/" class="btn btn-neutral" title="2016 02 01"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-02-18/" class="btn btn-neutral" title="2016 02 18"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -269,10 +254,8 @@ for i = n-1, i &gt; 0, --i
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-02-01/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-02-18/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-02-15/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

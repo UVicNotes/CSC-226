@@ -587,7 +587,7 @@
         }, 
         {
             "location": "/2016-02-18/", 
-            "text": "Lecture 12 - Notes\n\n\nFebruary 18, 2016\n  \n\n\nMinimum Weight Spanning Trees Continued\n\n\nPrim's Algorithm\n\n\n\n\nLazy\n: Keep track of edges in cut\n\n\nEager\n: Keep track of vertices not in tree\n\n\n\n\nIndexed Priority Queues\n\n\nImplemented with a binary queue, maintain arrays\n\n\n\n\nkeys[i]\n is th priority of \ni\n\n\npq[i]\n is the index of the key in heap position \ni\n\n\nqp[i]\n is the heap position of the key with index \ni", 
+            "text": "Lecture 12 - Notes\n\n\nFebruary 18, 2016\n  \n\n\nMinimum Weight Spanning Trees Continued\n\n\nPrim's Algorithm\n\n\n\n\nLazy\n: Keep track of edges in cut\n\n\nEager\n: Keep track of vertices not in tree\n\n\n\n\nIndexed Priority Queues\n\n\nFor the \neager\n algorithm, we implement it with a binary queue. We maintain the arrays,\n\n\n\n\nkeys[i]\n is th priority of \ni\n\n\npq[i]\n is the index of the key in heap position \ni\n\n\nqp[i]\n is the heap position of the key with index \ni", 
             "title": "2016 02 18"
         }, 
         {
@@ -607,8 +607,33 @@
         }, 
         {
             "location": "/2016-02-18/#indexed-priority-queues", 
-            "text": "Implemented with a binary queue, maintain arrays   keys[i]  is th priority of  i  pq[i]  is the index of the key in heap position  i  qp[i]  is the heap position of the key with index  i", 
+            "text": "For the  eager  algorithm, we implement it with a binary queue. We maintain the arrays,   keys[i]  is th priority of  i  pq[i]  is the index of the key in heap position  i  qp[i]  is the heap position of the key with index  i", 
             "title": "Indexed Priority Queues"
+        }, 
+        {
+            "location": "/2016-02-22/", 
+            "text": "Lecture 13 - Notes\n\n\nFebruary 22, 2016\n  \n\n\nUndirected Graphs\n\n\nWe can consider a graph,\n\n\n\n\n\\begin{align}\n    G = (V,E)\n\\end{align}\n\n\n\n\nBipartite Graph\n\n\ndefinition\n: A graph is \nbipartite\n is there is a partition $A,B$ of $V$ such that all edges $(a,b) \\in E$ have $a \\in A$ and $b \\in B$.\n\n\nTrees are an example of a bipartite set, we can show this using a \ntwo coloring\n. So are paths, even cycles, and complete bipartite graphs.\n\n\nSubgraphs\n\n\ndefinition\n: A graph $G^\\prime$ is a \nsubgraph\n of a graph $G$ if $V^\\prime \\subseteq V$, $E^\\prime \\subseteq E$ and all edges in $E^\\prime$ are valid.\n\n\nThere are a few special types of subgraphs,\n\n\n\n\nspanning\n: Uses all the vertices in $G$, i.e., $V^\\prime = V$\n\n\ninduced\n: Uses all the valid edges in $G$ (with the selected vertices)", 
+            "title": "2016 02 22"
+        }, 
+        {
+            "location": "/2016-02-22/#lecture-13-notes", 
+            "text": "February 22, 2016", 
+            "title": "Lecture 13 - Notes"
+        }, 
+        {
+            "location": "/2016-02-22/#undirected-graphs", 
+            "text": "We can consider a graph,   \\begin{align}\n    G = (V,E)\n\\end{align}", 
+            "title": "Undirected Graphs"
+        }, 
+        {
+            "location": "/2016-02-22/#bipartite-graph", 
+            "text": "definition : A graph is  bipartite  is there is a partition $A,B$ of $V$ such that all edges $(a,b) \\in E$ have $a \\in A$ and $b \\in B$.  Trees are an example of a bipartite set, we can show this using a  two coloring . So are paths, even cycles, and complete bipartite graphs.", 
+            "title": "Bipartite Graph"
+        }, 
+        {
+            "location": "/2016-02-22/#subgraphs", 
+            "text": "definition : A graph $G^\\prime$ is a  subgraph  of a graph $G$ if $V^\\prime \\subseteq V$, $E^\\prime \\subseteq E$ and all edges in $E^\\prime$ are valid.  There are a few special types of subgraphs,   spanning : Uses all the vertices in $G$, i.e., $V^\\prime = V$  induced : Uses all the valid edges in $G$ (with the selected vertices)", 
+            "title": "Subgraphs"
         }
     ]
 }
