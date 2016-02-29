@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 02 01 - CSC 226</title>
+  <title>2016 02 29 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 02 01";
-    var mkdocs_page_input_path = "2016-02-01.md";
-    var mkdocs_page_url = "/2016-02-01/";
+    var mkdocs_page_name = "2016 02 29";
+    var mkdocs_page_input_path = "2016-02-29.md";
+    var mkdocs_page_url = "/2016-02-29/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -120,19 +120,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 02 01</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-9-notes">Lecture 9 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#probability">Probability</a></li>
-                
-                    <li><a class="toctree-l4" href="#uniform-hashing">Uniform Hashing</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-02-01/">2016 02 01</a>
         
     </li>
 <li>
@@ -166,8 +155,17 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-02-29/">2016 02 29</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 02 29</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-14">Lecture 14</a></li>
+                
+                    <li><a class="toctree-l4" href="#some-theorums">Some Theorums</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -194,7 +192,7 @@
     
       
     
-    <li>2016 02 01</li>
+    <li>2016 02 29</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -208,90 +206,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-9-notes">Lecture 9 - Notes</h1>
-<p><strong>February 1, 2016</strong>  </p>
-<h2 id="probability">Probability</h2>
-<p>How many people does it take before the probability that two have the same birthday is more than 50%?</p>
-<p>Let's assume that all birthdays are equally likely, what's the probability that $n$ people have different birthdays?</p>
-<p>So,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    p &= \frac{\text{favourable cases}}{\text{total number of cases}} \\\\
-    &= \frac{\binom{365}{n}n!}{365^n}
-\end{align}</script>
-</p>
-<p>we could also think of this as,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \cdot \ldots \cdot\frac{365-n}{365}
-\end{align}</script>
-</p>
-<p>let's rewrite this where $D$ is the days,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \left( 1 - \frac{0}{D}\right)\left( 1 - \frac{2}{D}\right)\ldots\left( 1 - \frac{n-1}{D}\right) = S_n
-\end{align}</script>
-</p>
-<p>we're asking when,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    1 - S_n \ge \frac{1}{2}
-\end{align}</script>
-</p>
-<p>Now, when $x$ is small $1 - x \approx e^x$, so if $n$ is small compared with $D$ then,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \prod_{j=1}^{n-1} (1 - \frac{j}{D}) &\approx \prod_{j=1}^{n-1} e^{-\frac{j}{D}}\\\\
-    &= e^{\left( -\sum_{j=1}^{n-1} \frac{j}{D} \right)} \\\\
-    &= e^{\left(\frac{-n\left( n-1 \right)}{2D} \right)} \\\\
-    &\approx e^{\left(\frac{- n^2}{2D} \right)} \\\\
-\end{align}</script>
-</p>
-<p>so the probability is $\frac{1}{2}$ when,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \frac{n^2}{2D} &= \ln \frac{1}{2} \\\\
-    \frac{n^2}{2D} &= \ln 2 \\\\
-    n &= \sqrt{2 \ln 2} \cdot \sqrt{D} \\\\
-    &= \sqrt{\ln 4} \cdot \sqrt{D} \\\\
-    &\approx 1.1774 \cdot \sqrt{D} \\\\
-\end{align}</script>
-</p>
-<h3 id="harmonic-numbers">Harmonic Numbers</h3>
-<p><em>definition</em>: The <strong>harmonic numbers</strong> are a series denoted,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    H_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n}
-\end{align}</script>
-</p>
-<p>The harmonic numbers arise in analyzing many algorithms.</p>
-<h4 id="example">Example</h4>
-<p>Consider $f(x) = \frac{1}{x}$,</p>
-<p><img alt="Plot of 1/x" src="https://graphsketch.com/render.php?eqn1_color=1&amp;eqn1_eqn=1%2Fx&amp;eqn2_color=2&amp;eqn2_eqn=&amp;eqn3_color=3&amp;eqn3_eqn=&amp;eqn4_color=4&amp;eqn4_eqn=&amp;eqn5_color=5&amp;eqn5_eqn=&amp;eqn6_color=6&amp;eqn6_eqn=&amp;x_min=0&amp;x_max=5&amp;y_min=0&amp;y_max=3&amp;x_tick=1&amp;y_tick=1&amp;x_label_freq=1&amp;y_label_freq=1&amp;do_grid=0&amp;do_grid=1&amp;bold_labeled_lines=0&amp;bold_labeled_lines=0&amp;line_width=4&amp;image_w=1920&amp;image_h=1080" /></p>
-<h3 id="mean-time-to-failure">Mean Time to Failure</h3>
-<p>When do you get the first heads when flipping coins?</p>
-<p>We can draw the outcomes,</p>
-<p><img alt="Probability Tree" src="http://www.onlinemathlearning.com/image-files/cliprob29.gif" /></p>
-<p>Let $p$ be the probability of a failure (a heads) and $p_k$ be the probability of a failure on the $k$-th try. We can write $p_k$ as</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    p_k = \left( 1 - p \right)^{k-1}p
-\end{align}</script>
-</p>
-<p>which we can see,</p>
-<p>
-<script type="math/tex; mode=display">\begin{align}
-    \sum_{k \ge 1} p_k &= \sum_{k \ge 1} \left( 1 - p \right)^{k-1}p \\\\
-    &= p \sum_{k \ge 0} \left( 1 - p \right)^{k} \\\\
-    &= p \frac{1}{1-(1-p)} \\\\
-    &= \frac{p}{p} \\\\
-    &= 1 \\\\
-\end{align}</script>
-</p>
-<p>so all our probabilities sum to one (which is good).</p>
-<h2 id="uniform-hashing">Uniform Hashing</h2>
-<p>You're a coupon collector and you're trying to collect $n$ coupons. How many do I need to collect before I can expect to have them all?</p>
-<p>Let $X$ be the number of trials.</p>
+                <h1 id="lecture-14">Lecture 14</h1>
+<ul>
+<li>Eulerian Cycle - contains every edge once<ul>
+<li>the origins of graph theory, bridges of Konigsberg</li>
+<li><img alt="" src="../img/bridges_of_konigsberg.jpeg" /></li>
+<li>see <a href="https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg">wikipedia article</a></li>
+</ul>
+</li>
+<li>Hamilton Cycle - Contains every vertex once</li>
+</ul>
+<h2 id="some-theorums">Some Theorums</h2>
+<ul>
+<li>A undirected graph has a Eulerian cycle iff every vertex has even degree</li>
+<li>A directed graph has a Eulerian Path iff exactly 2 vertices have odd degrees</li>
+</ul>
               
             </div>
           </div>
@@ -299,10 +228,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-02-04/" class="btn btn-neutral float-right" title="2016 02 04">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-01-28/" class="btn btn-neutral" title="2016 01 28"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-02-22/" class="btn btn-neutral" title="2016 02 22"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -330,10 +257,8 @@
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-01-28/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-02-22/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-02-04/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -634,6 +634,21 @@
             "location": "/2016-02-22/#subgraphs", 
             "text": "definition : A graph $G^\\prime$ is a  subgraph  of a graph $G$ if $V^\\prime \\subseteq V$, $E^\\prime \\subseteq E$ and all edges in $E^\\prime$ are valid.  There are a few special types of subgraphs,   spanning : Uses all the vertices in $G$, i.e., $V^\\prime = V$  induced : Uses all the valid edges in $G$ (with the selected vertices)", 
             "title": "Subgraphs"
+        }, 
+        {
+            "location": "/2016-02-29/", 
+            "text": "Lecture 14\n\n\n\n\nEulerian Cycle - contains every edge once\n\n\nthe origins of graph theory, bridges of Konigsberg\n\n\n\n\nsee \nwikipedia article\n\n\n\n\n\n\nHamilton Cycle - Contains every vertex once\n\n\n\n\nSome Theorums\n\n\n\n\nA undirected graph has a Eulerian cycle iff every vertex has even degree\n\n\nA directed graph has a Eulerian Path iff exactly 2 vertices have odd degrees", 
+            "title": "2016 02 29"
+        }, 
+        {
+            "location": "/2016-02-29/#lecture-14", 
+            "text": "Eulerian Cycle - contains every edge once  the origins of graph theory, bridges of Konigsberg   see  wikipedia article    Hamilton Cycle - Contains every vertex once", 
+            "title": "Lecture 14"
+        }, 
+        {
+            "location": "/2016-02-29/#some-theorums", 
+            "text": "A undirected graph has a Eulerian cycle iff every vertex has even degree  A directed graph has a Eulerian Path iff exactly 2 vertices have odd degrees", 
+            "title": "Some Theorums"
         }
     ]
 }
