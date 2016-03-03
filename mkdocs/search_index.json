@@ -637,13 +637,13 @@
         }, 
         {
             "location": "/2016-02-29/", 
-            "text": "Lecture 14\n\n\n\n\nEulerian Cycle - contains every edge once\n\n\nthe origins of graph theory, bridges of Konigsberg\n\n\n\n\nsee \nwikipedia article\n\n\n\n\n\n\nHamilton Cycle - Contains every vertex once\n\n\n\n\nSome Theorums\n\n\n\n\nA undirected graph has a Eulerian cycle iff every vertex has even degree\n\n\nA directed graph has a Eulerian Path iff exactly 2 vertices have odd degrees", 
+            "text": "Lecture 14 - Notes\n\n\nFebruary 29, 2016\n  \n\n\n\n\nEulerian Cycle - contains every edge once\n\n\nthe origins of graph theory, bridges of Konigsberg\n\n\n\n\nsee \nwikipedia article\n\n\n\n\n\n\nHamilton Cycle - Contains every vertex once\n\n\n\n\nSome Theorums\n\n\n\n\nA undirected graph has a Eulerian cycle iff every vertex has even degree\n\n\nA directed graph has a Eulerian Path iff exactly 2 vertices have odd degrees", 
             "title": "2016 02 29"
         }, 
         {
-            "location": "/2016-02-29/#lecture-14", 
-            "text": "Eulerian Cycle - contains every edge once  the origins of graph theory, bridges of Konigsberg   see  wikipedia article    Hamilton Cycle - Contains every vertex once", 
-            "title": "Lecture 14"
+            "location": "/2016-02-29/#lecture-14-notes", 
+            "text": "February 29, 2016      Eulerian Cycle - contains every edge once  the origins of graph theory, bridges of Konigsberg   see  wikipedia article    Hamilton Cycle - Contains every vertex once", 
+            "title": "Lecture 14 - Notes"
         }, 
         {
             "location": "/2016-02-29/#some-theorums", 
