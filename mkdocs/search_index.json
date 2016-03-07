@@ -662,7 +662,7 @@
         }, 
         {
             "location": "/2016-03-03/", 
-            "text": "Lecture 15 - Notes\n\n\nMarch 3, 2016\n  \n\n\nEulerian Cycles\n\n\ndefinition\n: A \nEulerian Cycle\n contains all the edges in the graph exactly once.\n\n\nTheorem\n\n\nA connected indirected graph has an Eulerian cycle if and only if the degree of each vertex is even.\n\n\nTheorem\n\n\nA connected (strongly connected) digraph has an Eulerian cycle if and only if the in-degree of each vertex equals its out-degree.\n\n\nAlgorithm\n\n\nTo find the Euclidean cycle in a digraph (enumerate the edges in the cycle), using a greedy process,\n\n\n\n\nPreprocess the graph and make and in-tree with root $r$, compute $\\bar{G}$ (reverse all edges). Then perform BFS to get the tree $T$. This is $O(|E| + |V|)$.\n\n\n\n\n\n\nif we write the adjacency list for the graph,\n\n\n\n\n\\begin{aligned}\n    r &\\to d\\\\\\\\\n    a &\\to b \\to r \\\\\\\\\n    b &\\to c \\\\\\\\\n    c &\\to d \\to a \\\\\\\\\n    d &\\to a \\to c \\\\\\\\\n\\end{aligned}\n\n\n\n\nWhen we perform the algorithm, we'll get the list,\n\n\n\n\n\\begin{aligned}\n    r \\to d \\to a \\to a \\to b \\to c \\to d \\to c \\to a \\to r\n\\end{aligned}\n\n\n\n\nWhy does it work?\n This works because, since, $G$ is Eulerian the algorithm ends at $r$. Imagine that $(v,w)$ is missing . Since the algorithm terminated $v \\neq r$. Without loss of generality we can assume that $(v,w) \\in T$. Since $C - P$ is balanced (where $P$ is the cycle found) there is an edge $(u,v)$ also not in $P$. Without loss of generality $(u,v) \\in T$. Continuing in this manner we get a sequence of tree edges which eventually get back to $r$, a contradiction.\n\n\nThis is actually what Frank Rusky wrote on the board. He makes no sense.\n\n\nEfficiency\n\n\nWe can get all edges in $O(|E| + |V|)$.\n\n\nHamiltonian Cycles\n\n\nFinding all vertices in a Hamiltonian is an $nP$-complete problem.\n\n\nPlanar Graphs\n\n\ndefinition\n: A graph is \nplanar\n if there is a way to embedded it in the plane without crossing edges. The graph embedded in the plane is a \nplane graph\n however a graph can be planar without being a plane graph. For example edges could be crossed but it has the potential to be rewritten into a plane graph.\n\n\nAre Two Graphs Isomorphic?\n\n\ndefinition\n: Two graphs are \nisomorphic\n if there is a bijection $\\phi: V \\to V^\\prime$ such that for every edge in $V$,\n\n\n\n\n\\begin{aligned}\n    (v,w) \\in E \\iff (\\phi(v),\\phi(w)) \\in E\n\\end{aligned}\n\n\n\n\nEuler Relation\n\n\ndefinition\n: The \nEuler Relation\n is, given a planar graph,\n\n\n\n\n\\begin{aligned}\n    f + v = e + 2\n\\end{aligned}\n\n\n\n\nwhere $f$ is the number of faces, $v$ is the number of vertices and $e$ is the number of edges.", 
+            "text": "Lecture 15 - Notes\n\n\nMarch 3, 2016\n  \n\n\nEulerian Cycles\n\n\ndefinition\n: A \nEulerian Cycle\n contains all the edges in the graph exactly once.\n\n\nTheorem\n\n\nA connected indirected graph has an Eulerian cycle if and only if the degree of each vertex is even.\n\n\nTheorem\n\n\nA connected (strongly connected) digraph has an Eulerian cycle if and only if the in-degree of each vertex equals its out-degree.\n\n\nAlgorithm\n\n\nTo find the Euclidean cycle in a digraph (enumerate the edges in the cycle), using a greedy process,\n\n\n\n\nPreprocess the graph and make and in-tree with root $r$, compute $\\bar{G}$ (reverse all edges). Then perform BFS to get the tree $T$. This is $O(|E| + |V|)$.\n\n\n\n\n\n\nif we write the adjacency list for the graph,\n\n\n\n\n\\begin{aligned}\n    r &\\to d\\\\\\\\\n    a &\\to b \\to r \\\\\\\\\n    b &\\to c \\\\\\\\\n    c &\\to d \\to a \\\\\\\\\n    d &\\to a \\to c \\\\\\\\\n\\end{aligned}\n\n\n\n\nWhen we perform the algorithm, we'll get the list,\n\n\n\n\n\\begin{aligned}\n    r \\to d \\to a \\to a \\to b \\to c \\to d \\to c \\to a \\to r\n\\end{aligned}\n\n\n\n\nWhy does it work?\n This works because, since, $G$ is Eulerian the algorithm ends at $r$. Imagine that $(v,w)$ is missing . Since the algorithm terminated $v \\neq r$. Without loss of generality we can assume that $(v,w) \\in T$. Since $C - P$ is balanced (where $P$ is the cycle found) there is an edge $(u,v)$ also not in $P$. Without loss of generality $(u,v) \\in T$. Continuing in this manner we get a sequence of tree edges which eventually get back to $r$, a contradiction.\n\n\nThis is actually what Frank Rusky wrote on the board. He makes no sense.\n\n\nEfficiency\n\n\nWe can get all edges in $O(|E| + |V|)$.\n\n\nHamiltonian Cycles\n\n\nFinding all vertices in a Hamiltonian is an $nP$-complete problem.\n\n\nPlanar Graphs\n\n\ndefinition\n: A graph is \nplanar\n if there is a way to embedded it in the plane without crossing edges. The graph embedded in the plane is a \nplane graph\n however a graph can be planar without being a plane graph. For example edges could be crossed but it has the potential to be rewritten into a plane graph.\n\n\nAre Two Graphs Isomorphic?\n\n\ndefinition\n: Two graphs are \nisomorphic\n if there is a bijection $\\phi: V \\to V^\\prime$ such that for every edge in $V$,\n\n\n\n\n\\begin{aligned}\n    (v,w) \\in E \\iff (\\phi(v),\\phi(w)) \\in E\n\\end{aligned}", 
             "title": "2016 03 03"
         }, 
         {
@@ -711,9 +711,49 @@
             "title": "Are Two Graphs Isomorphic?"
         }, 
         {
-            "location": "/2016-03-03/#euler-relation", 
+            "location": "/2016-03-07/", 
+            "text": "Lecture 16 - Notes\n\n\nMarch 7, 2016\n  \n\n\nPlanar Graphs Continued\n\n\nEuler Relation\n\n\ndefinition\n: The \nEuler Relation\n is, given a planar graph,\n\n\n\n\n\\begin{aligned}\n    f + v = e + 2\n\\end{aligned}\n\n\n\n\nwhere $f$ is the number of faces, $v$ is the number of vertices and $e$ is the number of edges.\n\n\nProof\n\n\nImagine we're invading Rome and we want to first flood all the fields around Rome then destroy all roads leading to Rome. How many edges do we destroy? \n\n\nTo flood the regions we need to break a dyke leading into every region, so $f-1$ dykes (edges in this case).\n\n\nTo destroy the roads we have to destroy $v - 1$ roads.\n\n\nSo,\n\n\n\n\n\\begin{gathered}\n    (f-1) + (v-1) = e \\\\\\\\\n    \\downarrow \\\\\\\\\n    f + v = e + 2 \\\\\\\\\n\\end{gathered}\n\n\n\n\nGeometric Dual\n\n\ndefinition\n: We define the \nGeometric Dual\n of a planar graph $G$ as the graph created if we make a vertex out of every face of $G$.\n\n\n\n\nIf all faces are incident on at least $3$ edges then,\n\n\n\n\n\\begin{gathered}\n    3f \\le 2e \\\\\\\\\n    \\downarrow \\\\\\\\\n    3e + 6 = 3v + 3f \\le 3v + 3e \\\\\\\\\n    e \\le 3v - 6\n\\end{gathered}\n\n\n\n\nTheorem\n\n\nIf a Planar Graph without self-loops or multi-edges,\n\n\n\n\n\\begin{aligned}\n    e \\le 3v - 6\n\\end{aligned}\n\n\n\n\nGenus\n\n\ndefinition\n: The \nGenus\n of a graph is defined as the degree of the surface required to embed the graph on the surface. It is related to the graph by,\n\n\n\n\n\\begin{aligned}\n    \\text{genus} &= \\frac{1}{2} \\left( 2 - v + e - f \\right)\n\\end{aligned}\n\n\n\n\nHere's some examples of different genus,\n\n\n\n\n\n\n\n\nGenus 0\n\n\nGenus 1\n\n\nGenus 2\n\n\nGenus 3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEmbedding in a Plane\n\n\nPre-Processing\n\n\n\n\nBreak a Graph into its connected components\n\n\nBreak each component down to 2-connected components (subgraphs with no cut vertices)", 
+            "title": "2016 03 07"
+        }, 
+        {
+            "location": "/2016-03-07/#lecture-16-notes", 
+            "text": "March 7, 2016", 
+            "title": "Lecture 16 - Notes"
+        }, 
+        {
+            "location": "/2016-03-07/#planar-graphs-continued", 
+            "text": "", 
+            "title": "Planar Graphs Continued"
+        }, 
+        {
+            "location": "/2016-03-07/#euler-relation", 
             "text": "definition : The  Euler Relation  is, given a planar graph,   \\begin{aligned}\n    f + v = e + 2\n\\end{aligned}   where $f$ is the number of faces, $v$ is the number of vertices and $e$ is the number of edges.", 
             "title": "Euler Relation"
+        }, 
+        {
+            "location": "/2016-03-07/#proof", 
+            "text": "Imagine we're invading Rome and we want to first flood all the fields around Rome then destroy all roads leading to Rome. How many edges do we destroy?   To flood the regions we need to break a dyke leading into every region, so $f-1$ dykes (edges in this case).  To destroy the roads we have to destroy $v - 1$ roads.  So,   \\begin{gathered}\n    (f-1) + (v-1) = e \\\\\\\\\n    \\downarrow \\\\\\\\\n    f + v = e + 2 \\\\\\\\\n\\end{gathered}", 
+            "title": "Proof"
+        }, 
+        {
+            "location": "/2016-03-07/#geometric-dual", 
+            "text": "definition : We define the  Geometric Dual  of a planar graph $G$ as the graph created if we make a vertex out of every face of $G$.   If all faces are incident on at least $3$ edges then,   \\begin{gathered}\n    3f \\le 2e \\\\\\\\\n    \\downarrow \\\\\\\\\n    3e + 6 = 3v + 3f \\le 3v + 3e \\\\\\\\\n    e \\le 3v - 6\n\\end{gathered}", 
+            "title": "Geometric Dual"
+        }, 
+        {
+            "location": "/2016-03-07/#theorem", 
+            "text": "If a Planar Graph without self-loops or multi-edges,   \\begin{aligned}\n    e \\le 3v - 6\n\\end{aligned}", 
+            "title": "Theorem"
+        }, 
+        {
+            "location": "/2016-03-07/#genus", 
+            "text": "definition : The  Genus  of a graph is defined as the degree of the surface required to embed the graph on the surface. It is related to the graph by,   \\begin{aligned}\n    \\text{genus} &= \\frac{1}{2} \\left( 2 - v + e - f \\right)\n\\end{aligned}   Here's some examples of different genus,     Genus 0  Genus 1  Genus 2  Genus 3", 
+            "title": "Genus"
+        }, 
+        {
+            "location": "/2016-03-07/#embedding-in-a-plane", 
+            "text": "Pre-Processing   Break a Graph into its connected components  Break each component down to 2-connected components (subgraphs with no cut vertices)", 
+            "title": "Embedding in a Plane"
         }
     ]
 }
