@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 03 07 - CSC 226</title>
+  <title>2016 03 10 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 03 07";
-    var mkdocs_page_input_path = "2016-03-07.md";
-    var mkdocs_page_url = "/2016-03-07/";
+    var mkdocs_page_name = "2016 03 10";
+    var mkdocs_page_input_path = "2016-03-10.md";
+    var mkdocs_page_url = "/2016-03-10/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -169,24 +169,24 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 03 07</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-16-notes">Lecture 16 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#planar-graphs-continued">Planar Graphs Continued</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-03-07/">2016 03 07</a>
         
     </li>
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-03-10/">2016 03 10</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 03 10</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-17-notes">Lecture 17 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#shortest-path-algorithms">Shortest Path Algorithms</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -213,7 +213,7 @@
     
       
     
-    <li>2016 03 07</li>
+    <li>2016 03 10</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -227,80 +227,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-16-notes">Lecture 16 - Notes</h1>
-<p><strong>March 7, 2016</strong>  </p>
-<h2 id="planar-graphs-continued">Planar Graphs Continued</h2>
-<h3 id="euler-relation">Euler Relation</h3>
-<p><em>definition</em>: The <strong>Euler Relation</strong> is, given a planar graph,</p>
+                <h1 id="lecture-17-notes">Lecture 17 - Notes</h1>
+<p><strong>March 10, 2016</strong>  </p>
+<h2 id="shortest-path-algorithms">Shortest Path Algorithms</h2>
+<p><em>definition</em>: Given a directed edge-weighted graph, find the <strong>shortest path</strong> from $s$ to $w$.</p>
+<p>We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\infty$ for all other vertices $v$. We  <strong>relax</strong> an when we evaluate the actual shortest path from that node to $w$.</p>
+<h3 id="dijkstras-algorithm">Dijkstra's Algorithm</h3>
+<p><em>definition</em>: To find the shortest path between $a$ and $b$. Pick the unvisited vertex with the lowest distance and calculate the distance through it to each unvisited neighbour, then update the neighbour's distance if smaller. Mark the vertex visited (or red) when done with neighbours.</p>
+<p><img alt="Animation of Dijkstra's Algorithm" src="https://upload.wikimedia.org/wikipedia/commons/5/57/Dijkstra_Animation.gif" /></p>
+<h3 id="floyd-warshall-algorithm">Floyd-Warshall Algorithm</h3>
+<p><em>definition</em>: To find the shortest path between all pairs <code>d[n][n]</code> and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,</p>
 <p>
 <script type="math/tex; mode=display">\begin{aligned}
-    f + v = e + 2
+    d_{ij}^{(k)} = \min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})
 \end{aligned}</script>
 </p>
-<p>where $f$ is the number of faces, $v$ is the number of vertices and $e$ is the number of edges.</p>
-<h4 id="proof">Proof</h4>
-<p>Imagine we're invading Rome and we want to first flood all the fields around Rome then destroy all roads leading to Rome. How many edges do we destroy? </p>
-<p>To flood the regions we need to break a dyke leading into every region, so $f-1$ dykes (edges in this case).</p>
-<p>To destroy the roads we have to destroy $v - 1$ roads.</p>
-<p>So,</p>
-<p>
-<script type="math/tex; mode=display">\begin{gathered}
-    (f-1) + (v-1) = e \\\\
-    \downarrow \\\\
-    f + v = e + 2 \\\\
-\end{gathered}</script>
-</p>
-<h3 id="geometric-dual">Geometric Dual</h3>
-<p><em>definition</em>: We define the <strong>Geometric Dual</strong> of a planar graph $G$ as the graph created if we make a vertex out of every face of $G$.</p>
-<p><img alt="A Geometric Duality of a Planar Graph" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Duals_graphs.svg/2000px-Duals_graphs.svg.png" /></p>
-<p>If all faces are incident on at least $3$ edges then,</p>
-<p>
-<script type="math/tex; mode=display">\begin{gathered}
-    3f \le 2e \\\\
-    \downarrow \\\\
-    3e + 6 = 3v + 3f \le 3v + 3e \\\\
-    e \le 3v - 6
-\end{gathered}</script>
-</p>
-<h4 id="theorem">Theorem</h4>
-<p>If a Planar Graph without self-loops or multi-edges,</p>
-<p>
-<script type="math/tex; mode=display">\begin{aligned}
-    e \le 3v - 6
-\end{aligned}</script>
-</p>
-<h3 id="genus">Genus</h3>
-<p><em>definition</em>: The <strong>Genus</strong> of a graph is defined as the degree of the surface required to embed the graph on the surface. It is related to the graph by,</p>
-<p>
-<script type="math/tex; mode=display">\begin{aligned}
-    \text{genus} &= \frac{1}{2} \left( 2 - v + e - f \right)
-\end{aligned}</script>
-</p>
-<p>Here's some examples of different genus,</p>
-<table>
-<thead>
-<tr>
-<th align="center">Genus 0</th>
-<th align="center">Genus 1</th>
-<th align="center">Genus 2</th>
-<th align="center">Genus 3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Sphere_filled_blue.svg" /></td>
-<td align="center"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Torus_illustration.png/320px-Torus_illustration.png" /></td>
-<td align="center"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Double_torus_illustration.png/219px-Double_torus_illustration.png" /></td>
-<td align="center"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Triple_torus_illustration.png/320px-Triple_torus_illustration.png" /></td>
-</tr>
-</tbody>
-</table>
-<h3 id="embedding-in-a-plane">Embedding in a Plane</h3>
-<p><strong>Pre-Processing</strong></p>
-<ol>
-<li>Break a Graph into its connected components</li>
-<li>Break each component down to 2-connected components (subgraphs with no cut vertices)</li>
-</ol>
               
             </div>
           </div>
@@ -308,10 +249,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-03-10/" class="btn btn-neutral float-right" title="2016 03 10">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-03-03/" class="btn btn-neutral" title="2016 03 03"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-03-07/" class="btn btn-neutral" title="2016 03 07"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -339,10 +278,8 @@
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-03-03/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-03-07/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-03-10/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

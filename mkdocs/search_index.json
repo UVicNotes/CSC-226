@@ -754,6 +754,31 @@
             "location": "/2016-03-07/#embedding-in-a-plane", 
             "text": "Pre-Processing   Break a Graph into its connected components  Break each component down to 2-connected components (subgraphs with no cut vertices)", 
             "title": "Embedding in a Plane"
+        }, 
+        {
+            "location": "/2016-03-10/", 
+            "text": "Lecture 17 - Notes\n\n\nMarch 10, 2016\n  \n\n\nShortest Path Algorithms\n\n\ndefinition\n: Given a directed edge-weighted graph, find the \nshortest path\n from $s$ to $w$.\n\n\nWe begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We  \nrelax\n an when we evaluate the actual shortest path from that node to $w$.\n\n\nDijkstra's Algorithm\n\n\ndefinition\n: To find the shortest path between $a$ and $b$. Pick the unvisited vertex with the lowest distance and calculate the distance through it to each unvisited neighbour, then update the neighbour's distance if smaller. Mark the vertex visited (or red) when done with neighbours.\n\n\n\n\nFloyd-Warshall Algorithm\n\n\ndefinition\n: To find the shortest path between all pairs \nd[n][n]\n and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,\n\n\n\n\n\\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}", 
+            "title": "2016 03 10"
+        }, 
+        {
+            "location": "/2016-03-10/#lecture-17-notes", 
+            "text": "March 10, 2016", 
+            "title": "Lecture 17 - Notes"
+        }, 
+        {
+            "location": "/2016-03-10/#shortest-path-algorithms", 
+            "text": "definition : Given a directed edge-weighted graph, find the  shortest path  from $s$ to $w$.  We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We   relax  an when we evaluate the actual shortest path from that node to $w$.", 
+            "title": "Shortest Path Algorithms"
+        }, 
+        {
+            "location": "/2016-03-10/#dijkstras-algorithm", 
+            "text": "definition : To find the shortest path between $a$ and $b$. Pick the unvisited vertex with the lowest distance and calculate the distance through it to each unvisited neighbour, then update the neighbour's distance if smaller. Mark the vertex visited (or red) when done with neighbours.", 
+            "title": "Dijkstra's Algorithm"
+        }, 
+        {
+            "location": "/2016-03-10/#floyd-warshall-algorithm", 
+            "text": "definition : To find the shortest path between all pairs  d[n][n]  and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,   \\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}", 
+            "title": "Floyd-Warshall Algorithm"
         }
     ]
 }
