@@ -757,7 +757,7 @@
         }, 
         {
             "location": "/2016-03-10/", 
-            "text": "Lecture 17 - Notes\n\n\nMarch 10, 2016\n  \n\n\nShortest Path Algorithms\n\n\ndefinition\n: Given a directed edge-weighted graph, find the \nshortest path\n from $s$ to $w$.\n\n\nWe begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We  \nrelax\n an when we evaluate the actual shortest path from that node to $w$.\n\n\nDijkstra's Algorithm\n\n\ndefinition\n: To find the shortest path between $a$ and $b$. Pick the unvisited vertex with the lowest distance and calculate the distance through it to each unvisited neighbour, then update the neighbour's distance if smaller. Mark the vertex visited (or red) when done with neighbours.\n\n\n\n\nFloyd-Warshall Algorithm\n\n\ndefinition\n: To find the shortest path between all pairs \nd[n][n]\n and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,\n\n\n\n\n\\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}", 
+            "text": "Lecture 17 - Notes\n\n\nMarch 10, 2016\n  \n\n\nShortest Path Algorithms\n\n\ndefinition\n: Given a directed edge-weighted graph, find the \nshortest path\n from $s$ to $w$.\n\n\nWe begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We  \nrelax\n an when we evaluate the actual shortest path from that node to $w$.\n\n\nDijkstra's Algorithm\n\n\ndefinition\n: To find the shortest path between $a$ and $b$. Pick the unvisited vertex with the lowest distance and calculate the distance through it to each unvisited neighbour, then update the neighbour's distance if smaller. Mark the vertex visited (or red) when done with neighbours.\n\n\n\n\nDirected Acyclic Graph\n\n\nOn a directed acyclic graph the algorithm takes $O(E+V)$.", 
             "title": "2016 03 10"
         }, 
         {
@@ -776,9 +776,34 @@
             "title": "Dijkstra's Algorithm"
         }, 
         {
-            "location": "/2016-03-10/#floyd-warshall-algorithm", 
+            "location": "/2016-03-10/#directed-acyclic-graph", 
+            "text": "On a directed acyclic graph the algorithm takes $O(E+V)$.", 
+            "title": "Directed Acyclic Graph"
+        }, 
+        {
+            "location": "/2016-03-14/", 
+            "text": "Lecture 18 - Notes\n\n\nMarch 14, 2016\n  \n\n\nShortest Path Algorithms Continued\n\n\nFloyd-Warshall Algorithm\n\n\ndefinition\n: To find the shortest path between all pairs \nd[n][n]\n and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,\n\n\n\n\n\\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}\n\n\n\n\nBellman-Ford\n\n\ndefinition\n: We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We relax \nevery\n node $E$ exactly $V$ times.", 
+            "title": "2016 03 14"
+        }, 
+        {
+            "location": "/2016-03-14/#lecture-18-notes", 
+            "text": "March 14, 2016", 
+            "title": "Lecture 18 - Notes"
+        }, 
+        {
+            "location": "/2016-03-14/#shortest-path-algorithms-continued", 
+            "text": "", 
+            "title": "Shortest Path Algorithms Continued"
+        }, 
+        {
+            "location": "/2016-03-14/#floyd-warshall-algorithm", 
             "text": "definition : To find the shortest path between all pairs  d[n][n]  and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,   \\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}", 
             "title": "Floyd-Warshall Algorithm"
+        }, 
+        {
+            "location": "/2016-03-14/#bellman-ford", 
+            "text": "definition : We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We relax  every  node $E$ exactly $V$ times.", 
+            "title": "Bellman-Ford"
         }
     ]
 }
