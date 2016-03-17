@@ -782,7 +782,7 @@
         }, 
         {
             "location": "/2016-03-14/", 
-            "text": "Lecture 18 - Notes\n\n\nMarch 14, 2016\n  \n\n\nShortest Path Algorithms Continued\n\n\nFloyd-Warshall Algorithm\n\n\ndefinition\n: To find the shortest path between all pairs \nd[n][n]\n and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,\n\n\n\n\n\\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}\n\n\n\n\nBellman-Ford\n\n\ndefinition\n: We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We relax \nevery\n node $E$ exactly $V$ times.", 
+            "text": "Lecture 18 - Notes\n\n\nMarch 14, 2016\n  \n\n\nShortest Path Algorithms Continued\n\n\nFloyd-Warshall Algorithm\n\n\ndefinition\n: To find the shortest path between all pairs \nd[n][n]\n and make a shortest distance matrix. Let $d_{ij}^{(k)}$ be the shortest path from $i$ to $j$ passing through vertices, $1,2,...,k$. The algorithm states,\n\n\n\n\n\\begin{aligned}\n    d_{ij}^{(k)} = \\min(d_{ij}^{(k-1)},d_{ik}^{(k-1)} + d_{kj}^{(k-1)})\n\\end{aligned}", 
             "title": "2016 03 14"
         }, 
         {
@@ -801,9 +801,34 @@
             "title": "Floyd-Warshall Algorithm"
         }, 
         {
-            "location": "/2016-03-14/#bellman-ford", 
+            "location": "/2016-03-17/", 
+            "text": "Lecture 19 - Notes\n\n\nMarch 17, 2016\n  \n\n\nShortest Path Algorithms Continued\n\n\nBellman-Ford\n\n\ndefinition\n: We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We relax \nevery\n node $E$ exactly $V$ times.\n\n\nDynamic Programming\n\n\ndefinition\n: Like greedy, \nDynamic Programming\n is a problem solving technique particularly applicable to optimization. An example would be the Floyd-Warshall All-Pairs Shortest Path Algorithm.\n\n\nSuppose I create a variable,\n\n\n\n\n\\begin{aligned}\n    d_{i}^{(k)} = \\min\\left(d_{i}^{(k-1)}, \\min_{j \\in E}\\left( d_{j}^{(k-1)} + w_{ij} \\right) \\right)\n\\end{aligned}\n\n\n\n\nwhere $d_{i}^{(k)}$ is the shortest path from $s$ to $i$ using at most $k$ edges. This is an example of the Bellman-Ford algorithm.\n\n\nLongest Common Substring\n\n\ndefinition\n: Given two strings, $S_1$ and $S_2$, what is their longest common substring? It's possible we could allow skipping letters in the the strings.\n\n\nWe can solve this using dynamic programming, let's call our strings,\n\n\n\n\n\\begin{aligned}\n    x &= x_1 x_2 x_3 \\ldots x_n \\\\\\\\\n    y &= y_1 y_2 y_3 \\ldots y_m \\\\\\\\\n\\end{aligned}\n\n\n\n\nand,\n\n\n\n\n\\begin{aligned}\n    c[i,j] &=\n    \\begin{cases}\n        0 & \\text{if}~ i=0 ~\\text{or}~ j=0 \\\\\\\\\n        1 + c[i -1,j-1] & \\text{if}~ x_i = y_i \\\\\\\\\n        \\max\\left(c[i-1,j], c[i,j-1] \\right) & \\text{if}~ x_i \\neq y_i \\\\\\\\\n    \\end{cases} \\\\\\\\\n    &~\n\\end{aligned}\n\n\n\n\nwhere $c[i,j]$ is the longest common string of $x[1 \\ldots i]$ and  $y[1 \\ldots j]$.", 
+            "title": "2016 03 17"
+        }, 
+        {
+            "location": "/2016-03-17/#lecture-19-notes", 
+            "text": "March 17, 2016", 
+            "title": "Lecture 19 - Notes"
+        }, 
+        {
+            "location": "/2016-03-17/#shortest-path-algorithms-continued", 
+            "text": "", 
+            "title": "Shortest Path Algorithms Continued"
+        }, 
+        {
+            "location": "/2016-03-17/#bellman-ford", 
             "text": "definition : We begin by setting the distance to $s$ to $0$ and the distance to $w$ to $\\infty$ for all other vertices $v$. We relax  every  node $E$ exactly $V$ times.", 
             "title": "Bellman-Ford"
+        }, 
+        {
+            "location": "/2016-03-17/#dynamic-programming", 
+            "text": "definition : Like greedy,  Dynamic Programming  is a problem solving technique particularly applicable to optimization. An example would be the Floyd-Warshall All-Pairs Shortest Path Algorithm.  Suppose I create a variable,   \\begin{aligned}\n    d_{i}^{(k)} = \\min\\left(d_{i}^{(k-1)}, \\min_{j \\in E}\\left( d_{j}^{(k-1)} + w_{ij} \\right) \\right)\n\\end{aligned}   where $d_{i}^{(k)}$ is the shortest path from $s$ to $i$ using at most $k$ edges. This is an example of the Bellman-Ford algorithm.", 
+            "title": "Dynamic Programming"
+        }, 
+        {
+            "location": "/2016-03-17/#longest-common-substring", 
+            "text": "definition : Given two strings, $S_1$ and $S_2$, what is their longest common substring? It's possible we could allow skipping letters in the the strings.  We can solve this using dynamic programming, let's call our strings,   \\begin{aligned}\n    x &= x_1 x_2 x_3 \\ldots x_n \\\\\\\\\n    y &= y_1 y_2 y_3 \\ldots y_m \\\\\\\\\n\\end{aligned}   and,   \\begin{aligned}\n    c[i,j] &=\n    \\begin{cases}\n        0 & \\text{if}~ i=0 ~\\text{or}~ j=0 \\\\\\\\\n        1 + c[i -1,j-1] & \\text{if}~ x_i = y_i \\\\\\\\\n        \\max\\left(c[i-1,j], c[i,j-1] \\right) & \\text{if}~ x_i \\neq y_i \\\\\\\\\n    \\end{cases} \\\\\\\\\n    &~\n\\end{aligned}   where $c[i,j]$ is the longest common string of $x[1 \\ldots i]$ and  $y[1 \\ldots j]$.", 
+            "title": "Longest Common Substring"
         }
     ]
 }
