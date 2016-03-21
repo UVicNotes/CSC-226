@@ -829,6 +829,21 @@
             "location": "/2016-03-17/#longest-common-substring", 
             "text": "definition : Given two strings, $S_1$ and $S_2$, what is their longest common substring? It's possible we could allow skipping letters in the the strings.  We can solve this using dynamic programming, let's call our strings,   \\begin{aligned}\n    x &= x_1 x_2 x_3 \\ldots x_n \\\\\\\\\n    y &= y_1 y_2 y_3 \\ldots y_m \\\\\\\\\n\\end{aligned}   and,   \\begin{aligned}\n    c[i,j] &=\n    \\begin{cases}\n        0 & \\text{if}~ i=0 ~\\text{or}~ j=0 \\\\\\\\\n        1 + c[i -1,j-1] & \\text{if}~ x_i = y_i \\\\\\\\\n        \\max\\left(c[i-1,j], c[i,j-1] \\right) & \\text{if}~ x_i \\neq y_i \\\\\\\\\n    \\end{cases} \\\\\\\\\n    &~\n\\end{aligned}   where $c[i,j]$ is the longest common string of $x[1 \\ldots i]$ and  $y[1 \\ldots j]$.", 
             "title": "Longest Common Substring"
+        }, 
+        {
+            "location": "/2016-03-21/", 
+            "text": "Lecture 20 - Notes\n\n\nMarch 21, 2016\n  \n\n\nBacktracking\n\n\ndefinition\n: \nBacktracking\n is a general technique for,\n\n\n\n\nexhaustive generation\n\n\nsearches in large discrete space", 
+            "title": "2016 03 21"
+        }, 
+        {
+            "location": "/2016-03-21/#lecture-20-notes", 
+            "text": "March 21, 2016", 
+            "title": "Lecture 20 - Notes"
+        }, 
+        {
+            "location": "/2016-03-21/#backtracking", 
+            "text": "definition :  Backtracking  is a general technique for,   exhaustive generation  searches in large discrete space", 
+            "title": "Backtracking"
         }
     ]
 }

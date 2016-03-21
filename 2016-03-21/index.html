@@ -8,7 +8,7 @@
   
   <meta name="author" content="Andrei Taylor">
   
-  <title>2016 03 03 - CSC 226</title>
+  <title>2016 03 21 - CSC 226</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -23,9 +23,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "2016 03 03";
-    var mkdocs_page_input_path = "2016-03-03.md";
-    var mkdocs_page_url = "/2016-03-03/";
+    var mkdocs_page_name = "2016 03 21";
+    var mkdocs_page_input_path = "2016-03-21.md";
+    var mkdocs_page_url = "/2016-03-21/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -162,21 +162,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">2016 03 03</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#lecture-15-notes">Lecture 15 - Notes</a></li>
-                
-                    <li><a class="toctree-l4" href="#eulerian-cycles">Eulerian Cycles</a></li>
-                
-                    <li><a class="toctree-l4" href="#hamiltonian-cycles">Hamiltonian Cycles</a></li>
-                
-                    <li><a class="toctree-l4" href="#planar-graphs">Planar Graphs</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../2016-03-03/">2016 03 03</a>
         
     </li>
 <li>
@@ -210,8 +197,17 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../2016-03-21/">2016 03 21</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">2016 03 21</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#lecture-20-notes">Lecture 20 - Notes</a></li>
+                
+                    <li><a class="toctree-l4" href="#backtracking">Backtracking</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -238,7 +234,7 @@
     
       
     
-    <li>2016 03 03</li>
+    <li>2016 03 21</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -252,51 +248,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="lecture-15-notes">Lecture 15 - Notes</h1>
-<p><strong>March 3, 2016</strong>  </p>
-<h2 id="eulerian-cycles">Eulerian Cycles</h2>
-<p><em>definition</em>: A <strong>Eulerian Cycle</strong> contains all the edges in the graph exactly once.</p>
-<h4 id="theorem">Theorem</h4>
-<p>A connected indirected graph has an Eulerian cycle if and only if the degree of each vertex is even.</p>
-<h4 id="theorem_1">Theorem</h4>
-<p>A connected (strongly connected) digraph has an Eulerian cycle if and only if the in-degree of each vertex equals its out-degree.</p>
-<h4 id="algorithm">Algorithm</h4>
-<p>To find the Euclidean cycle in a digraph (enumerate the edges in the cycle), using a greedy process,</p>
-<ol>
-<li>Preprocess the graph and make and in-tree with root $r$, compute $\bar{G}$ (reverse all edges). Then perform BFS to get the tree $T$. This is $O(|E| + |V|)$.</li>
-</ol>
-<p><img alt="" src="../img/EulerDigraph.png" /></p>
-<p>if we write the adjacency list for the graph,</p>
-<p>
-<script type="math/tex; mode=display">\begin{aligned}
-    r &\to d\\\\
-    a &\to b \to r \\\\
-    b &\to c \\\\
-    c &\to d \to a \\\\
-    d &\to a \to c \\\\
-\end{aligned}</script>
-</p>
-<p>When we perform the algorithm, we'll get the list,</p>
-<p>
-<script type="math/tex; mode=display">\begin{aligned}
-    r \to d \to a \to a \to b \to c \to d \to c \to a \to r
-\end{aligned}</script>
-</p>
-<p><em>Why does it work?</em> This works because, since, $G$ is Eulerian the algorithm ends at $r$. Imagine that $(v,w)$ is missing . Since the algorithm terminated $v \neq r$. Without loss of generality we can assume that $(v,w) \in T$. Since $C - P$ is balanced (where $P$ is the cycle found) there is an edge $(u,v)$ also not in $P$. Without loss of generality $(u,v) \in T$. Continuing in this manner we get a sequence of tree edges which eventually get back to $r$, a contradiction.</p>
-<p><em>This is actually what Frank Rusky wrote on the board. He makes no sense.</em></p>
-<h3 id="efficiency">Efficiency</h3>
-<p>We can get all edges in $O(|E| + |V|)$.</p>
-<h2 id="hamiltonian-cycles">Hamiltonian Cycles</h2>
-<p>Finding all vertices in a Hamiltonian is an $nP$-complete problem.</p>
-<h2 id="planar-graphs">Planar Graphs</h2>
-<p><em>definition</em>: A graph is <strong>planar</strong> if there is a way to embedded it in the plane (drawn in two dimensions) without crossing edges. The graph embedded in the plane is a <strong>plane graph</strong> however a graph can be planar without being a plane graph. For example edges could be crossed but it has the potential to be rewritten into a plane graph.</p>
-<h3 id="are-two-graphs-isomorphic">Are Two Graphs Isomorphic?</h3>
-<p><em>definition</em>: Two graphs are <strong>isomorphic</strong> if there is a bijection $\phi: V \to V^\prime$ such that for every edge in $V$,</p>
-<p>
-<script type="math/tex; mode=display">\begin{aligned}
-    (v,w) \in E \iff (\phi(v),\phi(w)) \in E
-\end{aligned}</script>
-</p>
+                <h1 id="lecture-20-notes">Lecture 20 - Notes</h1>
+<p><strong>March 21, 2016</strong>  </p>
+<h2 id="backtracking">Backtracking</h2>
+<p><em>definition</em>: <strong>Backtracking</strong> is a general technique for,</p>
+<ul>
+<li>exhaustive generation</li>
+<li>searches in large discrete space</li>
+</ul>
               
             </div>
           </div>
@@ -304,10 +263,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../2016-03-07/" class="btn btn-neutral float-right" title="2016 03 07">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../2016-02-29/" class="btn btn-neutral" title="2016 02 29"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../2016-03-17/" class="btn btn-neutral" title="2016 03 17"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -335,10 +292,8 @@
           <a href="https://github.com/UVicNotes/CSC-226" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../2016-02-29/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../2016-03-17/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../2016-03-07/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
