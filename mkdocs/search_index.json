@@ -844,6 +844,31 @@
             "location": "/2016-03-21/#backtracking", 
             "text": "definition :  Backtracking  is a general technique for,   exhaustive generation  searches in large discrete space", 
             "title": "Backtracking"
+        }, 
+        {
+            "location": "/2016-03-31/", 
+            "text": "Lecture 21 - Notes\n\n\nMarch 31, 2016\n  \n\n\nMax Flow \n Mincut\n\n\nMincut\n\n\ndefinition\n: Given an edge weighted digraph with source $s$ and sink $t$, we define,\n\n\n\n\n$st$-cut\n is a partition of two disjoint sets, with $s$ in one set $A$ and $t$ in the other set $B$.\n\n\nCapacity\n is the sum of the capacities of the edges from $A$ to $B$.\n\n\n\n\nThe problem is to find a cut of minimum capacity.\n\n\nMax Flow\n\n\ndefinition\n: Given an edge weighted digraph with source $s$ and sink $t$, an \n$st$-flow\n is an assignment of values to the edge such that,\n\n\n\n\nCapacity\n, $0 \\le \\text{edge's flow} \\le \\text{edge's capacity}$\n\n\nEquilibrium\n, The inflow equals the outflow at every vertex except $s$ and $t$.\n\n\n\n\nThe \nvalue\n of a flow is the total inflow at $t$. The problem is to find the maximum value.", 
+            "title": "2016 03 31"
+        }, 
+        {
+            "location": "/2016-03-31/#lecture-21-notes", 
+            "text": "March 31, 2016", 
+            "title": "Lecture 21 - Notes"
+        }, 
+        {
+            "location": "/2016-03-31/#max-flow-mincut", 
+            "text": "", 
+            "title": "Max Flow &amp; Mincut"
+        }, 
+        {
+            "location": "/2016-03-31/#mincut", 
+            "text": "definition : Given an edge weighted digraph with source $s$ and sink $t$, we define,   $st$-cut  is a partition of two disjoint sets, with $s$ in one set $A$ and $t$ in the other set $B$.  Capacity  is the sum of the capacities of the edges from $A$ to $B$.   The problem is to find a cut of minimum capacity.", 
+            "title": "Mincut"
+        }, 
+        {
+            "location": "/2016-03-31/#max-flow", 
+            "text": "definition : Given an edge weighted digraph with source $s$ and sink $t$, an  $st$-flow  is an assignment of values to the edge such that,   Capacity , $0 \\le \\text{edge's flow} \\le \\text{edge's capacity}$  Equilibrium , The inflow equals the outflow at every vertex except $s$ and $t$.   The  value  of a flow is the total inflow at $t$. The problem is to find the maximum value.", 
+            "title": "Max Flow"
         }
     ]
 }
