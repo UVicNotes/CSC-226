@@ -869,6 +869,26 @@
             "location": "/2016-03-31/#max-flow", 
             "text": "definition : Given an edge weighted digraph with source $s$ and sink $t$, an  $st$-flow  is an assignment of values to the edge such that,   Capacity , $0 \\le \\text{edge's flow} \\le \\text{edge's capacity}$  Equilibrium , The inflow equals the outflow at every vertex except $s$ and $t$.   The  value  of a flow is the total inflow at $t$. The problem is to find the maximum value.", 
             "title": "Max Flow"
+        }, 
+        {
+            "location": "/2016-04-04/", 
+            "text": "Lecture 22 - Notes\n\n\nApril 4, 2016\n  \n\n\nProject Selection Problem\n\n\nImagine we have a set of projects $P$ with the following properties,\n\n\n\n\nEach project $v$ has an associated revenue $p_v$\n\n\nEach project has a set of requirements $E$ where $(v,w) \\in E$ means you cannot do project $v$ unless you do project $w$\n\n\nA subset of projects, $A \\subseteq P$ is feasible if the prerequisites for every project in $A$ are also in $A$.\n\n\n\n\nThe Problem\n: Given a set of project $P$ find a feasible solution that maximizes revenue.\n\n\nSolution using Min-cut\n\n\nTo solve the set of projects,\n\n\n\n\nAssign a capacity of $\\infty$ to all prerequisite edges\n\n\nAdd an edge $(s,v)$ with capacity $p_v$ if the revenue is positive ($p_v \\gt 0$)\n\n\nAdd an edge $(v,t)$ with capacity $-p_v$ if the revenue is negative ($p_v \\lt 0$)\n\n\nFor convenience let $p_s$ and $p_t$ be zero.", 
+            "title": "2016 04 04"
+        }, 
+        {
+            "location": "/2016-04-04/#lecture-22-notes", 
+            "text": "April 4, 2016", 
+            "title": "Lecture 22 - Notes"
+        }, 
+        {
+            "location": "/2016-04-04/#project-selection-problem", 
+            "text": "Imagine we have a set of projects $P$ with the following properties,   Each project $v$ has an associated revenue $p_v$  Each project has a set of requirements $E$ where $(v,w) \\in E$ means you cannot do project $v$ unless you do project $w$  A subset of projects, $A \\subseteq P$ is feasible if the prerequisites for every project in $A$ are also in $A$.   The Problem : Given a set of project $P$ find a feasible solution that maximizes revenue.", 
+            "title": "Project Selection Problem"
+        }, 
+        {
+            "location": "/2016-04-04/#solution-using-min-cut", 
+            "text": "To solve the set of projects,   Assign a capacity of $\\infty$ to all prerequisite edges  Add an edge $(s,v)$ with capacity $p_v$ if the revenue is positive ($p_v \\gt 0$)  Add an edge $(v,t)$ with capacity $-p_v$ if the revenue is negative ($p_v \\lt 0$)  For convenience let $p_s$ and $p_t$ be zero.", 
+            "title": "Solution using Min-cut"
         }
     ]
 }
